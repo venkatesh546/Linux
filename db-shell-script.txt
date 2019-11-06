@@ -1,0 +1,105 @@
+script 1:
+#########
+#########################################
+# 9393_call_log hutch script
+#########################################
+
+
+cd /root
+
+day=$(date +%F)
+
+
+source /home/script/pass2.sh # path.sh
+
+
+mysql -u$db_user -p$db_passwd $db <<EOF
+
+update 9393_call_log set status=1 where status=0 and starttime<curdate();
+
+select rid,uniqueid,recordedfile,starttime,endtime,duration,crbtlanguage,category,songid,songpath,downloads,start_epoch from 9393_call_log where starttime<curdate() and status=1 into outfile '/home/backup/9393_call_log_hutch.txt';
+
+
+update 9393_call_log set status=2 where status=1 and starttime<curdate();
+
+EOF
+
+cd /home/backup/
+
+tar -cvzf 9393_call_log_hutch.tgz 9393_call_log_hutch.txt
+
+cp 9393_call_log_hutch.tgz $day.9393_call_log_hutch.tgz
+
+cp $day.9393_call_log_hutch.tgz /home/backuptar/
+
+rm -rf 9393_call_log_hutch.txt
+
+rm -rf 9393_call_log_hutch.tgz
+
+
+rm -rf $day.9393_call_log_hutch.tgz
+
+cd /home/backuptar/
+
+
+scp -rp $day.9393_call_log_hutch.tgz 192.168.7.2:/home/backup_hutch/
+############################################################################
+
+
+
+
+
+script 2:
+
+##########
+
+#!/bin/sh
+####################################
+#
+# Backup script For HMS_DIALOG
+
+source /home/pass2.sh  ####
+####################################
+
+day=$(date +%F)
+
+H_DIR='/home/backup_dialog'
+
+DB_DIR='/var/lib/mysql/ABC_IVRS/'
+
+cd $H_DIR
+
+
+#for i in $day.hms_main_call_log_dialog.tgz $day.hms_call_log_dialog.tgz
+for i in  $day.hms_call_log_dialog.tgz
+
+do
+ echo $i
+ tar -xvzf $i
+
+
+########################################## DIALOG Main call_log ###################################################
+
+if [ -f $H_DIR/hms_main_call_log_dialog.txt ];  # This code is for DIALOG
+then
+cd $H_DIR/
+chmod 777 hms_main_call_log_dialog.txt
+cp hms_main_call_log_dialog.txt $DB_DIR
+echo $i
+cd /root
+mysql -u$db_user -p$db_passwd $db <<EOF
+use ABC_IVRS;
+
+LOAD DATA INFILE 'hms_main_call_log_dialog.txt' INTO TABLE call_log (rid,mobileno,shortcode,starttime,endtime,uniqueid,duration,operator,application,language,status,ip,start_epoch,dialstatus,dtmf);
+EOF
+rm -rf $DB_DIRhms_main_call_log_dialog.txt
+echo "success";
+
+cd $H_DIR/
+rm -rf hms_main_call_log_dialog.txt
+rm -rf $day.hms_main_call_log_dialog.tgz
+fi
+
+
+----
+(IPMsg Delayed Send: 11:39)
