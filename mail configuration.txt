@@ -1,0 +1,120 @@
+How to configure postfix mail configuration
+Install Packages
+
+Make sure Postfix, the SASL authentication framework, and mailx are all installed.
+
+#	yum -y install postfix cyrus-sasl-plain mailx
+
+Postfix will need to be restarted before the SASL framework will be detected.
+
+#	systemctl restart postfix	(centos 7)
+#	service postfix restart	(centos 6)
+
+Postfix should also be set to start on boot.
+
+#	systemctl enable postfix	(centos 7)
+#	chkconfig postfix on		(centos 6)
+
+Configure Postfix
+
+Open the /etc/postfix/main.cf and add the following lines to the end of the file.
+#	vim /etc/postfix/main.cf
+
+myhostname = tesync-intranet
+relayhost = [smtp.gmail.com]:587
+smtp_use_tls = yes
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_tls_CAfile = /etc/ssl/certs/ca-bundle.crt
+smtp_sasl_security_options = noanonymous
+smtp_sasl_tls_security_options = noanonymous
+
+The myhostname parameter is optional. If the hostname is not specified, Postfix will use the fully-qualified domain name of the Linux server.
+
+Save the main.cf file and close the editor.
+Configure Postfix SASL Credentials
+
+The Gmail credentials must now be added for authentication. Create a /etc/postfix/sasl_passwd file and add following line:
+#	vim /etc/postfix/sasl_passwd
+
+ [smtp.gmail.com]:587 username:password    
+here it is enter your gmail username and password
+
+The username and password values must be replaced with valid Gmail credentials. The sasl_passwd file can now be saved and closed.
+
+A Postfix lookup table must now be generated from the sasl_passwd text file by running the following command.
+
+#	postmap /etc/postfix/sasl_passwd
+
+
+Access to the sasl_passwd files should be restricted.
+
+#	chown root:postfix /etc/postfix/sasl_passwd*
+#	chmod 640 /etc/postfix/sasl_passwd*
+
+Lastly, reload the Postfix configuration.
+
+#	systemctl reload postfix	(centos 7)
+#	service postfix reload	(centos 6)
+
+Test the Relay
+
+Use the mail command to test the relay.
+
+#	echo "This is a test." | mail -s "test message" user@example.net
+
+The destination address should receive the test message.
+Troubleshoot Delivery Issues
+
+The maillog can be reviewed if the test message is not successfully delivered. Open another shell and run tail while performing another test.
+
+#	tail -f /var/log/maillog
+----------------------------------------------------
+Troubleshooting:
+Go to the "Less secure apps" section in My Account.
+Next to "Access for less secure apps," select Turn on
+--------------------------------------------
+If there are not enough details in the maillog to determine the problem, then the debug level can be increased by adding the following lines to the /etc/postfix/main.cf.
+
+#	/etc/postfix/main.cf
+debug_peer_list=smtp.gmail.com
+debug_peer_level=3
+
+The Postfix configuration must be reloaded after updating the main.cf file.
+
+#	systemctl reload postfix	(centos 7)
+#	service postfix restart	(centos 6)
+
+Remember to remove the debug settings when testing is complete. The verbose logs can have a negative impact on server performance.
+
+step 2:
+
+root:me@server.com:mail.server.com:25in /etc/ssmtp/revaliases
+
+
+
+nagios error code:wq
+
+http://www.linuxquestions.org/questions/linux-newbie-8/[nagios]-send-emails-to-gmail-when-services-are-down-824596/
+
+------------------------------------------------------------------
+mail -a "test.txt"  -s "test with param1" -S replyto="Venkatesh<venkatesh.kondapalli@tesync.net>" -r "Venkatesh<venkatesh.kondapalli@tesync.net>" suryachandra.p@tesync.net  < test.txt  
+mail error add below edit 
+--------------------------------------
+mailbox_size_limit = 0
+inet_interfaces = all to  inet_interfaces = loopback-only
+-----------------------------------------------------------
+
+
+
+error: open database /etc/postfix/generic.db: No such file or directory
+
+Assure the precursor file ( generic NOT generic.db ) exists
+
+ls -la /etc/postfix/generic
+when your error happens typically this file does not exist ... so create it :
+
+touch /etc/postfix/generic
+only then will this be of any use
+
+ postmap /etc/postfix/generic

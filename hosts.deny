@@ -1,0 +1,18 @@
+#
+# hosts.deny	This file contains access rules which are used to
+#		deny connections to network services that either use
+#		the tcp_wrappers library or that have been
+#		started through a tcp_wrappers-enabled xinetd.
+#
+#		The rules in this file can also be set up in
+#		/etc/hosts.allow with a 'deny' option instead.
+#
+#		See 'man 5 hosts_options' and 'man 5 hosts_access'
+#		for information on rule syntax.
+#		See 'man tcpd' for information on tcp_wrappers
+
+##ALL : ALL
+##sshd : ALL
+
+
+sshd : ALL EXCEPT  202.62.85.242 123.176.41.158 123.176.41.145 123.176.41.146 123.176.41.147 123.176.41.148 123.176.41.149 123.176.41.150 123.176.41.151 123.176.41.152 123.176.41.153 123.176.41.154 123.176.41.155 123.176.41.156 123.176.41.157  112.196.30.220  112.196.30.219 192.168.168.110  183.83.201.239 192.168.168.22 10.99.1.15 10.99.1.13 10.99.3.12 10.99.2.26 10.99.3.26 10.99.2.11 10.99.10.13 10.99.10.12 122.160.233.157 10.99.2.12 10.99.10.1 14.98.252.195 10.99.1.5 10.99.1.46 10.99.1.9 122.160.235.157 10.99.1.11 10.99.10.100 122.176.57.115 10.99.1.8 10.99.1.27 10.99.1.4 119.235.6.226 119.235.6.227 123.231.6.36 123.231.6.37 10.99.1.34

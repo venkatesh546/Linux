@@ -1,0 +1,17 @@
+Create or Edit Logrotate Configuration File:
+vim /etc/logrotate.d/mylog
+/var/log/mylog.log {
+    daily
+    missingok
+    rotate 7
+    compress
+    delaycompress
+    notifempty
+    create 0644 root root
+}
+save the  file and exit
+Create a Cron Job to Run Logrotate Daily:
+crontab -e
+Add the following line to schedule log rotation to occur every day at 3:00 AM:
+0 3 * * * /usr/sbin/logrotate /etc/logrotate.conf
+save and exit

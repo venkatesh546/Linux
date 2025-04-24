@@ -1,0 +1,85 @@
+LINK : https://www.linuxtechi.com/install-configure-haproxy-centos-8-rhel-8/
+vim /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.99.0.101 haproxy-server
+10.99.10.124 http-node1
+10.99.0.22 http-node2
+10.99.10.90 apache2-node3
+:wq (save and exit)
+yum install haproxy
+cp -r  /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg-ori
+vim /etc/haproxy/haproxy.cfg
+# Global settings
+#---------------------------------------------------------------------
+global
+    log         127.0.0.1 local2
+
+    chroot      /var/lib/haproxy
+    pidfile     /var/run/haproxy.pid
+    maxconn     4000
+    user        haproxy
+    group       haproxy
+    daemon
+
+    stats socket /var/lib/haproxy/stats
+
+    ssl-default-bind-ciphers PROFILE=SYSTEM
+    ssl-default-server-ciphers PROFILE=SYSTEM
+
+defaults
+    mode                    http
+    log                     global
+    option                  httplog
+    option                  dontlognull
+    option http-server-close
+    option forwardfor       except 127.0.0.0/8
+    option                  redispatch
+    retries                 3
+    timeout http-request    10s
+    timeout queue           1m
+    timeout connect         10s
+    timeout client          1m
+    timeout server          1m
+    timeout http-keep-alive 10s
+    timeout check           10s
+    maxconn                 3000
+# main frontend which proxys to the backends
+#---------------------------------------------------------------------
+frontend main
+    bind 10.99.0.101:8080
+    option http-server-close
+    option forwardfor
+    stats uri /haproxy?stats
+    default_backend             http_webservers
+
+backend http_webservers
+    balance     roundrobin
+    server http-node1  10.99.10.124:80 check
+    server http-node2  10.99.0.22:80 check
+    server apache2-node3  10.99.10.90:80 check
+:wq (save and exit)
+
+vim /etc/rsyslog.conf
+uncomment line 20 & 21
+module(load="imudp") # needs to be done just once
+input(type="imudp" port="514")
+:wq (save and exit)
+Create a file for haproxy log under /etc/rsyslog.d/haproxy.conf
+vim /etc/rsyslog.d/haproxy.conf
+local2.=info     /var/log/haproxy-access.log
+local2.notice    /var/log/haproxy-info.log
+:wq (save and exit)
+systemctl restart rsyslog
+Now finally start haproxy but before starting haproxy service, set the following selinux rule,
+setsebool -P haproxy_connect_any 1
+systemctl start haproxy
+systemctl enable haproxy
+
+
+
+
+
+
+
+

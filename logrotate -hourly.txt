@@ -1,0 +1,69 @@
+https://sleeplessbeastie.eu/2018/07/11/how-to-execute-logrotate-every-hour/
+
+How to execute logrotate every hour
+
+Create separate directory to store hourly logrotate configuration files.
+$ sudo mkdir /etc/logrotate.hourly.d
+Create main logrotate configuration file that will read configuration files from designated directory.
+$ cat << EOF | sudo tee /etc/logrotate.hourly.conf
+# packages drop hourly log rotation information into this directory
+include /etc/logrotate.hourly.d
+EOF
+Set proper permissions.
+$ sudo chmod 644 /etc/logrotate.hourly.conf
+Create cron configuration to execute logrotate every hour and read main hourly configuration file.
+$ cat << EOF | sudo tee /etc/cron.hourly/logrotate
+#!/bin/bash
+test -x /usr/sbin/logrotate || exit 0
+/usr/sbin/logrotate /etc/logrotate.hourly.conf
+EOF
+Set proper permissions.
+$ sudo chmod 775 /etc/cron.hourly/logrotate
+Create configuration file to hourly rotate specific log file inside above-mentioned directory.
+$ cat << EOF | sudo tee /etc/logrotate.hourly.d/application
+/home/tesync/kannel_logs/ksmppd.log {
+  size 128M
+  rotate 365
+  copytruncate
+  missingok
+  compress
+  delaycompress
+  notifempty
+  nomail
+}
+EOF
+Set proper permissions.
+$ sudo chmod 644 /etc/logrotate.hourly.d/application
+Do not specify weekly, monthly or yearly parameter.
+-------------------------------------------------------------------------------
+Working hourly logrotate configuration.
+Create a custom log rotation configuration file. Let's name it hourly_rotation.conf:
+vim /etc/logrotate.hourly_rotation.conf
+/home/tesync/kannel_logs/*.log {
+    hourly
+    dateext
+    dateformat -%Y-%m-%d_%H
+    rotate 365
+    compress
+    delaycompress
+    missingok
+    notifempty
+    sharedscripts
+    postrotate
+         killall -HUP bearerbox  ksmppd || true > /dev/null 2> /dev/null || true
+    endscript
+}
+save and exit
+
+Now, test your configuration to ensure there are no syntax errors:
+logrotate -d /etc/logrotate.hourly_rotation.conf
+
+If the test is successful, you can manually run log rotation:
+logrotate -f /etc/logrotate.hourly_rotation.conf
+
+To automate this process, you can add a cron job to run the log rotation hourly. Edit the crontab file:
+crontab -e
+@hourly /usr/sbin/logrotate -f /etc/logrotate.hourly_rotation.conf
+save and exit
+
+
