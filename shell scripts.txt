@@ -1,0 +1,65 @@
+this is client server(10.99.1.45)
+[root@localhost data_backup]# cd ..
+[root@localhost opt]# ls
+data_backup  rh
+[root@localhost opt]#
+[root@localhost opt]# pwd
+/opt
+[root@localhost opt]# vi data_backup.sh
+[root@localhost opt]#
+[root@localhost opt]# chmod 777 data_backup.sh
+[root@localhost opt]# ls
+data_backup  data_backup.sh  rh
+[root@localhost opt]#
+[root@localhost opt]#vi data_backup.sh  
+o/p
+ rsync -avz /opt/data_backup/ root@10.99.1.27:/opt/
+ :wq
+[root@localhost opt]# sh data_backup.sh
+sending incremental file list
+./
+data
+data1
+data3
+data4
+file
+
+sent 17026 bytes  received 152 bytes  11452.00 bytes/sec
+total size is 151745402  speedup is 8833.71
+--------------------------------------------------------------------------------------------------------------------------
+[root@localhost data_backup]# touch data{5..8}
+[root@localhost data_backup]# cd ..
+[root@localhost opt]# ls
+data_backup  data_backup.sh  rh
+[root@localhost opt]#
+[root@localhost opt]# sh data_backup.sh
+sending incremental file list
+./
+data5
+data6
+data7
+data8
+
+sent 17041 bytes  received 133 bytes  34348.00 bytes/sec
+total size is 151745402  speedup is 8835.76
+
+-------------------------------------------------------------------------------------------------------------------------
+then go server(10.99.1.45)
+to check list
+[root@www opt]# ls
+Adobe                                            data5   nagios-4.0.8                 ruby-2.2.3.tar.gz
+bitnami-redmine-3.1.2-0-linux-x64-installer.run  data6   nagios-plugins-2.0.3         rubygem-rake-0.8.7-2.1.el6.noarch.rpm
+data                                             data7   ntfs-3g_ntfsprogs-2015.3.14  teamviewer
+data1                                            data8   redmine
+data3                                            file    rh
+data4                                            google  ruby-2.2.3
+You have new mail in /var/spool/mail/root
+-------------------------------------------------------------------------------------------------------------------------
+if you want whole system backup then use below shell script.sh
+------------------------------------------------------------------
+rsync -avz /opt/data_backup/ root@10.99.1.27:/opt/
+rsync -avz /home/ root@10.99.1.27:/opt/
+rsync -avz /etc/ root@10.99.1.27:/opt/
+rsync -avz /bin/ root@10.99.1.27:/opt/
+rsync -avz /sbin/ root@10.99.1.27:/opt/
+

@@ -1,0 +1,37 @@
+dnf -y install teamd
+rpm -qi teamd
+ip link  show or ifconfig
+nmcli connection show 
+nmcli connection delete 6089354f-aeb0-4f89-91d6-a4921d4efafd 
+nmcli connection delete	 c93155e0-b81e-444c-b9aa-ed4a41af6d23
+nmcli connection show
+nmcli connection add type team con-name bond0 ifname bond0 config '{"runner": {"name": "activebackup"}}'
+nmcli con show bond0
+nmcli con show
+nmcli con mod bond0 ipv4.addresses 172.16.237.53/24
+nmcli con mod bond0 ipv4.gateway 172.16.237.1
+nmcli con mod bond0 ipv4.method manual
+nmcli con mod bond0 connection.autoconnect yes
+nmcli con add type team-slave con-name bond0-slave0 ifname ens1f0 master bond0                    ens3f0 ens3f1
+nmcli con add type team-slave con-name bond0-slave1 ifname ens1f1 master bond0
+nmcli connection down bond0 && nmcli connection up bond0
+ip addr show  dev bond0
+teamdctl bond0 state
+
+
+
+BOND1
+nmcli connection delete ffc204da-a49c-49fc-9248-a3804c038764
+nmcli connection delete 8ce45875-0d28-427a-a0d4-a592f4c17db3
+nmcli connection show 
+nmcli connection add type team con-name bond1 ifname bond1 config '{"runner": {"name": "activebackup"}}'
+nmcli con show bond1
+nmcli con show
+nmcli con mod bond1 ipv4.addresses 10.48.212.249/28
+nmcli con mod bond1 ipv4.method manual
+nmcli con mod bond1 connection.autoconnect yes
+nmcli con add type team-slave con-name bond1-slave0 ifname eno3 master bond1                   
+nmcli con add type team-slave con-name bond1-slave1 ifname eno4 master bond1
+nmcli connection down bond1 && nmcli connection up bond1
+ip addr show  dev bond1
+teamdctl bond1 state

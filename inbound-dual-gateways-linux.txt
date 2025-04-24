@@ -1,0 +1,114 @@
+https://unix.stackexchange.com/questions/4420/reply-on-same-interface-as-incoming
+
+Implemented in Webserver-sector 53 as the webserver is not reachable  dated 04-05-2021
+
+$ echo 200 oandm >> /etc/iproute2/rt_tables
+$ echo "from 192.168.14.154  table oandm " > /etc/sysconfig/network-scripts/rule-eno1
+$ echo "default via 192.168.14.254 dev eno1  table oandm" > /etc/sysconfig/network-scripts/route-eno1
+
+
+/etc/sysctl.conf 
+net.ipv4.conf.default.arp_filter=1
+net.ipv4.conf.all.arp_filter=1
+
+
+Before Applying the rules
+[root@web1s3 ~]# route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.16.237.1    0.0.0.0         UG    100    0        0 ens192
+10.147.204.111  10.147.237.2    255.255.255.255 UGH   101    0        0 ens224
+10.147.204.112  10.147.237.2    255.255.255.255 UGH   101    0        0 ens224
+10.147.237.0    0.0.0.0         255.255.255.192 U     101    0        0 ens224
+10.147.237.98   10.147.237.2    255.255.255.255 UGH   101    0        0 ens224
+10.147.237.101  10.147.237.2    255.255.255.255 UGH   101    0        0 ens224
+172.16.237.0    0.0.0.0         255.255.255.0   U     100    0        0 ens192
+
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.16.237.47  netmask 255.255.255.0  broadcast 172.16.237.255
+        inet6 fe80::8ae1:7247:4ef:13f1  prefixlen 64  scopeid 0x20<link>
+        inet6 fe80::841e:314b:d152:3e14  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:ca:4f:e3  txqueuelen 1000  (Ethernet)
+        RX packets 24290971  bytes 13488225489 (12.5 GiB)
+        RX errors 0  dropped 697  overruns 0  frame 0
+        TX packets 20817124  bytes 32946596011 (30.6 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens224: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.147.237.47  netmask 255.255.255.192  broadcast 10.147.237.63
+        inet6 fe80::b029:11ba:da26:aeb7  prefixlen 64  scopeid 0x20<link>
+        inet6 fe80::a468:bead:8bb:dfc2  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:ca:4f:ed  txqueuelen 1000  (Ethernet)
+        RX packets 63117  bytes 4804515 (4.5 MiB)
+        RX errors 0  dropped 688  overruns 0  frame 0
+        TX packets 59236  bytes 5077314 (4.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@web1s3 network-scripts]# vim route-ens224
+10.147.237.98/32 via 10.147.237.2 dev ens224
+10.147.237.101/32 via 10.147.237.2 dev ens224
+10.147.204.111/32 via 10.147.237.2 dev ens224
+10.147.204.112/32 via 10.147.237.2 dev ens224
+
+route add -host 10.147.237.98 gw 10.147.237.2
+route add -host 10.147.237.101 gw 10.147.237.2
+route add -host 10.147.204.111 gw 10.147.237.2
+route add -host 10.147.204.112 gw 10.147.237.2
+----------------------------------------------
+Previously implemented in vns servers
+Temp
+$ echo 200 sigtran >> /etc/iproute2/rt_tables
+$ ip rule add from 10.147.212.125 table sigtran
+$ ip route add default via 10.147.212.113  dev bond2 table sigtran
+
+
+Test that the network change is permanent:
+
+$ ifdown bond2 ; ifup bond2
+
+ip route add 10.60.60.0/24 via 10.147.212.113 dev bond2
+
+Permanent
+$ echo 200 sigtran >> /etc/iproute2/rt_tables
+$ echo "from 10.147.212.125 table sigtran" > /etc/sysconfig/network-scripts/rule-bond2
+$ echo "default via 10.147.212.113 dev bond2  table sigtran" > /etc/sysconfig/network-scripts/route-bond2
+
+10.60.60.0/24 via 10.147.212.113 dev bond2
+
+
+
+Test that the network change is permanent:
+
+$ ifdown bond2 ; ifup bond2
+
+
+
+
+/etc/sysctl.conf 
+net.ipv4.conf.default.arp_filter=1
+net.ipv4.conf.all.arp_filter=1
+
+
+
+-------------------------------------------------
+Temp
+$ echo 200 sigtran >> /etc/iproute2/rt_tables
+$ ip rule add from 10.147.212.126 table sigtran
+$ ip route add default via 10.147.212.113  dev enp10s0f0 table sigtran
+
+
+Permanent
+$ echo "from 10.147.212.125 table sigtran" > /etc/sysconfig/network-scripts/rule-bond2
+$ echo "default via 10.147.212.113 dev bond2  table sigtran" > /etc/sysconfig/network-scripts/route-bond2
+
+
+Test that the network change is permanent:
+
+$ ifdown enp10s0f0 ; ifup enp10s0f0
+
+ip route add 10.60.60.0/24 via 10.147.212.113 dev enp10s0f0
+
+
+/etc/sysctl.conf 
+net.ipv4.conf.default.arp_filter=1
+net.ipv4.conf.all.arp_filter=1

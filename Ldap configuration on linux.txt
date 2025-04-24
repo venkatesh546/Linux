@@ -1,0 +1,213 @@
+Ldap configuration server & clients on rhel/centos6
+--------------------------------------------------------------
+Step 1. Install OpenLDAP packages via YUM 
+ #yum install openldap*
+-------------------------------------------
+Step 2. Now generate a encrypted password for Administrator User That is "Manager"
+ #slappasswd 
+ New password: redhat
+ Re-enter new password: redhat
+{SSHA}dXK/BmC+DrrbwvAWYaPvA5omy6EqvUnX
+
+The above command will generate the password something like 
+"{SSHA}dXK/BmC+DrrbwvAWYaPvA5omy6EqvUnX" 
+---------------------------------------------
+Step 4. Now Configure OpenLDAP Server, so edit the following file:
+#vim /etc/openldap/slapd.d/"cn=config"/"olcDatabase={2}bdb.ldif"
+o/p
+Inside this file do the following changes:
+olcSuffix: dc=example,dc=com
+
+olcRootDN: cn=Manager,dc=example,dc=com
+
+Inside this file create the following lines:
+olcRootPW: <PASTE YOUR ENCRYPTED PASSWORD HERE>
+olcTLSCertificateFile: /etc/pki/tls/certs/example.pem
+olcTLSCertificateKeyFile: /etc/pki/tls/certs/examplekey.pem
+---------------------------------------------
+Step 5. Now specify the Monitoring privileges 
+#vim /etc/openldap/slapd.d/"cn=config"/"olcDatabase={1}monitor.ldif"
+o/p
+Inside this file search the following "cn=manager,dc=my-domain,dc=com" 
+and change this into "cn=Manager,dc=example,dc=com"
+
+:wq (save and exit)
+--------------------------------------------
+Step 6. Now copy the sample database file 
+#cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+---------------------------------------------
+ou need to change owner and group ownership of this Database
+#chown -R ldap:ldap /var/lib/ldap/
+------------------------------------------------
+Now update the database
+#updatedb 
+------------------------------------------------
+Step 7.  Configure OpenLDAP to listen on SSL/TLS 
+#vim /etc/sysconfig/ldap 
+
+SLAPD_LDAPS=yes #(default is no)
+
+:wq (save and exit)
+-----------------------------------------------------
+Step 8. Now you need to create a certificate for OpenLDAP Server. you can configure CA Server or something else, But in this example, I am creating a self sign certificate. 
+# openssl req -new -x509 -nodes -out /etc/pki/tls/certs/example.pem -keyout /etc/pki/tls/certs/examplekey.pem -days 365
+
+Country Name (2 letter code) [XX]:IN
+State or Province Name (full name) []:Delhi
+Locality Name (eg, city) [Default City]:New Delhi
+Organization Name (eg, company) [Default Company Ltd]:Example, Inc.
+Organizational Unit Name (eg, section) []:IT
+Common Name (eg, your name or your server's hostname) []:ldap.example.com
+Email Address []:root@ldap.example.com
+-----------------------------------------------------------
+Step 9. You need to change owner and group ownership of certificate and keyfile
+#chown -Rf root:ldap /etc/pki/tls/certs/example.pem 
+#chown -Rf root:ldap /etc/pki/tls/certs/examplekey.pem
+-------------------------------------------------------------
+You can also check, owner and group ownership changed or not
+# ls -l /etc/pki/tls/certs/example*
+------------------------------------------------------------
+Step 10. Start/Restart the service of OpenLDAP
+# service slapd restart
+#chkconfig slapd on
+--------------------------------------------------------------
+Step 11. Now you need to create base objects in OpenLDAP. 
+there are two ways, (1). you can create it manually (2). you can use migration tools. In this example I am using migration tools. 
+#yum install migrationtools 
+
+# cd /usr/share/migrationtools/
+# ls
+--------------------------------------------------------------
+You will see lot of files and scripts here. So you need to change some predefined values according to your domain name, for that do the following
+# vim migrate_common.ph
+on the Line Number 61, change "ou=Groups" 
+  $NAMINGCONTEXT{'group'}             = "ou=Groups";
+
+ on the Line Number 71, change your domain name 
+ $DEFAULT_MAIL_DOMAIN = "example.com";
+
+on the line number 74, change your base name 
+$DEFAULT_BASE = "dc=example,dc=com";
+
+on the line number 90, change schema value
+$EXTENDED_SCHEMA = 1;
+
+:wq (save and exit)
+-----------------------------------------------
+Now generate a base.ldif file for your Domain, use the following:
+#./migrate_base.pl > /root/base.ldif
+--------------------------------------------------
+If you want to migrate your local users and groups on LDAP do the following
+first I am creating 5 local users and groups and then I will migrate to LDAP. 
+
+#mkdir /home/guests
+#useradd -d /home/guests/ldapuser1 ldapuser1
+#useradd -d /home/guests/ldapuser2 ldapuser2
+#useradd -d /home/guests/ldapuser3 ldapuser3
+#useradd -d /home/guests/ldapuser4 ldapuser4
+#useradd -d /home/guests/ldapuser5 ldapuser5
+--------------------------------------------------------------
+Now assign the password 
+#passwd ldapuser1
+#passwd ldapuser2
+#passwd ldapuser3
+#passwd ldapuser4
+#passwd ldapuser5
+-----------------------------------------------------------------
+Now you need to filter out these users from /etc/passwd to another file:
+#getent passwd | tail -n 5 > /root/users
+------------------------------------------------------------------
+Now you need to filter out password information from /etc/shadow to another file:
+# getent shadow | tail -n 5 > /root/passwords
+--------------------------------------------------------------
+Now you need to filter out user groups from /etc/group to another file:
+# getent group | tail -n 5 > /root/groups
+-----------------------------------------------------------------
+So Open the following file to change the location of password file
+# vim migrate_passwd.pl 
+-----------------------------------------------------------------
+Inside this file search /etc/shadow and change it to /root/passwords and then save and exit. 
+
+------------------------------------------------------------------
+Now generate a ldif file for users 
+# ./migrate_passwd.pl /root/users > /root/users.ldif
+----------------------------------------------------------------
+Now Generate a ldif file for groups 
+# ./migrate_group.pl /root/groups > /root/groups.ldif
+---------------------------------------------
+Step 12. Now it' time to upload these ldif file to LDAP Server 
+
+#ldapadd -x -W -D "cn=Manager,dc=example,dc=com" -f /root/base.ldif 
+
+# ldapadd -x -W -D "cn=Manager,dc=example,dc=com" -f /root/users.ldif
+
+# ldapadd -x -W -D "cn=Manager,dc=example,dc=com" -f /root/groups.ldif 
+-------------------------------------------------
+NOTE: It will as a password of "Manager", you have to type the password which you generated in encrypted format. 
+
+Now you can use "ldapsearch" command 
+
+# ldapsearch -x -b "dc=example,dc=com"
+-----------------------------------------
+Step 13. Now you need to share LDAP Users Home Directories via NFS they can mount the home directory on client machine. 
+
+#vim /etc/exports 
+
+/home/guests    192.168.48.0/255.255.255.0(rw,sync)
+
+:wq (save and exit)
+
+# service nfs restart 
+# service iptables stop 
+# chkconfig iptables off
+-------------------------------------------
+Step 14. Now you need to copy your LDAP Server certificate in to /var/ftp/pub/. 
+# cp -rvf /etc/pki/tls/certs/example.pem /var/ftp/pub/
+# ln -s /var/ftp/pub/ /var/www/html/
+# service vsftpd restart
+# chkconfig vsftpd on
+# service httpd restart 
+# chkconfig httpd on
+--------------------------------------------
+
+Now go to the Client Machine and configure it to use LDAP Server.
+
+
+# authconfig-gtk 
+
+Click on "Identity & Authentication" Tab 
+Click on drop down menu in "User Account Database" and Select "LDAP"
+in LDAP Search Base DN: dc=example,dc=com
+in LDAP Server: ldap://ldap.example.com
+Select the check Box of "Use TLS to encrypt connections" 
+Click "Download CA Certificate" 
+In Certificate URL: type http://ldap.example.com/pub/example.pem
+Click "OK"
+
+----------------------------------------
+# getent passwd ldapuser1
+
+-----------------------------------------
+Now Configure your client machine to access the home directory as well 
+# vim /etc/auto.master
+
+create the following New Line 
+/home/guests    /etc/auto.guests
+:wq
+
+# vim /etc/auto.guests
+*       -rw     ldap.example.com:/home/guests/&
+:wq
+---------------------------------------------
+#service autofs reload
+------------------------------------
+#su - ldapuser1
+----------------------------------------------
+
+
+
+
+
+
+
+

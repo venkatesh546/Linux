@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=UNaA6o6qIN8
+https://tecadmin.net/create-sftp-user-without-shell-access-on-centos-8/
+[root@localhost home]# groupadd sftpgrp   	
+[root@localhost home]# useradd -G sftpgrp -s /sbin/nologin crtuser
+[root@localhost home]# usermod -d /home/crtuser crtuser
+[root@localhost home]# passwd sftptest
+Changing password for user sftptest.
+New password:
+BAD PASSWORD: it is based on a dictionary word
+BAD PASSWORD: is too simple
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@localhost home]# mkdir -p /home/crtuser/auto_call
+[root@localhost home]# chmod 755 /home/crtuser/auto_call
+[root@localhost home]# chgrp sftpgrp /home/crtuser/auto_call
+[root@localhost home]# vim /etc/ssh/sshd_config
+Subsystem sftp internal-sftp -f AUTH -l INFO
+Match Group sftpgrp
+X11Forwarding no
+AllowTcpForwarding no
+ChrootDirectory  /home/crtuser/auto_call/
+ForceCommand internal-sftp
+
+save and exit
+
+[root@localhost home]# service sshd restart
+Stopping sshd:                                             [  OK  ]
+Starting sshd:                                             [  OK  ]
+[root@localhost home]#

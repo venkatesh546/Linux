@@ -1,0 +1,57 @@
+https://woshub.com/configure-mariadb-replication/
+Mariadb Master2Master setup in rhel-8.9
+From Master1 (172.16.161.110)
+
+vim /etc/my.cnf.d/mariadb-server.cnf 
+[server]
+server_id = 1  # change server_id =  2 in master 2
+report_host = 172.16.161.110  
+log_bin = /var/lib/mysql/mariadb-bin
+log_bin_index = /var/lib/mysql/mariadb-bin.index
+relay_log = /var/lib/mysql/relay-bin
+relay_log_index = /var/lib/mysql/relay-bin.index
+save and exit
+service mariadb restart
+service mariadb status
+ mysql -uroot -p
+use mysql;
+create user 'master'@'%' identified by 'tesync@123';
+grant replication slave on *.* to 'master'@'%';
+show master status;
+STOP SLAVE;
+CHANGE MASTER TO MASTER_HOST='10.99.0.39', MASTER_USER='master2', MASTER_PASSWORD='tesync@123', MASTER_LOG_FILE='mariadb-bin.000001', MASTER_LOG_POS=330;
+START SLAVE;
+show slave status \G;
+create database m1;
+show databases;
+---------------------------------------------
+From Master2 (10.99.0.39)
+vim /etc/my.cnf.d/mariadb-server.cnf 
+[server]
+server_id = 2
+report_host = 10.99.0.39
+log_bin = /var/lib/mysql/mariadb-bin
+log_bin_index = /var/lib/mysql/mariadb-bin.index
+relay_log = /var/lib/mysql/relay-bin
+relay_log_index = /var/lib/mysql/relay-bin.index
+save and exit
+service mariadb restart
+service mariadb status
+mysql -uroot -p
+show databases;
+use mysql;
+create user 'master2'@'%' identified by 'tesync@123';
+grant replication slave on *.* to 'master2'@'%';
+show master status;
+use mysql;
+show master status;
+STOP SLAVE;
+CHANGE MASTER TO MASTER_HOST='172.16.161.110', MASTER_USER='master', MASTER_PASSWORD='tesync@123', MASTER_LOG_FILE='mariadb-bin.000001', MASTER_LOG_POS=663;
+START SLAVE;
+show slave status \G;
+show databases;
+show slave status \G;
+create database m2;
+show databases;
+-------------------------------------
+

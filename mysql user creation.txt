@@ -1,0 +1,166 @@
+user create mysql in linux
+-------------------------------
+CREATE USER 'smscuser'@'%' IDENTIFIED BY 'vnsvns';
+GRANT ALL PRIVILEGES ON   *TO 'smscuser'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER '"spare1s7"'@'172.16.237.47' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON   *.* TO '"spare1s7"'@'172.16.237.47'  IDENTIFIED BY 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER '"demouser"'@'192.168.7.1' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON   *.* TO '"demouser"'@'192.168.7.1'  IDENTIFIED BY 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'sltcrbt'@'172.20.234.2' IDENTIFIED BY  'tesync@1234';
+GRANT ALL PRIVILEGES ON   *.* TO 'sltcrbt'@'172.20.234.2'  IDENTIFIED BY 'tesync@1234' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'tesyncwp'@'172.16.161.100' IDENTIFIED BY 'tesync';
+GRANT ALL PRIVILEGES ON   *.* TO 'tesyncwp'@'172.16.161.100'  IDENTIFIED BY 'tesync' with grant option;
+FLUSH PRIVILEGES;
+
+Create a user only read only permission
+CREATE USER 'smscuser'@'103.251.94.128' IDENTIFIED BY 'h6ak4RGtpwWk';
+CREATE USER 'smscuser'@'172.16.161.1' IDENTIFIED BY 'h6ak4RGtpwWk';
+GRANT SELECT, SHOW VIEW ON cloudsmscdb.* TO smscuser@’172.16.161.1′ IDENTIFIED BY 'h6ak4RGtpwWk';
+GRANT CREATE ON cloudsmscdb.* TO smscuser@’172.16.161.1′ IDENTIFIED BY 'h6ak4RGtpwWk';
+GRANT INSERT ON cloudsmscdb.* TO smscuser@’103.251.94.128′ IDENTIFIED BY 'h6ak4RGtpwWk';
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'smscuser'@'172.16.161.1' IDENTIFIED BY 'h6ak4RGtpwWk';
+GRANT ALL privileges ON `cloudsmscdb`.* TO 'smscuser'@172.16.161.1;
+FLUSH PRIVILEGES;
+
+
+
+CREATE USER 'pradeeptest'@'106.76.192.220' IDENTIFIED BY 'h6ak4RGtpwWk';
+GRANT ALL PRIVILEGES ON  cloudsmscdb.* TO pradeeptest@’106.76.192.220′ IDENTIFIED BY 'h6ak4RGtpwWk';
+FLUSH PRIVILEGES;
+
+
+
+update user set password=PASSWORD("h6ak4RGtpwQK") where User='smscuser';
+mysqldump all databases
+--------------------
+mysqldump -uroot -p --all-databases > all_databases.sql
+
+mysql restore all databases
+-------------------------------------
+mysql -uroot -p  < wap3_20180125all_databases.sql
+check users
+--------------
+SELECT User,Host FROM mysql.user;
+
+mysql remote connection 
+------------------------------
+CREATE USER 'renewals'@'%' IDENTIFIED BY 'tesync';
+GRANT ALL PRIVILEGES ON *.* TO 'renewals'@'172.16.161.106' identified by 'tesync' with grant option;
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'webserver1'@'%' IDENTIFIED BY 'vnsvns';
+GRANT ALL PRIVILEGES ON *.* TO 'webserver1'@'%' identified by 'vnsvns' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'temtmis'@'%' IDENTIFIED BY 'vnsvns';
+GRANT ALL PRIVILEGES ON *.* TO 'temtmis'@'%' identified by 'vnsvns' with grant option;
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.7.254' identified by 'cYU5uaQR' with grant option;
+
+
+CREATE USER 'wapuser1'@'172.16.100.2' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'wapuser1'@'172.16.100.2' identified by 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'smsc'@'localhost' IDENTIFIED BY 'tesync123';
+GRANT ALL PRIVILEGES ON *.* TO 'smsc'@'localhost' identified by 'tesync123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'wap3dbuser'@'172.16.161.103' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'wap3dbuser'@'172.16.161.103' identified by 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'tesync'@'192.168.7.1' IDENTIFIED BY 'tesync_DB_2013';
+GRANT ALL PRIVILEGES ON *.* TO 'tesync'@'192.168.7.1' identified by 'tesync_DB_2013' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'tesync'@'172.22.106.45' IDENTIFIED BY 'tesync_DB_2013';
+GRANT ALL PRIVILEGES ON *.* TO 'tesync'@'172.22.106.45' identified by 'tesync_DB_2013' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'tesync'@'172.16.161.120' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'tesync'@'172.16.161.120' identified by 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'wap1user'@'172.16.161.1' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'wap1user'@'172.16.161.1' identified by 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'wap6user'@'172.16.161.106' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'wap6user'@'172.16.161.106' identified by 'tesync@123' with grant option;
+GRANT ALL PRIVILEGES ON *.* TO 'bulksms'@'%' identified by 'h6ak4RGtpwQK' with grant option;
+
+CREATE USER 'tesync'@'%' IDENTIFIED BY 'h6ak4RGtpwQK';
+GRANT ALL PRIVILEGES ON *.* TO 'tesync'@'%' identified by 'h6ak4RGtpwQK' with grant option;
+FLUSH PRIVILEGES;
+
+CREATE USER 'reversebid'@'192.168.7.1' IDENTIFIED BY 'tesync@123';
+GRANT ALL PRIVILEGES ON *.* TO 'reversebid'@'192.168.7.1' identified by 'tesync@123' with grant option;
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'root'@'172.16.143.164' IDENTIFIED BY 'tesync';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.16.143.164' identified by 'tesync' with grant option;
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' identified by 'tesync' with grant option;
+
+mysql> GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'tesync';
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+sloution: mysql_upgrade -uroot --force -p
+
+mysql upgrade error
+mysql_upgrade -u root -p
+
+Delete Host from mysql
+select * from user where user = 'tesync' and host = '172.16.100.2'\G
+delete from user where user = 'smscuser' and host = '172.16.161.1';
+------------------------------d
+drop user in mysql
+
+SELECT User,Host FROM mysql.user;
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'tesync'@'localhost;
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'root'@'172.16.237.47';
+DROP USER 'tesync'@'localhost';
+DROP USER 'root'@'172.16.237.47';
+DROP USER 'root'@'%';
+
+
+Read permission only.
+GRANT SELECT ON *.* TO 'tesyncbduser'@'localhost' IDENTIFIED BY 'Tesync@123';
+
+ALTER USER 'testuser'@'localhost' IDENTIFIED BY 'Tesync@123';
+
+change mysql password change in centos 7
+mysql -u root -p
+USE mysql;
+UPDATE user SET password=PASSWORD('YourPasswordHere') WHERE User='root' AND Host = 'localhost';
+FLUSH PRIVILEGES;
+------------------------
+Remote mysql password change in centos 7
+ mysql -u root -p
+ use mysql;
+ SET PASSWORD FOR 'user-name-here'@'hostname' = PASSWORD('new-password');
+
+
+
+/var/www/html/SLTCrbt/directBilling.php -> H:172.20.234.1 | U:sltc | P: |DB: tes_crbt
+/var/www/html/SLTCrbt/slt_billing_transaction.php -> H:172.20.234.1 | U: sltcrbt | P: tesync@1234| DB:crbt 
+
+
+
+

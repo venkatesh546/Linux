@@ -1,0 +1,19 @@
+Centos 6.6
+how to reset root passwd
+step1:press e
+step2:again press e
+step3:init1 press enter and press b
+step4:passwd root
+step5:reboot
+----------------------------------
+centos 7
+how to reset root password
+step 1: Restart/start the system on getting grub2 boot press e 
+Step 2 : we have use linux16. remove the parameter rhgb and quiet  
+and add the init=/bin/sh
+Now press CTRL with x
+Step 3: mount -o remount, rw /
+              passwd root
+step 4 : touch /.autorelabel
+step 5 : exec /sbin/reboot
+-----------------------------------------------

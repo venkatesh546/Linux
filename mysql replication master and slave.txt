@@ -1,0 +1,68 @@
+https://woshub.com/configure-mariadb-replication/
+https://www.unixmen.com/setup-mariadb-master-slave-replication-in-centos-7/
+
+mater to master url  : https://www.howtoforge.com/tutorial/how-to-setup-mysql-master-master-replication/
+mysql replication on centos-6.6
+--------------------------------------
+from master server 
+1) ifconfig
+2)mysql -uroot -p
+3)help grant;
+create database rep;
+CREATE USER 'repuser'@'localhost'IDENTIFIED BY '123';
+GRANT ALL ON rep.* TO 'repuser'@'localhost';
+flush privileges;
+exit
+4) vim /etc/my.cnf
+ under [mysqld]
+server-id=1
+binlog-do-db=rep
+log-bin=mysql-bin
+5)service mysqld restart
+6)mysql -uroot -p
+GRANT REPLICATION SLAVE ON *.* TO 'repuser'@'%' IDENTIFIED BY '123';
+FLUSH PRIVILEGES;
+show databases;
+use rep;
+FLUSH TABLES WITH READ LOCK;
+SHOW MASTER STATUS;
+exit
+7)mysqldump -uroot -p rep > rep.sql
+8) scp rep.sql root@10.99.10.36:/root/.
+9) mysql -uroot -p
+UNLOCK TABLES;
+--------------------------------------
+FROM SALVE 
+1) vim /etc/my.cnf
+ under [mysqld]
+server-id=2
+binlog-do-db=rep
+log-bin=mysql-bin
+2) service mysqld restart
+3) mysql -uroot -p
+create  database rep;
+exit
+4)mysql -uroot -p rep < rep.sql
+5)mysql -uroot -p
+help grant;
+CREATE USER 'repuser'@'localhost' IDENTIFIED BY '123';
+GRANT ALL ON rep.* TO 'repuser'@'localhost';
+GRANT REPLICATION SLAVE ON *.* TO 'repuser'@'%' IDENTIFIED BY '123';
+FLUSH PRIVILEGES;
+CHANGE MASTER TO MASTER_HOST='10.99.10.40',MASTER_USER='repuser',MASTER_PASSWORD='123',MASTER_LOG_FILE='mysql-bin.000005',MASTER_LOG_POS=324;
+STOP SLAVE ;
+START SLAVE ;
+------------------------
+FROM MASTER
+mysql -uroot -p
+show databases;
+use rep;
+create table sample (a int);
+insert into sample (a) values (1);
+select * from sample;
+---------------------
+FROM SALVE
+show databases;
+use rep;
+select * from sample;
+-------------------

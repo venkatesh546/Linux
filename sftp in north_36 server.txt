@@ -1,0 +1,25 @@
+adduser --shell /bin/false cbbbps
+passwd cbbbps     jcbQzA7GcB
+
+mkdir  \home\cbbbps\livecdrs
+mkdir \home\cbbbps\backupcdrs
+
+chown cbbbps:cbbbps \home\cbbbps\livecdrs
+chown cbbbps:cbbbps \home\cbbbps\backupcdrs
+
+chown root:root  \home\cbbbps
+chmod 755 -R \home\cbbbps
+
+vim /etc/ssh/sshd_config
+Match User cbbbps
+	ForceCommand internal-sftp
+	PasswordAuthentication yes
+	ChrootDirectory /home/cbbbps
+	PermitTunnel no
+	AllowAgentForwarding no
+	AllowTcpForwarding no
+	X11Forwarding no
+
+systemctl restart sshd.service
+
+sftp cbbbps@172.16.237.36

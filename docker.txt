@@ -1,0 +1,156 @@
+Docker
+---------------------------------
+docker exec -i -t 8f558bff5fea /bin/bash
+curl -sSL https://get.docker.com/ | sh
+1) yum -y install docker-io
+2) service docker start
+3) chkconfig docker on
+docker search centos
+4) docker pull centos
+5) docker run -d -ti centos
+6) docker ps
+7) docker attach <container-id>
+-------------------------------------------------
+export and import docker
+1) docker export NAME | gzip > NAME.gz
+2) scp NAME.gz USERNAME@SERVER_IP:/home/USERNAME
+3) from remote server
+zcat NAME.gz | docker import - NAME
+4) docker run -i -t NAME /bin/bash
+--------------------------------------------------
+Mysql
+--------------
+docker run --detach --name=test-mysql --env="MYSQL_ROOT_PASSWORD=mypassword" mysql
+docker inspect test-mysql
+mysql -uroot -pmypassword -h 172.17.0.20 -P 3306
+docker exec -it <container-id> /bin/bash
+
+1) docker search mysql
+2) docker run --name venkymysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql/mysql-server:5.6
+3) docker images
+4) docker ps
+5) docker exec -it venkymysql mysql -uroot -p
+6) docker exec -it venkymysql bash
+dump mysql
+docker exec f6757b1672a4 /usr/bin/mysqldump -u root --password=1234 mysql > backup.sql
+
+ centos 7
+ mysqld_safe --skip-grant-tables &
+ mysql -uroot 
+
+--------------------------
+httpd
+------------------
+1)  docker run -ti --name "testhttpd" centos /bin/bash    (installation centos for apache server)
+2)  ps aux
+3)  yum install httpd
+4)  docker commit -m "added httpd" 424074f1e3fa centos:7  (create a docker image)
+5) docker images
+6)/usr/sbin/httpd -k start
+ 
+port add:
+docker run --name webserver -v /home/tesync/httpd/:/usr/local/apache2/htdocs/ -p 8082:80 -d httpd
+-----------------------------------
+New configuration Ubuntu Docker
+1) docker pull ubuntu
+2) docker run -ti --name "testcontainer" ubuntu /bin/bash
+3) apt-get update
+4) apt-get install mc vim-nox
+5) apt-get apache2
+
+Mysql instllation centos 6.6 docker packages
+------------------------------------------------------
+[root@dnd3 ~]# rpm -qa | grep mysql
+mysql-server-5.5.58-1.el6.remi.x86_64
+mysql-5.5.58-1.el6.remi.x86_64
+qt-mysql-4.6.2-28.el6_5.x86_64
+mysql-libs-5.5.58-1.el6.remi.x86_64
+mysql-devel-5.5.58-1.el6.remi.x86_64
+php-mysqlnd-5.6.31-1.el6.remi.x86_64
+compat-mysql51-5.1.73-1.el6.remi.x86_64
+mysql-connector-odbc-5.1.5r1144-7.el6.x86_64
+----------------------------------------------
+Let’s deploy IPTables for Docker Container IP Address: 172.17.0.3
+
+#iptables -t nat -A POSTROUTING --source 172.17.0.1 --destination 172.17.0.1 -p tcp --dport 8080 -j MASQUERADE
+
+#iptables -t nat -A DOCKER ! -i docker0 --source 0.0.0.0/0 --destination 0.0.0.0/0 -p tcp --dport 8080  -j DNAT --to 172.17.0.1:8080
+
+#iptables -A DOCKER ! -i docker0 -o docker0 --source 0.0.0.0/0 --destination 172.17.0.1 -p tcp --dport 8080 -j ACCEPT
+
+Check IPTables with below command.
+
+#iptables -S DOCKER| grep 172.17.0.1
+-A DOCKER -d 172.17.0.1/32 ! -i docker0 -o docker0 -p tcp -m tcp --dport 80 -j ACCEPT
+
+#iptables -t nat -S DOCKER| grep 172.17.0.1
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 8080 -j DNAT --to-destination 172.17.0.1:8080
+
+#iptables -t nat -S POSTROUTING| grep 172.17.0.1
+-A POSTROUTING -s 172.17.0.3/32 -d 172.17.0.1/32 -p tcp -m tcp --dport 8080 -j MASQUERADE
+------------------------------
+nc -w 5 -v 10.99.10.49 8080
+------------------------------
+In Centos 7 
+Disable firewalld 
+-------------------------
+Docker cp from host to container-id
+# docker cp venky.txt centos6.6:/var/www/html/   or docker cp file_name container_name:<path>
+
+Docker cp from container to host
+# docker cp centos6.6:/var/www/html/ .
+-------------------------------
+
+httpd running 8084
+docker run -it -p 8084:80 -p 9443:443 --name apache docker.io/imagine10255/centos6-lnmp-php56  /bin/bash
+docker exec -i -t 8f558bff5fea /bin/bash
+
+docker search centos
+
+
+to start mysql in docker:
+service mysqld start
+
+To start httpd in docket:
+service httpd start
+
+To start docker container:
+To list containers docker ps -a
+docker start  `docker ps -q -l`
+docker exec -i -t 8f558bff5fea /bin/bash
+
+Remove container
+------------------------
+docker rm <Container_ID>
+docker rm -f < Container_ID>
+
+Restart the nginx container
+docker exec -it <Container> nginx -s reload
+---------------------------------------------------
+1) Docker images pull rhel8.6
+docker pull redhat/ubi8-init
+2) docker images
+docker run -d -t --privileged=true 8a32e441a6ec /usr/sbin/init
+docker exec -it 988f603dc5e3 /bin/bash
+3) Get the privateIP of the container
+docker inspect container_name | grep IPAddress
+4) We can see all the port mappings for specified container,
+docker container port <containerID>
+----------------------------
+Docker Commit Commands in linux
+docker ps
+docker stop 80e2ff1371fe
+docker ps -a
+docker commit httpdnginx ssh-http-nginx
+docker run -d -p 8050:8080 -p 8051:80 --privileged=true --name ssh_httpd_nginx ssh-http-nginx
+docker ps
+docker ps -a
+docker rm 80e2ff1371fe
+docker ps
+docker inspect e5226d38401e | grep IPAddress
+ssh "172.17.0.4"
+
+
+
+
+

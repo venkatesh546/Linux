@@ -1,0 +1,5 @@
+dnf module list php
+dnf module reset php
+dnf module enable php:7.4
+dnf install php
+php -v

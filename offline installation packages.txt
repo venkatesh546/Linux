@@ -1,0 +1,21 @@
+rpm -qa | grep dejavu-fonts-common >> nginx_packages.txt
+rpm -qa | grep dejavu-sans-fonts >> nginx_packages.txt
+rpm -qa | grep fontconfig >> nginx_packages.txt
+rpm -qa | grep fontpackages-filesystem >> nginx_packages.txt
+rpm -qa | grep jbigkit-libs >> nginx_packages.txt
+rpm -qa | grep  libX11 >> nginx_packages.txt
+rpm -qa | grep  libX11-common >> nginx_packages.txt
+rpm -qa | grep   libXau >> nginx_packages.txt
+rpm -qa | grep   libXpm >> nginx_packages.txt
+rpm -qa | grep  libjpeg-turbo >> nginx_packages.txt
+rpm -qa | grep  libtiff >> nginx_packages.txt
+rpm -qa | grep   libwebp >> nginx_packages.txt
+rpm -qa | grep   libxcb >> nginx_packages.txt
+rpm -qa | grep    libxslt >> nginx_packages.txt
+mkdir nginxrpms
+cd nginxrpms
+while read -r pkg; do yumdownloader --resolve "$pkg"; done < ~/nginx_packages.txt
+scp -r nginxrpms root@10.99.0.45:/root
+Login into offline machine
+cd /root/nginxrpms
+yum localinstall *.rpm

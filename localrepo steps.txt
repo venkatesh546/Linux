@@ -1,0 +1,37 @@
+Prepare the Repository Directory:
+Step1 )mkdir /home/localrepo/
+
+Step2) Mounting ISO (In your case, if you need to mount the DVD-ROM or mounted ISO in your virtual machine follow the below steps)
+
+#mount /dev/sr0  /mnt
+#cd /mnt/* /home/localrepo
+
+Step3) create a file under /etc/yum.repos.d/
+vim /etc/yum.repos.d/local.repo
+add the below configuration 
+
+[local_BaseOS]
+name=local_BaseOS
+baseurl=file:///home/localrepo/BaseOS
+enabled=1
+metadata_expire=-1
+gpgcheck=1
+gpgkey=file:///home/localrepo/RPM-GPG-KEY-redhat-release
+
+[local_AppStream]
+name=local_AppStream
+baseurl=file:///home/localrepo/AppStream
+enabled=1
+metadata_expire=-1
+gpgcheck=1
+gpgkey=file:///home/localrepo/RPM-GPG-KEY-redhat-release
+
+save the file and exit
+
+Step4) yum repolist 
+
+Step5) yum install tcpdump -y
+
+
+
+

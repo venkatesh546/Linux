@@ -1,0 +1,53 @@
+vim /etc/yum.repos.d/remote.repo
+[remote]
+name=Centos7_32BIT
+baseurl=http://103.255.146.164:8080/Packages/
+enabled=1
+gpgcheck=0
+
+yum repolist
+[remote]
+name=Centos7_32BIT
+baseurl=http://103.255.146.164:8080/Packages/
+enabled=1
+gpgcheck=0
+--------------------------------
+From client side remote repo
+
+[RemoteRepo_BaseOS]
+name=RemoteRepo_BaseOS
+metadata_expire=-1
+enabled=1
+gpgcheck=1
+baseurl=http://172.16.143.139/remoterepo/BaseOS
+gpgkey=http://172.16.143.139/remoterepo/RPM-GPG-KEY-redhat-release
+
+[RemoteRepo_AppStream]
+name=RemoteRepo_AppStream
+metadata_expire=-1
+enabled=1
+gpgcheck=1
+baseurl=http://172.16.143.139/remoterepo/AppStream
+gpgkey=http://172.16.143.139/remoterepo/RPM-GPG-KEY-redhat-release
+------------------------------
+localrepo
+[local_BaseOS]
+name=local_BaseOS
+baseurl=file:///home/tesync/localrepo/BaseOS
+enabled=1
+metadata_expire=-1
+gpgcheck=1
+gpgkey=file:///home/tesync/localrepo/RPM-GPG-KEY-redhat-release
+
+[local_AppStream]
+name=local_AppStream
+baseurl=file:///home/tesync/localrepo/AppStream
+enabled=1
+metadata_expire=-1
+gpgcheck=1
+gpgkey=file:///home/tesync/localrepo/RPM-GPG-KEY-redhat-release
+
+
+
+
+nameserver 172.26.9.50

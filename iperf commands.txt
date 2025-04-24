@@ -1,0 +1,9 @@
+iperf 
+Client side:
+iperf  -c 10.99.10.93
+iperf  -c 10.99.10.93 -p 123
+
+
+server side
+iperf -s
+iperf -s -p 123

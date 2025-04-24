@@ -1,0 +1,86 @@
+Nginx configuration 
+--------------------------
+URl : https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+ 
+How To Install Linux, Nginx, MySQL, PHP (LEMP stack) in Ubuntu 16.04
+step 1: sudo apt-get update
+        sudo apt-get install nginx
+
+step 2 : You can enable this by typing:
+      ufw allow 'Nginx HTTP'
+You can verify the change by typing:
+       sudo ufw status
+http://server_domain_or_IP
+
+
+Step 3: Install MySQL to Manage Site Data
+
+ $ sudo apt-get install mysql-server
+$ mysql_secure_installation
+
+Step 4: Install PHP for Processing
+$ sudo apt-get install php-fpm php-mysql
+vim /etc/php/7.0/fpm/php.ini
+
+We will change both of these conditions by uncommenting the line and setting it to "0" like this:
+cgi.fix_pathinfo=0
+
+$ systemctl restart php7.0-fpm
+
+Step 5: Configure Nginx to Use the PHP Processor
+
+vim /etc/nginx/sites-available/default
+
+Currently, with the comments removed, the Nginx default server block file looks like this:
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name _;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
+
+The changes that you need to make are in red in the text below:
+
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.php index.html index.htm index.nginx-debian.html;
+
+    server_name server_domain_or_IP;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    }
+
+
+$ nginx -t
+$ systemctl reload nginx
+
+Step 6: Create a PHP File to Test Configuration
+
+vim /var/www/html/info.php
+
+<?php
+phpinfo();
+?>
+
+save and exit
+
+http://server_domain_or_IP/

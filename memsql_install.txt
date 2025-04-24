@@ -1,0 +1,23 @@
+MemSQL install:-
+-----------------------------------------
+Memsql download from internet  link  "http://www.memsql.com/download/" (COMMUNITY EDITION) and copy to linux system(usr/src/) then file come like "memsql-ops-5.5.3.tar"
+cd /usr/src/
+[root@qsrv2 src]# tar -xvf memsql-ops-5.5.3.tar.gz
+[root@qsrv2 src]# cd memsql-ops-5.5.3
+[root@qsrv2 memsql-ops-5.5.3]# ./install.sh
+
+with out internet following bellow:-
+
+For Community Edition, the download link is: "http://download.memsql.com/releases/latest/memsqlbin_amd64.tar.gz" and copy to specified path(/)
+[root@qsrv2 memsql-ops-5.5.3]# memsql-ops file-add -t memsql /memsqlbin_amd64.tar.gz
+[root@qsrv2 memsql-ops-5.5.3]# memsql-ops memsql-deploy -P 3307
+If you would like to use the Community edition, just press enter:(press Enter)
+then connect to memsql like "memsql -uroot -P3307"
+[root@qsrv2 memsql-ops-5.5.3]# memsql -uroot -P3307
+
+to start :- memsql-ops memsql-start
+to stop:- memsql-ops memsql-stop
+
+
+
+

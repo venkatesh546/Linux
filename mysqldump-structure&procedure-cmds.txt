@@ -1,0 +1,5 @@
+mysqldump -u [username] -p[password] -h [hostname] --no-data [database_name] > structure_backup.sql
+mysqldump -u [username] -p[password] -h [hostname] --no-create-info --no-data --routines [database_name] > procedures_backup.sql
+
+
+mysqldump -uksmppduser -pksmppdpass --all-databases --routines --triggers > INSMS_alldatabases.sql

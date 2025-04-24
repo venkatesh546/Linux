@@ -1,0 +1,154 @@
+Domain Name Server Configuration in RHEL 8 (CentOS 8):
+======
+DNS is a service that helps to resolve a fully qualified domain name (FQDN) into an IP address and additionally, perform a reverse translation- translation of an IP address to a user-friendly domain name.
+
+Step 1: Install bind DNS packages.
+dnf install bind bind-utils
+
+Start the DNS server using the command below:
+systemctl start named
+
+Next, enable it so that it can kick in even after a reboot
+systemctl enable named
+
+Just to be sure that the service is running as expected, check its status
+systemctl status named
+
+Step 2:  Configure bind DNS server
+Let’s take a backup of the config file  /etc/named.conf
+cp /etc/named.conf  /etc/named.bak
+
+Now go ahead and open the file using your preferred text editor.
+vim /etc/named.conf
+
+Under the ‘Options’  section, ensure you comment out the lines indicated below to enable the Bind DNS server to listen to all IPs.
+
+// listen-on port 53 { 127.0.0.1; }; 
+// listen-on-v6 port 53 { ::1; };
+
+Additionally, locate the allow-query parameter and adjust it according to your network subnet.
+
+allow-query { localhost; 192.168.1.0/24; };
+
+This setting allows only the hosts in the defined network to access the DNS server and not just any other host.
+
+To define the reverse and forward lookup zones, copy and paste the following configuration at the end of /etc/named.conf
+
+//forward zone
+zone "nehraclasses.local" IN {
+     type master;
+     file "nehraclasses.local.db";
+     allow-update { none; };
+     allow-query { any; };
+};
+
+//backward zone
+zone "1.168.192.in-addr.arpa" IN {
+     type master;
+     file "nehraclasses.local.rev";
+     allow-update { none; };
+     allow-query { any; };
+};
+
+Step 3: Create a forward DNS zone file for the domain
+
+vim /var/named/nehraclasses.local.db
+$TTL 86400
+@ IN SOA primary-dns.nehraclasses.local. admin.nehraclasses.local. (
+                                                2020011800 ;Serial
+                                                3600 ;Refresh
+                                                1800 ;Retry
+                                                604800 ;Expire
+                                                86400 ;Minimum TTL
+)
+
+;Name Server Information
+@ IN NS primary-dns.nehraclasses.local.
+
+;IP Address for Name Server
+primary-dns IN A 192.168.1.115
+
+;Mail Server MX (Mail exchanger) Record
+nehraclasses.local. IN MX 10 mail.nehraclasses.local.
+
+;A Record for the following Host name
+www  IN   A   192.168.1.50
+mail IN   A   192.168.1.60
+
+;CNAME Record
+ftp  IN   CNAME www.nehraclasses.local.
+
+
+Step 4: Create a reverse DNS zone file for the domain
+
+vim /var/named/nehraclasses.local.rev
+$TTL 86400
+@ IN SOA primary-dns.nehraclasses.local. admin.nehraclasses.local. (
+                                            2020011800 ;Serial
+                                            3600 ;Refresh
+                                            1800 ;Retry
+                                            604800 ;Expire
+                                            86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS primary-dns.nehraclasses.local.
+primary-dns     IN      A       192.168.1.115
+
+;Reverse lookup for Name Server
+35 IN PTR primary-dns.nehraclasses.local.
+
+;PTR Record IP address to Hostname
+50      IN      PTR     www.nehraclasses.local
+60      IN      PTR     mail.nehraclasses.local
+
+Next, assign the necessary file permissions to the two configuration files.
+chown named:named /var/named/nehraclasses.local.db
+chown named:named /var/named/nehraclasses.local.rev
+
+To confirm that the DNS zone lookup files are free from any syntactical errors, run the commands shown:
+
+named-checkconf
+named-checkzone nehraclasses.local /var/named/nehraclasses.local.db
+named-checkzone 192.168.1.115 /var/named/nehraclasses.local.rev
+
+For the changes to be reflected in the system, restart the Bind DNS server
+
+systemctl restart named
+
+Add Firewall Rule.
+
+firewall-cmd  --add-service=dns --zone=public  --permanent
+firewall-cmd --reload
+
+Step 5: Test the Bind DNS server from a client system
+
+vim /etc/resolv.conf
+nameserver 192.168.1.115
+
+vim /etc/sysconfig/networkk-scripts/ifcfg-ens033
+DNS=192.168.1.115
+
+systemctl restart NetworkManager
+
+Using the nslookup command test the Bind DNS server as shown:
+
+nslookup primary-dns.nehraclasses.local
+nslookup mail.nehraclasses.local
+nslookup www.nehraclasses.local
+nslookup ftp.nehraclasses.local
+nslookup 192.168.1.115
+
+
+The output from the nslookup command confirms that the forward DNS lookup is working as expected.
+
+Moreover, you can also use the dig command as shown
+
+dig primary-dns.nehraclasses.local
+
+To perform a reverse DNS lookup, use the dig command as shown:
+
+dig -x 192.168.1.115
+
+Perfect! The reverse DNS lookup is also working as we would expect.
+===
+©COPYRIGHT. ALL RIGHTS RESERVED

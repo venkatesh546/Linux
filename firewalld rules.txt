@@ -1,0 +1,28 @@
+172.16.100.80
+172.16.100.62
+172.16.100.42
+172.16.100.67
+
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.80" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.62" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.42" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.47" drop'
+
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.80" protocol value="icmp" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.80" service name="ssh" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.62" protocol value="icmp" drop'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="172.16.100.62" service name="ssh" drop'
+
+
+
+
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -d 172.16.100.62/32 -j DROP
+
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -d 10.200.206.218/32 -j DROP
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -d 10.200.206.219/32 -j DROP
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -d 10.200.206.220/32 -j DROP
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -d 10.200.206.222/32 -j DROP
+
+firewall-cmd --reload
+
+

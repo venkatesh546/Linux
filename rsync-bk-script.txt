@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Remote Server IP
+rserver=183.82.1.230
+
+#SSH Non-Stardard port number
+snsport=2228
+
+#Local backup location
+lbackuploc=/var/log/kannel
+
+#Remote backup location
+rbackuploc=/northbk/
+
+#date
+TIME=`date +%b-%d-%y`
+
+#rsync command with non-standard port
+rsync -avz -e "ssh -p $snsport" $lbackuploc $rserver:$rbackuploc/$TIME

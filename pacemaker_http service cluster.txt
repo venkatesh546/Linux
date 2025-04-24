@@ -1,0 +1,96 @@
+cluster install on centos high avilability
+---------------------------------------
+yum install pacemaker pcs (both servers)
+-----------------------------------
+vi /ets/sysconfig/selinux config
+selinux disabled
+-----------------------------------
+service pcsd restart (both servers)
+chkconfig pcsd on    (both servers)
+----------------------------------
+passwd hacluster (both servers)
+----------------------------------
+service iptables restart (both servers)
+firewall-cmd --permanent --add-service=high-avilability --
+firewall-cmd --add-service=high-avilability --
+service iptables reload
+-------------------------
+hostname (single server)
+----------------------
+pcs cluster auth qsrv1 qsrv2 -u hacluster (single server)
+-------------------------------
+pcs cluster setup --name hacluster qsrv1 qsrv2 --force (single server)
+--------------------------------
+pcs cluster start --all    (single server)
+-----------------------------
+chkconfig pcs on       (single server )
+-------------------------------
+pcs status       (both server)
+-------------------------
+pcs status corosync   (single server)
+--------------------------
+vi /etc/httpd/conf.d/server-status.conf  (both server)
+<Location /server-status>
+       SetHandler server-status
+       Order Deny,Allow
+       Allow from All
+</Location>
+---------------------------
+pcs property set stonith-enabled=flase      (single server)
+pcs property set no-quorum-policy=ignore
+pcs property set default-resource-stickiness="INFINITY'
+pcs property list
+-----------------------------------
+pcs resource create VirtIP IPaddr2 ip=10.99.11.10 cidr_netmask=19 op monitor interval-5s  (single server)
+pcs status resouces 
+pcs status
+---------------------------------
+
+yum install httpd (both server)
+------------------------------
+port add httpd 80  (both servers)
+service iptables restart
+service iptables reload
+-------------------------------
+(singleserver)
+pcs resource cerate Http apache configfile="/etc/httpd/conf/httpd.conf" statusurl="http://127.0.0.1/server-status" op monitor interval=5s
+pcs constraint colocation add httpd with VirtIP INFINITY
+pcs constraint order VirtIP then Httpd
+-----------------------------
+pcs status  (both servers)
+---------------------
+ping 10.99.11.10  (server1)
+vi /var/www/html/index.php
+<?php
+echo "<h1>dmz1.local-zone.net</h1>";
+?>
+:wq
+---------------------
+vi /etc/var/www/html/index.php  (server2)
+<?php
+echo "<h1>dmz2.local-zone.net</h1>";
+?>
+:wq
+----------------------------
+pcs cluster stop -all   (single server)
+pcs cluster start -all
+-------------------------------------
+pcs status  (both server)
+-----------------------------
+
+nmap localhost (single server port httpd open)
+pcs cluster stop qsrv1.example.com
+nmap localhost (single server port httpd not open)
+--------------------------
+pcs status (anther server)
+nmap localhost port 80 open
+------------------------
+
+
+-------------------------------
+
+
+
+
+
+>

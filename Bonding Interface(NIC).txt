@@ -1,0 +1,151 @@
+Linux Network bonding – setup guide (RHEL/Centos/Fedora6)
+Help : http://www.cloudibee.com/network-bonding-modes/
+for Centos 7  https://www.unixmen.com/linux-basics-create-network-bonding-on-centos-76-5/
+-----------------------------------------------
+Step 1.Create the file ifcfg-bond0 with the IP address, netmask and gateway. Shown below is my test bonding config file.
+# vim /etc/sysconfig/network-scripts/ifcfg-bond0
+DEVICE=bond0 
+IPADDR=192.168.1.12 
+NETMASK=255.255.255.0 
+GATEWAY=192.168.1.1 
+USERCTL=no 
+BOOTPROTO=none 
+ONBOOT=yes
+
+:wq
+------------------------------------------------
+Step 2.
+Modify eth0, eth1 and eth2 configuration as shown below. 
+Comment out, or remove the ip address, netmask, gateway and hardware address from each one of these files, 
+since settings should only come from the ifcfg-bond0 file above. 
+Make sure you add the MASTER and SLAVE configuration in these files.
+
+#vim /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0 
+BOOTPROTO=none 
+ONBOOT=yes 
+# Settings for Bond 
+MASTER=bond0 
+SLAVE=yes
+
+:wq
+-------------------------------------------------
+#vim /etc/sysconfig/network-scripts/ifcfg-eth1
+DEVICE=eth1 
+BOOTPROTO=none  
+ONBOOT=yes 
+USERCTL=no 
+# Settings for bonding 
+MASTER=bond0 
+SLAVE=yes
+
+:wq
+Note:Again ifcfg-eth2 also
+-----------------------------------------------
+Step 3.
+Set the parameters for bond0 bonding kernel module.Select the network bonding mode based on you need
+
+mode=0 (Balance Round Robin)
+mode=1 (Active backup)
+mode=2 (Balance XOR)
+mode=3 (Broadcast)
+mode=4 (802.3ad)
+mode=5 (Balance TLB)
+mode=6 (Balance ALB)
+------------------------------------------------
+Add the following lines to /etc/modprobe.d/modprobe.conf 
+#vim /etc/modprobe.d/modprobe.conf 
+
+# bonding commands 
+alias bond0 bonding 
+options bond0 mode=1 miimon=100
+
+:wq
+------------------------------------------------
+Step 4.Load the bond driver module from the command prompt.
+
+# modprobe bonding
+------------------------------------------------
+Step 5. Restart the network, or restart the computer.
+
+# service network restart # Or restart computer
+----------------------------------------------------
+step 6 : When the machine boots up check the proc settings.
+# cat /proc/net/bonding/bond0 
+
+Ethernet Channel Bonding Driver
+Bonding Mode: adaptive load balancing 
+Primary Slave: None 
+Currently Active Slave: eth2 
+MII Status: up 
+MII Polling Interval (ms): 100 
+Up Delay (ms): 0 
+Down Delay (ms): 0
+Slave Interface: eth2 
+MII Status: up 
+Link Failure Count: 0 
+Permanent HW addr: 00:13:72:80: 62:f0
+----------------------------------------------------
+Look at ifconfig -a and check that your bond0 interface is active. You are done!.
+-----------------------------------------------------
+To verify whether the failover bonding works..
+
+1) Do an ifdown eth0 and check /proc/net/bonding/bond0 and check the “Current Active slave”.
+2) Do a continuous ping to the bond0 ipaddress from a different machine and do a ifdown the active interface.
+3) The ping should not break.
+--------------------------------------------------------
+NIC Bonding Centos 7
+--------------------------
+If bonding module is not loaded on your linux box then use the below command to load.
+1)	# modprobe bonding
+To list the bonding module info, use following command.
+2)	# modinfo bonding
+Create a bond interface file (ifcfg-bond0) under the folder “/etc/sysconfig/network-scripts/”
+3) # vi ifcfg-bond0
+DEVICE=bond0
+TYPE=Bond
+NAME=bond0
+BONDING_MASTER=yes
+BOOTPROTO=none
+ONBOOT=yes
+IPADDR=192.168.1.70
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+BONDING_OPTS="mode=5 miimon=100"
+
+save & exit
+ Edit the NIC interface files  For ifcfg-enp0s3
+4) vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+TYPE=Ethernet
+BOOTPROTO=none
+DEVICE=enp0s3
+ONBOOT=yes
+HWADDR="08:00:27:69:60:c9"
+MASTER=bond0
+SLAVE=yes
+
+save & exit
+
+For ifcfg-enp0s8
+5) 	# cat /etc/sysconfig/network-scripts/ifcfg-enp0s8
+TYPE=Ethernet
+BOOTPROTO=none
+DEVICE=enp0s8
+ONBOOT=yes
+HWADDR="08:00:27:ea:71:8d"
+MASTER=bond0
+SLAVE=yes
+save & exit
+
+Restart the Network Service
+6)systemctl restart network.service
+7)ifconfig
+Use following command to view bond interface settings like bonding mode & slave interface.
+8) # cat /proc/net/bonding/bond0
+To test the fault tolerance we can down one interface and check whether you are still able access the server.
+9) # ifdown enp0s8
+--------------------------------------------------------
+
+
+
+
