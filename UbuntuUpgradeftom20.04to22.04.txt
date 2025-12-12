@@ -1,0 +1,13 @@
+Ubuntu Upgrade ftom 20.04 to 22.04 and 22.04 to 24.04
+Step1 : lsb_release -a
+Step2: apt update
+step3: apt upgrade
+step4: reboot
+step5: /etc/update-manager/release-upgrades
+Prompt=lts
+:wq
+step6: do-release-upgrade
+step7 : press Y for reboot
+step8: lsb_release -a
+step9: uptime & uname -r
+--------------------------
