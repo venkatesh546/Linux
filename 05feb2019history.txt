@@ -1,0 +1,296 @@
+    1  ifconfig
+    2  yum install net-tools
+    3  yum install vim mlocate
+    4  vim /etc/selinux/config 
+    5  systemctl stop firewalld
+    6  systemctl disable firewalld
+    7  init 6
+    8  yum install redis
+    9  yum install redis*
+   10  ping 8.8.8.8
+   11  yum install redis
+   12  updatedb
+   13  yum install redis
+   14  yum install epel-release
+   15  vim /etc/resolv.conf 
+   16  yum install epel-release
+   17  yum install redis
+   18  systemctl status redis
+   19  systemctl start redis
+   20  systemctl enable redis
+   21  tail -f /var/log/redis/redis.log 
+   22  cd /var/lib/redis/
+   23  ls
+   24  cd
+   25  vim /etc/redis.conf 
+   26  systemctl restart redis
+   27  journalctl -xe
+   28  systemctl status fiorewalld
+   29  systemctl status firewalld
+   30  ifconfig 
+   31  systemctl stop firewalld
+   32  systemctl start firewalld
+   33  systemctl restart firewalld
+   34  cd /home/
+   35  ls -ltrh
+   36  cd /var/lib/redis/
+   37  ls
+   38  cd ..
+   39  cp -r redis/ /home/
+   40  cd /home/redis/
+   41  l;s
+   42  ls
+   43  systemctl restart firewalld
+   44  systemctl restart redis
+   45  systemctl stop firewalld
+   46  systemctl restart redis
+   47  journalctl -xe
+   48  vim /etc/redis.conf 
+   49  systemctl restart redis
+   50  journalctl -xe
+   51  systemctl restart firewalld
+   52  firewall-cmd --permanent --zone=redis --add-port=6379/tcp
+   53  firewall-cmd --permanent --zone=public --add-port=6379/tcp
+   54  ifconfig 
+   55  init 6
+   56  ifconfig 
+   57  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+   58  systemctl restart network
+   59  ifconfig 
+   60  cat /etc/redhat-release 
+   61  ifconfig 
+   62  vim /etc/redis.conf 
+   63  systemctl restart redis
+   64  journalctl -xe
+   65  systemctl status firewalld
+   66  redis-server\
+   67  redis-server
+   68  services start redis
+   69  systemctl start redis
+   70  vim /etc/redis.conf 
+   71  systemctl start redis
+   72  systemctl restart redis
+   73  systemctl status redis
+   74  vim /etc/redis.conf 
+   75  systemctl restart redis
+   76  journalctl -xe
+   77  vim /etc/redis.conf 
+   78  systemctl restart redis
+   79  cd /var/lib/redis/
+   80  ls
+   81  cd /home/redis/
+   82  ls
+   83  cd ..
+   84  rm -rf redis/
+   85  cp -r /var/lib/redis/ /home/
+   86  chmod 755 -R /home/redis/
+   87  vim /etc/redis.conf 
+   88  systemctl restart redis
+   89  systemctl status redis
+   90  systemctl start redis
+   91  systemctl status redis
+   92  systemctl status firewalld
+   93  redis-cli 
+   94  systemctl restart  redis
+   95  systemctl status redis
+   96  systemctl enable redis
+   97  systemctl restart  redis
+   98  updatadb
+   99  updatedb
+  100  redis-cli 
+  101  brew service restart redis
+  102   service restart redis
+  103  systemctl restart redis
+  104  systemctl status redis
+  105  cd /var/lib/redis/
+  106  ls
+  107  cd ..
+  108  vim /etc/redis.conf 
+  109  systemctl restart redis
+  110  redis-cli 
+  111  vim /etc/redis.conf 
+  112  cp -r /var/lib/redis/ /home/redis/
+  113  mv /var/lib/redis/ /home/
+  114  cd redis/
+  115  ls
+  116  cd ../
+  117  cd
+  118  rm -rf /home/redis/
+  119  mv /var/lib/redis/ /home/
+  120  vim /etc/redis.conf 
+  121  systemctl restart redis
+  122  systemctl status redis
+  123  redis-cli 
+  124  yum install redis-perl
+  125  redis-cli 
+  126  rpm -qa | grep redis
+  127  cd /home/redis/
+  128  ls -ltrh
+  129  yum install perl-Redis
+  130  ping 59.91.63.150
+  131  telnet  59.91.63.150 22
+  132  cd /root/
+  133  ls -ltrh
+  134  vim import_redis_dnd.pl 
+  135  mkdir /home/tesync/redis_DNDdata_import_delete_script_DB2
+  136  mkdir /home/tesync/dnddata
+  137  vim import_redis_dnd.pl 
+  138  ls -ltrhg
+  139  chmod 777 import_redis_dnd.pl 
+  140  ./import_redis_dnd.pl 
+  141  perl import_redis_dnd.pl 
+  142  cd 
+  143  cd /home/tesync/dnddata/
+  144  chmod 777 522019.csv 
+  145  cd -
+  146  ls -ltrh
+  147  perl import_redis_dnd.pl 522019.csv 
+  148  cd /home/redis/
+  149  ls -ltrh
+  150  rpm -qa | grep redis
+  151  rpm -e redis-3.2.12-2.el7.x86_64
+  152  rpm -qa | grep redis
+  153  rpm -qa | grep redis*
+  154  redis-cli
+  155  cd /home/redis/
+  156  ;s
+  157  ls
+  158  ls -ltrh
+  159  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  160  systemctl restart network
+  161  cd /usr/src/
+  162  ls -ltrh
+  163  mv /home/redis/redis-5.0.3-1.el7.remi.x86_64.rpm .
+  164  mv /home/redis/redis-devel-5.0.3-1.el7.remi.x86_64.rpm .
+  165  ls -ltrh
+  166  rpm -ivh redis-5.0.3-1.el7.remi.x86_64.rpm 
+  167  rpm -ivh redis-devel-5.0.3-1.el7.remi.x86_64.rpm 
+  168  ls
+  169  cd
+  170  systemctl status redis
+  171  systemctl start redis
+  172  systemctl status redis
+  173  ls -ltrh
+  174  redis-server --version
+  175  vim /etc/redis.conf
+  176  mv /var/lib/redis/ /home/venkatesh/redis
+  177  mkdir /home/venkatesh/redis
+  178  cd /home/
+  179  ls
+  180  mkdir venkatesh 
+  181  cd venkatesh/
+  182  mkdir redis
+  183  cd
+  184  mv /var/lib/redis/ /home/venkatesh/redis/.
+  185  systemctl restart redis
+  186  systemctl status redis
+  187  systemctl restart redis
+  188  systemctl status redis
+  189  cd /home/venkatesh/redis/
+  190  ls -ltrh
+  191  cd redis/ ../../.
+  192  ls
+  193  pwd
+  194  mv * ../../.
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd redis/
+  201  ls
+  202  rm -rf redis/
+  203  ls
+  204  cd ..
+  205  ls
+  206  mv dump.rdb redis/.
+  207  cd redis/
+  208  ls
+  209  pwd
+  210  vim /etc/redis.conf
+  211  updatedb
+  212  systemctl restart redis
+  213  systemctl status redis
+  214  cd /var/lib/
+  215  ls
+  216  cd /home/venkatesh/
+  217  ls
+  218  cd redis/
+  219  ls
+  220  cd ..
+  221  ls
+  222  mv /home/venkatesh/redis /var/lib/.
+  223  vim /etc/redis.conf
+  224  systemctl restart redis
+  225  vim /etc/redis.conf
+  226  systemctl restart redis
+  227  systemctl status redis
+  228  systemctl status firewalld
+  229  systemctl restart redis
+  230  cd /var/lib/redis/
+  231  ls
+  232  redis-cli 
+  233  cd /var/lib/redis/
+  234  ls
+  235  systemctl restart redis
+  236  systemctl stop redis
+  237  systemctl start redis
+  238  ls
+  239  cd
+  240  cd -
+  241  ls\
+  242  ls
+  243  systemctl restart redis
+  244  systemctl status redis
+  245  vim /etc/redis.conf
+  246  systemctl restart redis
+  247  systemctl status redis
+  248  rpm -qa | grep redis
+  249  rpm -e redis-5.0.3-1.el7.remi.x86_64
+  250  ls
+  251  cd ..
+  252  rm -rf redis/
+  253  cd
+  254  cd /usr/src/
+  255  ls 
+  256  rpm -ivh redis-5.0.3-1.el7.remi.x86_64.rpm 
+  257  cd /var/lib/redis/
+  258  ls
+  259  cd
+  260  vim /etc/redis.conf
+  261  systemctl restart redis
+  262  systemctl status redis
+  263  cd /var/lib/redis/
+  264  ls
+  265  ls -ltrh
+  266  systemctl status redis
+  267  systemctl restart redis
+  268  ls
+  269  ls -ltrh
+  270  redis-cli 
+  271  ls -ltrh
+  272  cd ..
+  273  ls
+  274  cd /home/venkatesh/
+  275  ls
+  276  cd -
+  277  mv redis/ /home/venkatesh/.
+  278  vim /etc/redis.conf
+  279  systemctl restart redis
+  280  systemctl status redis
+  281  redis-cli 
+  282  cd /home/
+  283  ls
+  284  cd redis/
+  285  ;s
+  286  ls
+  287  mv * ../venkatesh/redis/.
+  288  systemctl restart redis
+  289  systemctl status redis
+  290  systemctl restart redis
+  291  systemctl status redis
+  292  redis-cli 
+  293  redis-server -v
+  294  redis-cli 
+  295  history
+  296  history > 05feb2019history.txt
