@@ -1,0 +1,19 @@
+tcpdump -i eth2 -s 0 -w nethserver20171229-1.pcap
+tcpdump -i eth3 -s 0 -w nginx20171229-1.pcap
+tcpdump -i eth0 -s 0 -w wap320171229-1.pcap
+tcpdump -i eno1 'port 5666' -s 0 -w nrpe.pcap
+
+tcpdump -i 45.79.127.206 'port 14000' -s 0 -w 2ndnginx.pcap
+
+tcpdump -i bond0 dst 45.79.127.206 'port 14000' -s 0 -w 2ndnginx.pcap
+
+
+tcpdump   -i ens224  -i ens256 -s 0 -w dialogvm1_2.pcap
+
+tcpdump -i any -w 20191219.pcap eth2
+
+tcpdump -i eth0 port 3307 db.pcap
+
+tcpdump -i any  -w DOKannel.pcap
+
+tcpdump port 3306 -n
