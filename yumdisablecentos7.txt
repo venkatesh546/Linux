@@ -1,0 +1,9 @@
+yum disable in centos-7
+--------------------
+systemctl status packagekit
+systemctl stop packagekit
+systemctl disable packagekit
+
+vim /etc/yum.conf
+exclude=kernel*
+	
