@@ -1,0 +1,20 @@
+
+touch.exe file{1..5}
+mkdir dir{1..5}
+git init
+git config --global user.name venkatesh
+git config --global user.email venkatesh@gmail.com
+touch.exe dir1/test1 dir2/test2 dir3/test3 dir4/test4 dir5/test5
+ls -ltrh
+git status
+git add .
+git status
+git commit -m "added new files"
+git config --global user.name bhavana
+git config --global user.email bhavana@gmail.com
+touch	b1 b2 b3 4 b5
+git add .
+git status
+git commit -m "added new files for bhavana"
+git log
+git show e262412f56af177300cc96a8e6a2309654ae1cf8
