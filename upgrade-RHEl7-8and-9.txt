@@ -1,0 +1,93 @@
+https://chatgpt.com/share/685d5e4d-dc3c-8000-8bd0-008b397ce3c6 --->offline migration from rhel-7.8 to rhel-8.10
+https://www.tecmint.com/upgrade-from-rhel-7-to-rhel-8/
+subscription-manager repos --enable rhel-7-server-extras-rpms
+yum install -y \
+openscap-scanner scap-security-guide \
+yum-utils tmux vim curl wget vdo net-tools bind-utils traceroute telnet nmap \
+gcc gcc-c++ make cmake automake autoconf kernel-devel kernel-headers libtool pkgconfig \
+sysstat iotop iptraf lsof strace tcpdump \
+selinux-policy setools-console policycoreutils firewalld audit aide \
+chrony ntp lvm2 xfsprogs parted gdisk nfs-utils kexec-tools \
+mariadb mariadb-server sqlite \
+httpd mod_ssl php php-mysql python3 python3-pip \
+python3-policycoreutils openssl openssl-devel device-mapper-multipath libzip libzip-devel
+
+modprobe -r pata_acpi
+or
+lsmod | grep pata_acpi
+dmesg | grep pata_acpi
+echo "blacklist pata_acpi" >> /etc/modprobe.d/blacklist.conf
+dracut -f
+
+leapp answer --section remove_pam_pkcs11_module_check.confirm=True
+Please run "alternatives --set python /usr/bin/python3" after upgrade
+-----------------------------------------------
+update php from 7.3 to 8.2 in rhel 8 and 9
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+dnf module list php
+dnf module reset php
+dnf module install php:remi-8.2
+-------------------------------------------------
+[root@rhel-7 ~]# php -v
+PHP Warning:  PHP Startup: Unable to load dynamic library 'zip.so' (tried: /usr/lib64/php/modules/zip.so (/usr/lib64/php/modules/zip.so: undefined symbol: zip_register_cancel_callback_with_state), /usr/lib64/php/modules/zip.so.so (/usr/lib64/php/modules/zip.so.so: cannot open shared object file: No such file or directory)) in Unknown on line 0
+PHP 8.2.25 (cli) (built: Oct 22 2024 15:12:03) (NTS gcc x86_64)
+Copyright (c) The PHP Group
+Zend Engine v4.2.25, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.25, Copyright (c), by Zend Technologies
+[root@rhel-7 ~]#
+[root@rhel-7 ~]# yum install libzip libzip-devel
+[root@rhel-7 ~]# php -v
+PHP 8.2.25 (cli) (built: Oct 22 2024 15:12:03) (NTS gcc x86_64)
+Copyright (c) The PHP Group
+Zend Engine v4.2.25, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.25, Copyright (c), by Zend Technologies
+[root@rhel-7 ~]#
+--------------------------------------------------------
+I completed from rhel-7.9 to rhel-8.10 --> now upgrade from rhel-8.10 to rhel-9.6 use below commands
+before do that stop all application , db and disable database 
+rm -rf /root/tmp_leapp_py3   (optional if u have upgraded from rhel 7 to rhel 8.10 use this command)
+dnf update
+reboot
+--
+[root@rhel-8 ~]# rpm -qa | grep leapp
+leapp-upgrade-el7toel8-0.20.0-13.el7_9.noarch
+leapp-repository-deps-el8-5.0.8-100.202401121819Z.0e51aebb.master.el8.noarch
+python2-leapp-0.17.0-2.el7_9.noarch
+leapp-deps-el8-5.0.8-100.202401121819Z.0e51aebb.master.el8.noarch
+leapp-0.17.0-2.el7_9.noarch
+[root@rhel-8 ~]# rpm -e leapp-upgrade-el7toel8-0.20.0-13.el7_9.noarch leapp-repository-deps-el8-5.0.8-100.202401121819Z.0e51aebb.master.el8.noarch python2-leapp-0.17.0-2.el7_9.noarch leapp-deps-el8-5.0.8-100.202401121819Z.0e51aebb.master.el8.noarch leapp-0.17.0-2.el7_9.noarch
+---
+subscription-manager repos --enable rhel-8-for-x86_64-baseos-rpms \
+                           --enable rhel-8-for-x86_64-appstream-rpms \
+                           --enable rhel-8-for-x86_64-highavailability-rpms \
+                           --enable rhel-8-for-x86_64-supplementary-rpms \
+                           --enable codeready-builder-for-rhel-8-x86_64-rpms
+--
+vi /etc/dnf/dnf.conf
+exclude=python2-leapp,snactor,leapp-upgrade-el7toel8,leapp  commect the line
+--
+dnf install leapp leapp-repository leapp-upgrade-el8toel9
+--
+leapp preupgrade
+--
+for Inhibitors error:--> following below for sloution
+1) yum install vdo
+2) leapp answer --section check_vdo.confirm=True
+3) /etc/ssh/sshd_config --> comment the PermitRootLogin yes
+--
+again run 
+leapp preupgrade
+--
+leapp upgrade
+--
+reboot
+---
+cat /etc/redhat-release
+uname -r
+--
+
+subscription-manager repos --enable rhel-9-for-x86_64-baseos-rpms
+subscription-manager repos --enable rhel-9-for-x86_64-appstream-rpms
+
+
