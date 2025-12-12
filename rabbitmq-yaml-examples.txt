@@ -1,0 +1,75 @@
+https://getbetterdevops.io/how-to-deploy-rabbitmq-with-the-cluster-kubernetes-operators/
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: definition
+spec:
+  ports:
+  - protocol: TCP
+    port: 1339
+    targetPort: 15672
+    port: 1340
+    targetPort: 5672
+  type: NodePort
+
+  replicas: 1
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 800m
+      memory: 1Gi
+spec:
+  service:
+    type: LoadBalancer
+spec:
+  service:
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+~
+~
+~
+spec:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 1Gi
+    limits:
+      cpu: 100m
+      memory: 1G
+
+spec:
+  rabbitmq:
+    additionalConfig: |
+      default_user=guest
+      default_pass=guest
+----------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: venkatesh-rqsvc    
+spec:
+  selector:
+    app:   rqsvc   
+  ports:
+  - protocol: TCP
+    port: 1337
+    targetPort: 15672
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: rqsvc
+spec:
+  selector:
+    matchLabels:
+      app: rqsvc
+  serviceName: "rqsvc"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rqsvc
+ 

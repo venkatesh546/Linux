@@ -1,0 +1,69 @@
+https://www.zerostopbits.com/how-to-upgrade-mysql-5-1-to-mysql-5-5-on-centos-6-7/
+https://www.zerostopbits.com/how-to-upgrade-php-5-4-to-php-5-6-on-centos-7-5-1804/
+
+
+update php&mysql on centos 6.6
+
+step1 : check php version     php -v
+-------------------------------
+step 2 : Install the Remi and EPEL RPM repositories
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && rpm -Uvh epel-release-latest-6.noarch.rpm
+
+ 
+
+wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm && rpm -Uvh remi-release-6*.rpm
+--------------------------------
+step 3 : Enable the REMI repository globally:
+vim /etc/yum.repos.d/remi.repo
+
+Under the section that looks like [remi] make the following changes:
+[remi]
+name=Remi's RPM repository for Enterprise Linux 6 - $basearch
+#baseurl=http://rpms.remirepo.net/enterprise/6/remi/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/6/remi/mirror
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+Also, under the section that looks like [remi-php55] make the following changes:
+[remi-php56]
+name=Remi's PHP 5.6 RPM repository for Enterprise Linux 6 - $basearch
+#baseurl=http://rpms.remirepo.net/enterprise/6/php56/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/6/php56/mirror
+# WARNING: If you enable this repository, you must also enable "remi"
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+:wq
+----------------
+step 4 : Upgrade PHP 5.3 to PHP 5.6
+yum -y upgrade php*
+php -v
+-----------------
+
+Upgrade mysql 5.1 to 5.5 on centos6.6
+step 1 : check mysql package    rpm -qa | grep mysql
+--------------
+step 2 :  Install and activate the REMI and EPEL RPM Repositories
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && rpm -Uvh epel-release-latest-6.noarch.rpm
+
+wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm && rpm -Uvh remi-release-6*.rpm
+--------------------
+step 3 : Now to enable the REMI repository globally:
+vim /etc/yum.repos.d/remi.repo
+Under the section that looks like [remi] make the following changes:
+[remi]
+name=Remi's RPM repository for Enterprise Linux 6 - $basearch
+#baseurl=http://rpms.remirepo.net/enterprise/6/remi/$basearch/
+mirrorlist=http://rpms.remirepo.net/enterprise/6/remi/mirror
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+
+:wq
+---------------
+step 4 :Update MySQL from 5.1 to 5.5
+yum -y update mysql*
+rpm -qa | grep mysql
+----------------
+
+ 

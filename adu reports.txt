@@ -1,0 +1,104 @@
+hpacucli ctrl all diag file=/root/ADUReport.zip
+
+unzip ADUReport.zip
+
+rm -rf  ADUReport.txt .....
+
+rm -rf ADUReport.zip
+===================================================
+
+top (to check cpu usage)
+
+===================================================
+
+Temparature:
+
+hpasmcli
+
+show(temparature)
+
+====================================================
+
+hard disk space:
+
+df -h (to check hdd size)
+
+====================================================
+
+To free cache:
+
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+
+ram usage:
+
+free -m(free ram) and cache memory
+
+
+====================================================
+date
+====================================================
+
+database performance:
+
+mysqladmin -uroot -pL@nkadb_9*7 status 
+
+
+
+====================================================
+
+database size:
+
+cd /var/lib/mysql
+
+du-sh
+
+
+====================================================
+hutch:
+====================================================
+
+mysqladmin -uroot -proot12 status 
+
+====================================================
+mobitel
+====================================================
+
+mysqladmin -uroot -ptesync_DB_2013 status 
+
+====================================================
+slt (database)(application)
+====================================================
+
+mysqladmin -uroot -pDb_0bm0L0C_Tlc status 
+
+====================================================
+Etisalat
+====================================================
+
+mysqladmin -uroot -ptesync9*7 status 
+
+====================================================
+dialog
+====================================================
+
+mysqladmin -uroot -pTSdia_DBPASS_36 status 
+
+====================================================
+airtel(111)
+====================================================
+
+mysqladmin -uroot -proot12 status
+
+====================================================
+airtel(117)
+====================================================
+
+mysqladmin -uroot -pTeSync@2014@airtel status
+
+====================================================
+airtel (114)(116)
+====================================================
+
+mysqladmin -uroot -ptesync status
+

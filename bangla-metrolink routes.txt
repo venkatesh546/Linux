@@ -1,0 +1,13 @@
+ip route add 10.231.0.16/28 via 172.30.24.1 dev eth1
+ip route add 172.16.249.0/24 via 172.30.24.1 dev eth1
+
+10.231.0.16/28 via 172.30.24.1 dev eth1
+172.16.249.0/24 via 172.30.24.1 dev eth1
+
+172.30.24.0/24 dev eth1 src 172.30.24.10 table eth1_if
+default via 172.30.24.1 dev eth1 src 172.30.24.10 table eth1_if
+~
+
+
+telnet  172.16.249.43 6011
+telnet  172.16.249.43 6012

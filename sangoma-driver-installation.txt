@@ -1,0 +1,64 @@
+reference : http://wiki.sangoma.com/wanpipe-linux-asterisk-zaptel
+
+
+1)Zaptel Installation
+ 
+Download Zaptel into arbitrary directory (/usr/src) and  untar it.
+
+    #>tar xvfz zaptel-<version>
+    #>ln -s zaptel-<version> zaptel
+    #>cd zaptel-<version>
+    #>./configure
+    #>make
+    #>make install
+
+2)# LibPRI Installation
+Download libpri into arbitrary directory (/usr/src) and untar it.
+
+    #>tar xvfz libpri-<version>
+    #>cd libpri-<version>
+    #>make
+    #>make install
+
+3)Download Asterisk into arbirary directory  (/usr/src/) and untar it.
+Untar Asterisk and proceed with installation
+
+    #>tar xvfz asterisk-<version>.tgz
+    #>cd asterisk-<version>
+    #>./configure     
+    #>make
+    #>make install
+
+    #>make samples (in case of very first install)
+
+4)Wanpipe installation
+
+Wanpipe TDM/Zaptel Installation (Linux)
+
+   1. Download the Wanpipe Driver --> wanpipe-3.4.4.tgz
+      --
+
+          #>tar xvfz wanpipe-<version>.tgz
+          #>cd wanpipe-<version>
+
+
+   3. Run ./Setup install 
+	yes yes....
+	[1-11] select 2
+	y
+	y...
+
+	2 - select E1
+	1
+	1- select normal
+	1 
+	5
+	1
+	2
+	1
+	1
+			
+	
+
+
+

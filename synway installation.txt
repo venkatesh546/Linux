@@ -1,0 +1,11 @@
+#cd /home/tesync/bin
+./ss7d Ss7Server.ini &
+./test
+
+
+wanrouter status
+asterisk -r
+dahdi show status
+ss7 link status
+core set verbose  1111111
+core set debug 15

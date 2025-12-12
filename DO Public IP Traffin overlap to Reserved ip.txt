@@ -1,0 +1,33 @@
+https://docs.digitalocean.com/products/networking/reserved-ips/how-to/outbound-traffic/
+
+curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/anchor_ipv4/gateway
+ip route del 0/0; ip route add default via 10.47.0.1 dev eth0
+curl ifconfig.me
+139.59.52.48
+------------------------------------------------------
+Persist Outbound Reserved IP Traffic After Reboot
+echo "network: {config: disabled}" | sudo tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+
+Login into CentOS-8 
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
+# Created by cloud-init on instance boot automatically, do not edit.
+#
+BOOTPROTO=none
+DEFROUTE=yes
+DEVICE=eth0
+GATEWAY=10.47.0.1
+#GATEWAY=139.59.32.1
+HWADDR=16:4f:1e:e7:25:59
+IPADDR=139.59.35.41
+IPADDR1=10.47.0.8
+MTU=1500
+NETMASK=255.255.240.0
+NETMASK1=255.255.0.0
+ONBOOT=yes
+TYPE=Ethernet
+USERCTL=no
+Save and close the configuration file, then reboot the Droplet:
+
+reboot
+--------------------------
+

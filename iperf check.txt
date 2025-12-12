@@ -1,0 +1,110 @@
+Reference URL 
+https://unix.stackexchange.com/questions/291360/running-iperf-over-ssh
+
+TEST1
+1Gbps Local Server
+#ssh -L7001:localhost:7001 -R7002:localhost:7002 59.91.63.148 -p 4001
+After logging in to Secondary Server 
+#iperf -s -p 7001
+##############
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-30.0 sec  1.25 GBytes    357 Mbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-30.1 sec  1.25 GBytes    357 Mbits/sec
+#############
+
+Again Login to 1Gbps Local Server and run below command
+#iperf -c localhost -p 7001 -L 7002 -d -t 30
+#############
+------------------------------------------------------------
+[  4] local 127.0.0.1 port 34368 connected with 127.0.0.1 port 7001
+[  5] local 127.0.0.1 port 7002 connected with 127.0.0.1 port 59642
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-30.0 sec  1.25 GBytes   358 Mbits/sec
+[  5]  0.0-30.0 sec  2.49 GBytes   712 Mbits/sec
+##############
+
+Tested Conducted on 25-11-2019 15:30
+183.82.104.122  -- >   59.91.63.148
+
+___________________________________________
+TEST2
+Web Server2
+#iperf -s -p 161
+####################################
+------------------------------------------------------------
+Server listening on TCP port 161
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  4] local 10.147.212.51 port 161 connected with 103.255.146.164 port 9958
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-11.5 sec  7.62 MBytes  5.57 Mbits/sec
+########################################
+JumpServer_new
+#iperf -c 59.91.63.150 -p 161
+------------------------------------------------------------
+Client connecting to 59.91.63.150, TCP port 161
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.100.10 port 40268 connected with 59.91.63.150 port 161
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.3 sec  7.62 MBytes  6.19 Mbits/sec
+
+Tested Conducted on 25-11-2019 16:00
+103.255.146.164  -- >   59.91.63.150
+
+--------------------------------------------
+
+[root@webserver2 ~]# iperf -s -p 161
+------------------------------------------------------------
+Server listening on TCP port 161
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  4] local 10.147.212.51 port 161 connected with 103.255.146.164 port 14739
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-10.2 sec  74.5 MBytes  61.2 Mbits/sec
+#########################################################
+[root@pioneer-jumpserver1-new ~]# iperf -c 59.91.63.150 -p 161
+------------------------------------------------------------
+Client connecting to 59.91.63.150, TCP port 161
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.100.10 port 34880 connected with 59.91.63.150 port 161
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  74.5 MBytes  62.1 Mbits/sec
+[root@pioneer-jumpserver1-new ~]#
+
+Tested condected on 11/06/2020 15:33
+103.255.146.164  -- >   59.91.63.150
+-------------------------------------------------
+1Gbps Local Server
+#ssh -L7001:localhost:7001 -R7002:localhost:7002 59.91.63.148 -p 4001
+After logging in to Secondary Server 
+[root@secondaryserver ~]# iperf -s -p 7001
+
+[  6] local 127.0.0.1 port 57994 connected with 127.0.0.1 port 7002
+Waiting for server threads to complete. Interrupt again to force quit.
+[ ID] Interval       Transfer     Bandwidth
+[  6]  0.0-30.0 sec    342 MBytes  95.5 Mbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-31.2 sec    347 MBytes  93.4 Mbits/sec
+[root@secondaryserver ~]#
+Again Login to 1Gbps Local Server and run below command
+#iperf -c localhost -p 7001 -L 7002 -d -t 30
+Client connecting to localhost, TCP port 7001
+TCP window size: 2.50 MByte (default)
+------------------------------------------------------------
+[  4] local 127.0.0.1 port 47148 connected with 127.0.0.1 port 7001
+[  5] local 127.0.0.1 port 7002 connected with 127.0.0.1 port 40988
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-30.1 sec   347 MBytes  96.8 Mbits/sec
+[  5]  0.0-30.0 sec   673 MBytes   188 Mbits/sec
+[root@wap1 ~]#
+
+
+
+
+
+
+
+

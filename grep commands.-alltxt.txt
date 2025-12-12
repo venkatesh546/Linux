@@ -1,0 +1,3 @@
+find /etc/nginx/conf.d/ -type f -exec grep -H 'tsl1.gamesmobi.net' {} \;
+find /etc/nginx/sites-available/ -type f -exec grep -H 'tsl1.gamesmobi.net' {} \;
+

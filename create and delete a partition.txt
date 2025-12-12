@@ -1,0 +1,71 @@
+how to create a partition on centos 6.7/7
+--------------check partititon---------------
+fdisk -l
+-----------------create a partition----------------we are using  vm ---------------
+fdisk /dev/xvda               
+--------------------format the partition------------------
+partprobe /dev/xvda
+mkfs -t ext4 /dev/xvda5
+mkfs -t ext4 /dev/xvda6
+---------------------------------------------------------
+mkdir /dd
+-------------------add the mount partition----------------
+mount /dev/xvda5 /dd
+--------------------create a another dir----------------------
+mkdir /ff
+mount /dev/xvda6 /ff
+-------------------added the filesystem type-------------------------
+vim /etc/fstab
+
+/dev/xvda5      /dd        ext4 defaults  0 0
+/dev/xvda6      /ff          ext4 defaults  0 0
+---------------------------------------------check size of partition-------------
+df -h
+fdisk -l
+
+--------how to remove partitions on centos 7/6.7----------------------------------
+------------------------------check the partition-----------------
+fdisk -l
+------------------------------create a partition table---------------
+fdisk /dev/sda  or fdisk /dev/sdb           or fdsik /dev/xvda        (for requirement)
+d    is delete the partition
+6  number of patition
+
+d    is delete the partition
+5 number of partition
+
+p   print the partition
+w save and exit
+--------------------------------
+---------------umount the partition-------------------
+mount
+umount -t -f /dev/xvda5
+umount -t -f /dev/xvda6
+-----------------------------------------check the partition
+fdisk -l
+df -h
+-------------------
+then partitions are deleted sucessfully
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

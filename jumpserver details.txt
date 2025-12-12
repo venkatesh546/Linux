@@ -1,0 +1,14 @@
+103.255.146.164  14657
+
+
+192.168.2.106  14657
+7pfypg9QnBjC
+
+pgrep -c sshd
+pkill --signal HUP sshd
+check again===> pgrep -c sshd
+Ps -ef | grep ssh |xargs kill -9
+
+
+
+ 

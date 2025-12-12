@@ -1,0 +1,109 @@
+Apache-cassandra-2.2.9 installation on centos6.6
+---------------------------------------------------
+server requirements....
+1. centos-6.6 64bit
+2: python2.7.6
+3:java1.8
+these r required for installing apache-cassandra........
+-----------------------------
+step 1 : update java1.8
+step2: update python2.6 to 2.7
+step 3:cd /home
+step 4:wget http://mirror.fibergrid.in/apache/cassandra/2.2.9/apache-cassandra-2.2.9-bin.tar.gz
+step 5:cd apache-cassandra-2.2.9/bin
+step 6 : ./cassandra
+take one dublicate tab
+step7 : cd  /home/cassandra/apache-cassandra-2.2.9/bin
+step 8: ./cqlsh
+Connected to Test Cluster at 127.0.0.1:9042.
+[cqlsh 5.0.1 | Cassandra 2.2.5 | CQL spec 3.3.1 | Native protocol v4]
+Use HELP for help.
+cqlsh> 
+=======================================================
+cqlsh>  CREATE KEYSPACE tutorialspoint WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+=======================================================
+cqlsh> DESCRIBE keyspaces;
+
+"RestCommSMSC"   tutorialspoint  system              system_traces
+"VenkateshSMSC"  system_auth     system_distributed
+=======================================================
+cqlsh> use "RestCommSMSC"  ;
+cqlsh:RestCommSMSC>
+========================================================
+cqlsh:RestCommSMSC> CREATE TABLE cassandra(cassandra_id int PRIMARY KEY,cassandra_name text,cassandra_city text,cassandra_sal varint,cassandra_phone varint)  ;
+========================================================
+cqlsh:RestCommSMSC> select * from cassandra;
+
+ emp_id | emp_city | emp_name | emp_phone | emp_sal
+--------+----------+----------+-----------+---------
+
+(0 rows)
+==========================================================
+cqlsh:RestCommSMSC> INSERT INTO cassandra (cassandra_id, cassandra_name,cassandra_city,cassandra_phone, cassandra_sal) VALUES(1,'venkatesh','Hyderabad',9505438546,1000);
+cqlsh:RestCommSMSC> INSERT INTO cassandra (cassandra_id, cassandra_name,cassandra_city,cassandra_phone, cassandra_sal) VALUES(2,'suresh','Hyderabad',9700260871,1000);
+cqlsh:RestCommSMSC> INSERT INTO cassandra (cassandra_id, cassandra_name,cassandra_city,cassandra_phone, cassandra_sal) VALUES(3,'pradeep','Hyderabad',7386517475,1000);
+==========================================================
+cqlsh:RestCommSMSC> select * from cassandra;
+
+ emp_id | emp_city  | emp_name  | emp_phone  | emp_sal
+--------+-----------+-----------+------------+---------
+      1 | Hyderabad | venkatesh | 9505438546 |    1000
+      2 | Hyderabad |   pradeep | 7386517475 |    1000
+      3 | Hyderabad |    suresh | 9700260871 |    1000
+
+(3 rows)
+==========================================================
+cqlsh> DROP KEYSPACE tutorialspoint;
+cqlsh> describe keyspaces;
+
+"RestCommSMSC"   system_auth  system_distributed
+"VenkateshSMSC"  system       system_traces
+
+cqlsh>
+==========================================================
+cqlsh> use "VenkateshSMSC" ;
+cqlsh:VenkateshSMSC> drop table tesync;
+cqlsh:VenkateshSMSC> DESCRIBE COLUMNFAMILIES;
+
+<empty>
+
+cqlsh:VenkateshSMSC>
+==========================================================
+cqlsh> DESCRIBE COLUMNFAMILIES;
+
+Keyspace "RestCommSMSC"
+-----------------------
+cassandra
+
+Keyspace "VenkateshSMSC"
+------------------------
+<empty>
+
+Keyspace tutorialspoint
+-----------------------
+<empty>
+
+Keyspace system_auth
+--------------------
+resource_role_permissons_index  role_permissions  role_members  roles
+
+Keyspace system
+---------------
+available_ranges  size_estimates    schema_usertypes    compactions_in_progress
+range_xfers       peers             paxos               schema_aggregates
+schema_keyspaces  schema_triggers   batchlog            schema_columnfamilies
+schema_columns    sstable_activity  schema_functions    local
+"IndexInfo"       peer_events       compaction_history  hints
+
+Keyspace system_distributed
+---------------------------
+repair_history  parent_repair_history
+
+Keyspace system_traces
+----------------------
+events  sessions
+
+cqlsh>
+=============================================================
+
+ 

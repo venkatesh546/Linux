@@ -1,0 +1,83 @@
+Fiber san 
+--------------------
+Installation Process
+tar zxf zte_qla2xxx-8.07.00.27.07.0-k2-sbc.tar.gz
+cd zte_qla2xxx-8.07.00.27.07.0-k2
+chmod +x extras/build.sh
+./extras/build.sh install
+modprobe -r qla2xxx
+
+modprobe -v qla2xxx
+
+
+Checking after Installation
+
+Step 1
+modinfo qla2xxx | grep -i version
+
+version:        8.07.00.27.07.0-k2
+
+Step 2
+[root@PSERVERCLUSTER1 ~]# lspci | grep -i fibre
+83:00.0 Fibre Channel: QLogic Corp. Device 6432 (rev 02)
+83:00.1 Fibre Channel: QLogic Corp. Device 6432 (rev 02)
+
+[root@PSERVERCLUSTER1 ~]# lspci -v -s 83:00.0
+83:00.0 Fibre Channel: QLogic Corp. Device 6432 (rev 02)
+        Subsystem: QLogic Corp. Device 0138
+        Flags: bus master, fast devsel, latency 0, IRQ 123
+        I/O ports at f100 [size=256]
+        Memory at efe84000 (64-bit, non-prefetchable) [size=16K]
+        Expansion ROM at efe40000 [disabled] [size=256K]
+        Capabilities: [44] Power Management version 2
+        Capabilities: [4c] Express Endpoint, MSI 00
+        Capabilities: [64] MSI: Enable+ Count=1/16 Maskable- 64bit+
+        Capabilities: [74] Vital Product Data
+        Capabilities: [7c] MSI-X: Enable- Count=16 Masked-
+        Capabilities: [100] Advanced Error Reporting
+        Capabilities: [138] Power Budgeting <?>
+        Kernel driver in use: qla2xxx
+        Kernel modules: qla2xxx
+
+[root@PSERVERCLUSTER1 ~]# lspci -v -s 83:00.1
+83:00.1 Fibre Channel: QLogic Corp. Device 6432 (rev 02)
+        Subsystem: QLogic Corp. Device 0138
+        Flags: bus master, fast devsel, latency 0, IRQ 125
+        I/O ports at f000 [size=256]
+        Memory at efe80000 (64-bit, non-prefetchable) [size=16K]
+        Expansion ROM at efe00000 [disabled] [size=256K]
+        Capabilities: [44] Power Management version 2
+        Capabilities: [4c] Express Endpoint, MSI 00
+        Capabilities: [64] MSI: Enable+ Count=1/16 Maskable- 64bit+
+        Capabilities: [74] Vital Product Data
+        Capabilities: [7c] MSI-X: Enable- Count=16 Masked-
+        Capabilities: [100] Advanced Error Reporting
+        Capabilities: [138] Power Budgeting <?>
+        Kernel driver in use: qla2xxx
+        Kernel modules: qla2xxx
+
+[root@PSERVERCLUSTER1 ~]# ls -l /sys/class/fc_host
+total 0
+lrwxrwxrwx 1 root root 0 Dec 19 16:06 host5 -> ../../devices/pci0000:80/0000:80:05.0/0000:83:00.0/host5/fc_host/host5
+lrwxrwxrwx 1 root root 0 Dec 19 16:06 host6 -> ../../devices/pci0000:80/0000:80:05.0/0000:83:00.1/host6/fc_host/host6
+[root@PSERVERCLUSTER1 ~]# more /sys/class/fc_host/host?/port_state
+::::::::::::::
+/sys/class/fc_host/host5/port_state
+::::::::::::::
+Linkdown
+::::::::::::::
+/sys/class/fc_host/host6/port_state
+::::::::::::::
+Linkdown
+[root@PSERVERCLUSTER1 ~]#
+[root@PSERVERCLUSTER1 ~]#
+[root@PSERVERCLUSTER1 ~]#
+[root@PSERVERCLUSTER1 ~]#  more /sys/class/fc_host/host?/port_name
+::::::::::::::
+/sys/class/fc_host/host5/port_name
+::::::::::::::
+0x210000229371144d
+::::::::::::::
+/sys/class/fc_host/host6/port_name
+::::::::::::::
+0x210000229371144c

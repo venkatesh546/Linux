@@ -1,0 +1,9 @@
+history time stamp in linux
+1)vim  ~/.bashrc
+Scroll to the end of the file and add the following line:
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+save and exit
+To apply the changes, either close and reopen your terminal or run:
+source ~/.bashrc
+history
+

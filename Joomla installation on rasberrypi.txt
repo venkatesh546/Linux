@@ -1,0 +1,21 @@
+Joomla installation rasberrypi 
+--------------------------------
+step 1 : apt-get install php php-mysql php-curl php-gd php-pear php-memcache php-pspell php-snmp php-xmlrpc
+step 2 : apt-get install mariadb-server
+step 3 : service apache2 restart
+step 4 : apt-get install phpmyadmin
+step 5 : download and install the Joomla latest version installtion under (/var/www/html/<dir>)
+
+http://10.99.16.10/Joomla
+
+If any error in Joomla installation following below.
+step 1 : apt-get install  mariadb-server mariadb php php-mysql php-curl php-gd php-pear php-memcache php-pspell php-snmp php-xmlrpc
+step 2 : systemctl start mariadb.service
+step 3 : mysql -uroot -p
+use mysql
+update user set plugin  = '' where User = 'root';
+flush privileges ;
+exit;
+
+and reload UI : http://10.99.16.10/Joomla
+

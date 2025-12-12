@@ -1,0 +1,32 @@
+step1:	yum install redis
+step2:	systemctl status redis
+step 3 :  systemctl start redis
+vim /etc/redis.conf
+mkdir /etc/httpd/sites-enabled no to yes
+requirepass tesync
+change dir /var/lib/redis to /home/tesync/redis
+:wq
+mv redis/ /home/tesync/.
+chmod 755 /home/tesync/redis/
+systemctl restart redis 
+systemctl status redis
+------------------
+deleted redis version 3.2
+and installed latest version
+cd /usr/src
+rpm -ivh redis-5.0.3-1.el7.remi.x86_64.rpm
+rpm -ivh redis-devel-5.0.3-1.el7.remi.x86_64.rpm
+systemctl status redis
+systemctl restart redis
+vim /etc/redis.conf
+appendonly no to yes
+requirepass vnsvns
+change dir /home/tesync/redis to /home/venkatesh/redis
+:wq
+mv /home/tesync/redis /home/venkatesh/.
+chmod 755 /home/venkatesh/redis
+systemctl restart redis
+systemctl status redis
+-------------------------
+
+

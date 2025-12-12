@@ -1,0 +1,55 @@
+   1) cat /etc/issue
+
+Red Hat Enterprise Linux Server release 5.2 (Tikanga)
+-----------------------------------------------------------------------
+  2)uname -m
+  i686
+-----------------------------------------------------------------------
+3)rpm -ivh hpacucli-9.40-12.0.i386.rpm
+-----------------------------------------------------------------------
+4)hpacucli ctrl all diag file=/root/ADUReport.zip
+------------------------------------------------------------------------
+
+if 64bit :
+
+
+
+5)rpm -ivh hpacucli-9.40-12.0.x86_64.rpm
+------------------------------------------------------------------------
+
+6)hpacucli ctrl all diag file=/root/ADUReport.zip
+------------------------------------------------------------------------
+
+
+
+scp -rp hpacucli-9.40-12.0.i386.rpm 192.168.111.71:/root/(file name, location )
+
+
+ Lankabell 
+
+   hpacucli ctrl all diag file=/root/ADUReport_lankabell_226.zip
+
+
+ Airtel 220
+
+  hpacucli ctrl all diag file=/root/ADUReport_Airtel_220.zip
+
+ Airtel 111
+
+  hpacucli ctrl all diag file=/root/ADUReport_Airtel_111.zip
+
+ Airtel 114
+
+  hpacucli ctrl all diag file=/root/ADUReport_Airtel_114.zip
+
+ Airtel 117
+
+  hpacucli ctrl all diag file=/root/ADUReport_Airtel_117.zip
+
+ Airtel 116
+
+  hpacucli ctrl all diag file=/root/ADUReport_Airtel_116.zip
+   
+
+  
+

@@ -1,0 +1,35 @@
+TIME=`date +%b-%d-%y`
+FILENAME=access.log$TIME.tar.gz
+SRCDIR=/var/log/nginx/
+cd /home/forge/backup
+tar -cvzf $FILENAME --absolute-names $SRCDIR
+
+TIME=`date +%b-%d-%y`
+FILENAME=zopay.me-error.log$TIME.tar.gz
+SRCDIR=/var/log/nginx/
+cd /home/forge/backup
+tar -cvzf $FILENAME --absolute-names $SRCDIR
+
+user="zopaymainuser"
+password="U.W_9o8K_9*^~^BV45z-RQ=nZ"
+db_name="zopaymain"
+backup_path="/home/forge/backup"
+date=$(date +"%d-%b-%Y")
+umask 177
+mysqldump --user=$user --password=$password $db_name > $backup_path/$db_name-$date.sql
+
+TIME=`date +%b-%d-%y`
+FILENAME=zopaymain$TIME.tar.gz
+SRCDIR=$backup_path/$db_name-$date.sql
+cd /home/forge/backup
+tar -cvzf $FILENAME --absolute-names $SRCDIR
+
+a=1
+while [ $a != 0 ]
+do
+sshpass -p 'UNCTtH9KMHgdcghQMteh' scp -r $backup_path/*.tar.gz zopayuser@183.82.1.230:/raid6-51TB/livezopaybackup/
+a=$?
+done
+
+rm -rf $backup_path/*.tar.gz
+rm -rf $backup_path/*.sql

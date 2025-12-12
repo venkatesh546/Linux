@@ -1,0 +1,49 @@
+route add default gw 172.16.100.254
+route del default gw 172.16.100.254
+
+ route add -host 192.168.93.215 gw 192.168.7.254
+ route add -host 10.200.206.220 gw 192.168.7.254  
+ route add -host 192.168.93.215 gw 92.168.7.254
+ route add -host 192.168.111.71 gw 192.168.7.254
+
+[root@tesync-intranet network-scripts]# route -v
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.200.206.220  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.93.215  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.111.71  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.7.0     *               255.255.255.0   U     0      0        0 eth1
+192.168.122.0   *               255.255.255.0   U     0      0        0 virbr0
+10.99.0.0       *               255.255.224.0   U     1      0        0 eth0
+link-local      *               255.255.0.0     U     1003   0        0 eth1
+default         10.99.0.1       0.0.0.0         UG    0      0        0 eth0
+[root@tesync-intranet network-scripts]#
+
+08/mar/2018
+[root@tesync-intranet ~]# route -v
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.200.206.220  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.93.215  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.111.71  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.7.0     *               255.255.255.0   U     0      0        0 eth1
+192.168.122.0   *               255.255.255.0   U     0      0        0 virbr0
+10.99.0.0       *               255.255.224.0   U     1      0        0 eth0
+link-local      *               255.255.0.0     U     1003   0        0 eth1
+default         10.99.0.1       0.0.0.0         UG    0      0        0 eth0
+[root@tesync-intranet ~]#
+
+[root@tesync-intranet ~]# route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.200.206.220  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.93.215  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.111.71  192.168.7.254   255.255.255.255 UGH   0      0        0 eth1
+192.168.7.0     0.0.0.0         255.255.255.0   U     0      0        0 eth1
+192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
+10.99.0.0       0.0.0.0         255.255.224.0   U     1      0        0 eth0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1003   0        0 eth1
+0.0.0.0         10.99.0.1       0.0.0.0         UG    0      0        0 eth0
+[root@tesync-intranet ~]#
+
+

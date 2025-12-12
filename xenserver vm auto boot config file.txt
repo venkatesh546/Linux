@@ -1,0 +1,8 @@
+xe pool-list
+xe pool-param-set uuid=<enter uuid> other-config:auto_poweron=true
+xe vm-list
+xe vm-param-set uuid=<enter vm uuid> other-config:auto-poweron=true
+
+
+
+

@@ -1,0 +1,86 @@
+How to install SubversionEdge on centos 6.7
+step 1 : We need to install below packages
+Python-2.6
+Python-devel-2.6
+java-1.7-openjdk
+jdk
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+--------------------
+step 2 : download Subversion Edge from internet find below link
+http://www.collab.net/downloads/subversion
+---------------------
+step 3 :  rpm -ivh jre-8u111-linux-x64.rpm
+                rpm -ivh jdk-7u79-linux-x64.rpm
+Default location of JDK is /usr/java/jre1.8.0_111/
+---------------------
+step 4: 	[root@server svnpkg]# java -version
+	[root@server svnpkg]# python -V
+-------------------------
+step 5 : edit this below file
+[root@server ~]# vim .bash_profile
+export JAVA_HOME=/usr/java/jdk<version>
+PATH=$PATH:%HOME/bin:/usr/java/jdk<version>/bin
+:wq
+------------------------
+step 6 : 	[root@server ~]# source .bash_profile
+	[root@server ~]# java -version
+	[root@server ~]# env |grep JAVA_HOME
+------------------------
+step 7 : 	[root@server ~]# cd /usr/src/svnpkg	
+	[root@server svnpkg]#tar -xvf CollabNetSubversionEdge-5.1.4_linux-x86_64.tar.gz
+	[root@server svnpkg]cd csvn
+	[root@server csvn] #cd data
+	[root@server data]#cd conf
+	[root@server conf]#cp csvn.conf.dist csvn.conf
+	[root@server conf]env |grep JAVA_HOME
+	[root@server conf]vim csvn.conf
+add below line
+JAVA_HOME=/usr/java/jdk<version>
+:wq
+	[root@server conf]#cd ../../bin
+	[root@server bin]./csvn start
+----------------------------
+[/]
+* = r
+@sadmin = rw
+@admin = rw
+
+[Bills_Master:/Baseline]
+king = rw
+pranita = rw
+bing =rw
+@designer = 
+
+[ISMS:/Testing]
+@developer = rw
+bing = rw
+among = 
+king = 
+
+[/]
+admin=rw
+
+[zopay:/]                here zopay is repo
+sandeep=rw
+naresh=rw
+surya=rw
+ramesh=rw
+murty=rw
+ravi=rw
+
+[amit:/]
+amit=rw
+
+[avinash:/]
+avinash=rw
+
+[bala:/]
+bala=rw
+
+[gireesh:/]
+gireesh=rw
+
+[kiran:/]
+kiran=rw
+
+

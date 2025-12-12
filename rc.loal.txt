@@ -1,0 +1,22 @@
+rc.local in 17server
+-------------------------
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+
+route add -host 10.85.0.23 gw 10.25.85.38
+route add -host 10.85.0.17 gw 10.25.85.38
+~
+-------------------------------------
+
+route-eth1 under vim /etc/sysconfig/network-script-route-eth1
+
+172.30.24.0/24 dev eth1 src 172.30.24.10 table eth1_if
+default via 172.30.24.1 dev eth1 src 172.30.24.10 table eth1_if
+
+
+

@@ -1,0 +1,21 @@
+Step 1 – Requirements
+yum install gcc openssl-devel bzip2-devel libffi-devel
+Step 2 – Download Python 3.7
+cd /usr/src
+wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+tar xzf Python-3.7.4.tgz
+Step 3 – Install Python 3.7
+cd Python-3.7.4
+./configure --enable-optimizations
+make altinstall
+rm /usr/src/Python-3.7.4.tgz
+Step 4 – Check Python Version
+python3.7 -V
+
+change python default version from 2.7 to 3.7 on RHEL 7
+alternatives --list | grep -i python
+alternatives --install /usr/bin/python python /usr/local/bin/python3.7 4
+alternatives --config python
+python -V
+
+

@@ -1,0 +1,13 @@
+grep  "upstream timed" error.log-20191012   | grep 172.16.161.117 | grep "2019/10/12" | wc -l
+grep  "upstream timed" error.log-20191012   | grep 172.16.161.104 | grep "2019/10/12" | wc -l
+grep  "upstream timed" error.log-20191013   | grep 172.16.161.117 | grep "2019/10/13" | wc -l
+grep  "upstream timed" error.log-20191013   | grep 172.16.161.104 | grep "2019/10/13" | wc -l
+grep  "upstream timed" error.log-20191013   | grep 172.16.161.117 | grep "2019/10/14" | wc -l
+grep  "upstream timed" error.log-20191013   | grep 172.16.161.104 | grep "2019/10/14" | wc -l
+grep  "upstream timed" error.log-20191014   | grep 172.16.161.104 | grep "2019/10/14" | wc -l
+grep  "upstream timed" error.log-20191014   | grep 172.16.161.117 | grep "2019/10/14" | wc -l
+grep  "upstream timed" error.log-20191011   | grep 172.16.161.117 | grep "2019/10/11" | wc -l
+grep  "upstream timed" error.log-20191011   | grep 172.16.161.104 | grep "2019/10/11 00.*" | wc -l
+
+
+grep  "demo.mylifestyle.mobi"

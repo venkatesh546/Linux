@@ -1,0 +1,17 @@
+cockpit install on centos 7
+---------------------------------------
+yum install epel-release
+yum install git
+git clone https://github.com/baude/sig-atomic-buildscripts
+cd sig-atomic-buildscripts
+cp virt7-testing.repo /etc/yum.repos.d/
+yum install cockpit
+systemctl enable cockpit-socket
+vim /usr/lib/systemd/system/cockpit-service
+ExecuStart=/usr/libexec/cockpit-ws --no-tls
+:wq
+systemctl restart cockpit
+
+
+ https://10.99.11.4:10000/
+ https://10.99.1.45:10000/

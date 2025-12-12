@@ -1,0 +1,17 @@
+How to boot new kernel in linux.
+https://www.golinuxcloud.com/change-default-kernel-version-rhel-centos-8/
+
+Here we got a long list of kernel and it's dependent packages. You can use "grubby" to get a cleaner output for list of installed kernels
+
+# grubby --info=ALL | grep ^kernel
+# uname -r
+#grubby --info="/boot/vmlinuz-4.18.0-348.12.2.el8_5.x86_64"
+#grubby --grub2 --default-title
+# grubby --default-kernel
+#grubby --default-index
+Change the default kernel (switch kernel version)
+# grubby --set-default "/boot/vmlinuz-4.18.0-348.7.1.el8_5.x86_64"
+#grubby --default-kernel
+# grubby --info /boot/vmlinuz-4.18.0-348.7.1.el8_5.x86_64
+#grubby --default-index
+reboot and check new kernel version

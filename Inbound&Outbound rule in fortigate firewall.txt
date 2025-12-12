@@ -1,0 +1,76 @@
+Create NAT Inbound rule
+Step 1 goto policy and object > IPv4 Policy 
+click Virtual Ips > create New 
+Name  = Anything you want
+Comments = any
+Under Network
+Interface  = select external wan 
+Type  =  default
+External IP Address/Range = public IP 
+Mapped IP Address/Range  =  internal IP
+Optional Filters = Disabled
+Port Forwarding = enable
+Protocal = TCP
+External Service Port =  specific port
+Map to port =  custom port
+
+click OK
+
+And Navigate to IPv4 Policy > Create New
+Name  = Anything you want
+Incoming Interface =  External Interface(WAN IP)
+Outgoing Interface =  Internal LAN
+Source    = all
+Destination = Virtual Ip
+Schedule = always
+Service = All
+Action = Accept
+
+NAT = unchecked
+
+Click OK
+----------------------------------------------------
+Create NAT Outbound rule
+step 1 Navigate to:  Policy & Objects Create Address
+Name  = Anything you want
+Type = Subnet
+Subnet/Ip Range  = Just enter single Ip address
+Interface = any
+show in address list = enable
+cleck OK
+
+step 2  click IP Pools and create New
+Name = anything you want
+Comments = any
+Type = one-to-one
+External IP Range  = Just enter single Public IP
+
+ARP Reply = Unchecked
+Click OK 
+
+Step 3  Navigate to Policy & Objects > IPv4 Policy create New
+Name  = Anything
+Incoming Interface = Internal LAN
+Outgoing Interface = WAN IP
+Source = Address (Step1)
+Destination = all
+Sehedule = always
+Service = all
+Action = Accept
+NAT = Enable
+IP Pool Configuration = Use Dynamic IP Pool
+ add + IP POOl (step 2)
+Click OK
+ 
+Step 4 Navigate to Network > Policy Routes Create New
+Protocal = ANY
+Incoming Interface = Internal LAN
+Under Source Address > Address = (step 1)
+Under Destination Address >  Address = All
+
+Action
+Outoing Interface WAN Interface
+Gateway Address = Just enter wan gateway ip
+click OK
+------------------------- 
+

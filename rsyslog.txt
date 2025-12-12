@@ -1,0 +1,26 @@
+Commands are listing here as well:
+[root@rsyslog-server1 ~]# sudo yum update && yum install rsyslog 
+[root@rsyslog-server1 ~]# systemctl start rsyslog
+[root@rsyslog-server1 ~]# systemctl enable rsyslog
+[root@rsyslog-server1 ~]# systemctl status rsyslog
+[root@rsyslog-server1 ~]# setenforce Permissive
+[root@rsyslog-server1 ~]# systemctl disable firewalld
+[root@rsyslog-server1 ~]# systemctl stop firewalld
+[root@rsyslog-server1 ~]# vim /etc/rsyslog.conf
+
+# Provides UDP syslog reception
+$ModLoad imudp
+$UDPServerRun 514
+
+# Provides TCP syslog reception
+$ModLoad imtcp
+$InputTCPServerRun 514
+
+
+$template RemoteLogs,"/var/log/%HOSTNAME%/%PROGRAMNAME%.log"
+*.* ?RemoteLogs
+& ~
+
+
+[root@rsyslog-server1 ~]# systemctl restart rsyslog
+

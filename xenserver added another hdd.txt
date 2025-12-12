@@ -1,0 +1,4 @@
+step1 	: 	fdisk -l
+step2	:	ll /dev/disk/by-id (which partition is u required)
+step3 	:	 xe host-list      (exixting partition uuid)
+step4	:  	xe sr-create content-type=user device-config:device=/dev/disk/by-id/scsi-364cd98f05c9a8200242f850a731ecb90 host-uuid=0f39f1d0-8a0a-4e7f-9124-b1f00db74188 name-label=”Local Storage 2” shared=false type=lvm

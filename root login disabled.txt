@@ -1,0 +1,31 @@
+we are disabled root login on centos 6.7
+-----------------------------------------
+step 1 : create a user and assign a password
+useradd tom
+passwd tom
+--------------------------------------
+step 2 : edit the ssh config
+vim /etc/ssh/sshd_config
+#PermitRootLogin no
+-----------------------------------
+step 3 : service sshd restart
+------------------------------------
+step 4 : logout and login in local user
+------------------------------------------
+We are changed super user to sudo user on centos 6.7
+
+step 1 : create a user and assign a password
+useradd tom
+passwd tom
+------------------------------------------------------
+step 2 : edit the config file
+vim /etc/sudoers
+add below line
+tom ALL=(ALL)       ALL
+-----------------------------------------------------
+step 3 : logout and login local user by using sudo command
+------------------------------------------------------------
+
+
+
+

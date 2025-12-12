@@ -1,0 +1,49 @@
+Puppet configuration master and agent in centos 7
+-------------------------------------------------------
+URL : https://www.learnitguide.net/2016/09/how-to-install-puppet-master-and-agent.html
+URL : https://www.learnitguide.net/2016/10/learning-puppet-manifests-with-examples.html -------Puppet mainfests files
+
+Step1 : Install pupperlabs repository in both nodes
+yum -y install http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+ll /etc/yum.repos.d/puppetlabs.repo
+
+step2 : Install required packages on the master node "puppet"
+[root@server ~]# yum -y install puppet-server
+
+step3 : configure the puppet master server "Puppet"
+Under /etc/puppet/puppet.conf edit the file 	to define fridnldy hostname and certificate name for the puppet master node in [main] section
+[main]
+dns_alt_names = puppet, server.puppet
+certname=puppet
+save and exit
+
+step4 : Generate the certificate from the puppet master side
+After executing the below command to generate the cerificate,press CTRL+C to cancel when u can see puppet version
+sudo -u puppet puppet master --no-daemonize --verbose
+
+start and enable the puppetmaster services
+[root@server ~]#  systemctl start puppetmaster
+[root@server ~]#  systemctl enable puppetmaster
+
+Step5 : Install the puppet agent on client node
+[root@client ~]# yum -y install puppet
+step6 : Configure Puppet agent on client node, under the /etc/puppet/puppet.conf edit hte file to define the pupiiet master node puppet in the [Agent]
+[agent]
+server = server.puppet
+save and exit
+
+step 7 : generate the signing request from the puppet agent client node
+[root@client ~]#  puppet agent -t
+
+step 8 : List the certificate to signed from the puppet master nide
+[root@server ~]# puppet cert list
+[root@server ~]# puppet cert sign client.puppet
+
+step 9 : to start and enable  the puppet ganet service
+[root@client ~]# systemctl start puppet
+[root@client ~]#  systemctl enable puppet
+[root@client ~]# puppet agent --fingerprint
+
+
+
+

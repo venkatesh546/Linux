@@ -1,0 +1,41 @@
+How to upgrade the kernel on CentOS
+==========================================================
+You may want to upgrade the Linux kernel for various reasons.
+For example, you want to try a new kernel module or 
+device driver which requires the latest kernel feature. Or
+a new vulnerability has been uncovered in an existing Linux kernel.
+In other times, your Linux server may be unreliable with frequent system crashes. 
+Whatever the reason is, upgrading the Linux kernel is an essential maintenance job for every Linux user.
+
+step1: First, verify the current kernel version:
+# uname -r
+=============================================================
+step2: Before you start, install all necessary prerequisite software for building a kernel:
+# yum groupinstall "Development Tools"
+#  yum install ncurses-devel
+# yum update
+
+Now you are ready to upgrade the kernel from 2.6.32 to 3.2.48 LTS.
+
+================================================================
+step3: Download the new kernel source from kernel.org, and install it on your system:
+# wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.2.48.tar.xz
+# tar xvfvJ linux-3.2.48.tar.xz -C /usr/src
+# cd /usr/src/linux-3.2.48
+=================================================================
+step4: Before compiling a new kernel, you need to generate a kernel configuration.
+If you want to generate a kernel configuration via graphical user interface, run:
+
+# make menuconfig
+
+Alternatively, if you want to use the same kernel configuration as the currently running kernel, 
+run the following command instead. You still need to set any newly added configuration options by manually
+answering questions. 
+If you do not know the meaning of each option, just press enter to accept a default answer.
+====================================================================
+step5: If you want to use the same old kernel configuration, 
+and automatically accept default answers to every question, run the following command instead:
+
+# make oldconfig
+=======================================================================
+

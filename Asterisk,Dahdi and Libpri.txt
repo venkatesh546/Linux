@@ -1,0 +1,72 @@
+How to configure Libpri,Dahdi and Asterisk
+--------------------------------------------------------------------
+step 1 : Disabling SELinux
+vi /etc/sysconfig/selinux config
+enforcing to disabled
+---------------------------------------------------------
+step 2 :Reboot
+If its is not nessary
+----------------------------------------------------------
+step 3 :installation of Basic Dependencies
+yum install -y make wget openssl-devel ncurses-devel newt-devel libxml2-devel kernel-devel gcc gcc-c++ sqlite-devel
+-------------------------------------------------------------
+step 4 :ownloading Your Asterisk Source Code under the /usr/src
+cd /usr/src/
+then download the Source Code tar balls using these commands (one by one or at a time).
+a ) wget http://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+b ) wget http://downloads.asterisk.org/pub/telephony/libpri/libpri-1.4-current.tar.gz
+c ) wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz
+------------------------------------------------------------
+step 5 :  Extraction of Downloaded Files
+tar zxvf dahdi-linux-complete*
+tar zxvf libpri*
+tar zxvf asterisk*
+------------------------------
+step 6 : DAHDI Installation
+cd /usr/src/dahdi-linux-complete*
+make  or make all
+make install 
+make install-config
+-------------------------------------------
+step 7 : LibPRI Installation
+ cd ../libpri-1.5.0/
+make
+make install
+---------------------------------------------------
+step 8 : Asterisk Installation
+cd ../asterisk-11.22.0/
+uname -r
+./configure --libdir=/usr/lib64
+make menuselect
+make 
+make install
+make samples
+make config
+
+./configure
+make menuselect
+make
+make install
+make samples
+asterisk -vvvc
+
+--------------------------------------------------
+step 9 : To start the services
+service dahdi start
+service asterisk start
+
+Do your stuff by connecting to the Asterisk Console
+asterisk -rvvv
+----------------------------------------------------
+if any errors for asterisk
+You install Asterisk 12 successfully but receive the following error when trying to launch asterisk:
+asterisk: error while loading shared libraries: libjansson.so.4: cannot open shared object file: No such file or directory
+Solution
+Execute this
+echo “/usr/local/lib” > /etc/ld.so.conf.d/usr_local.conf
+and
+/sbin/ldconfig
+-------------------------------------------------------
+
+
+

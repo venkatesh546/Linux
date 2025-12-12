@@ -1,0 +1,25 @@
+route add -host 10.30.6.99 gw 10.100.0.253
+
+route add -host 10.30.6.100 gw 10.100.0.253
+
+
+[root@USSD1 ~]# route -v
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.30.6.99      10.100.0.253    255.255.255.255 UGH   0      0        0 eth2
+10.30.6.100     10.100.0.253    255.255.255.255 UGH   0      0        0 eth2
+192.168.112.0   *               255.255.255.0   U     0      0        0 bond0
+172.16.16.0     *               255.255.255.0   U     0      0        0 eth7
+10.10.1.0       10.100.0.254    255.255.255.0   UG    0      0        0 eth2
+10.100.0.0      *               255.255.255.0   U     0      0        0 eth2
+link-local      *               255.255.0.0     U     1005   0        0 eth3
+link-local      *               255.255.0.0     U     1006   0        0 eth4
+link-local      *               255.255.0.0     U     1007   0        0 eth5
+link-local      *               255.255.0.0     U     1008   0        0 eth6
+link-local      *               255.255.0.0     U     1009   0        0 eth7
+link-local      *               255.255.0.0     U     1011   0        0 bond0
+default         192.168.112.254 0.0.0.0         UG    0      0        0 bond0
+
+
+10.30.6.99/32 via 10.100.0.253 dev eth2
+10.30.6.100/32 via 10.100.0.253 dev eth2

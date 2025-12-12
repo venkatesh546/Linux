@@ -1,0 +1,230 @@
+TO CONFIGURE THE MYSQL DATABASE ######
+Step 1  :	TO INSTALL THE  PACKAGE ######
+
+yum  groupinstall  *MYSQL*  -y
+
+rpm -qa  mysql*  ( to query  the  pkgs )
+
+Step2 TO START THE   SERVICE #####
+
+service  mysqld  restart
+
+Step 3 TO ASSIGN THE PASSWORD FOR MYSQL DATABASE ####
+
+mysqladmin -u  root  password  redhat
+
+Step 4 TO LOGIN INTO MYSQL DATABASE #####
+
+mysql -u root -p
+
+password: assign the password 
+
+Step 5  TO SHOW THE MYSQL DATABASE #########
+mysql> show databases;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| test               |
++--------------------+
+3 rows in set (0.00 sec)
+
+step 6  TO  CREATE A DATABASE ######
+mysql>creat database zoom;
+
+Query OK, 1 row affected (0.00 sec)
+
+Step 7 TO  CHECK THE DATABASE ######
+
+mysql> show databases;
+
+Step 8 TO ENTER THE DATABASE  ######
+
+mysql> use zoom;
+
+Step 9  TO DISPLAY THE DATABASE TABLE ####
+mysql> show tables;
+
+
+Empty set (0.00 sec)
+
+
+
+Step 10 TO  CREATE A TABLE WITH FIELDS #######
+
+mysql> create table linux (Name varchar(20) not null, Phone varchar(10), Status varchar(10));
+
+
+
+Query OK, 0 rows affected (0.07 sec)
+
+Step 11 TO SHOW THE TABLE ######
+
+mysql> show tables;
+
++----------------+
+| Tables_in_zoom |
++----------------+
+| linux          |
++----------------+
+1 row in set (0.00 sec) 
+
+Step 13 TO DISPLAY THE TABLE FIELDS #######
+
+mysql>describe linux;
+
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| Name   | varchar(20) | NO   |     | NULL    |       |
+| Phone  |varchar(10) | YES  |     | NULL    |       |
+| Status | varchar(10) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+Step 14 TO  ADD  VALUES  TO FIELDS IN TABLE ######
+
+mysql> insert  into linux (Name,Phone,Status)values("jack",9944337755,"sales");
+
+mysql> insert  into linux (Name,Phone,Status) values("rose",9849112244,"finance");
+
+
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+
+
+
+
+Step 15 TO DISPLAY THE VALUES FROM TABLE ######
+mysql> select * from linux;
+
+-------- OUTPUT --------
+
++-------+------------+--------+
+| Name  | Phone      | Status |
++-------+------------+--------+
+| jack  | 9944337755 | sales  |
+| rose  | 9849112244 |finance |
++-------+------------+--------+
+1 row in set (0.00 sec)
+
+Step 16 TO  CHECK THE  PARTICULAR ROW #######
+mysql>select * from linux where Name="jack";
+
+-------- OUTPUT --------
+
++-------+------------+--------+
+| Name  | Phone      | Status |
++-------+------------+--------+
+| jack  | 9944337755 | sales  |
++-------+------------+--------+
+1 row in set (0.00 sec)
+
+Step17 TO  REMOVE THE  PARTICULAR ROW FROM TABLE #####
+mysql> delete  from linux  where Name="jack";
+
+Query OK, 1 row affected (0.00 sec)
+
+Step 18TO  DISPLAY THE  TABLE ######
+mysql> select * from linux;
+
+-------- OUTPUT --------
+
++-------+------------+--------+
+| Name  | Phone      | Status |
++-------+------------+--------+
+| rose  | 9849112244 |finance |
++-------+------------+--------+
+1 row in set (0.00 sec)
+
+mysql>exit   ( to come  out  from  mysql database )
+
+ Step 19 TO  TAKE THE BACKUP FROM  MYSQL DATABASE ######
+#cd   /var/lib/mysql( to enter the dir )
+
+#ls  ( to check the  contains )
+
+to take the backup
+
+#mysqldump  -u  root  -p zoom  >  /mnt/zoomback.sql
+
+#cd  /mnt  ( to enter the dir )
+
+#ls  ( to check the backup file )
+
+Step 20TO REMOVE THE MYSQL DATABASE 
+#mysql -u root -p  
+
+password: assign the password 
+
+mysql>drop database zoom;
+
+
+Query OK, 2 rows affected (0.00 sec)
+
+mysql>exit   ( to come  out  from  mysql database )
+
+Step 21 TO ENTER THE  DATABASE DIR LOCATION 
+
+#cd /var/lib/mysql  ( to enter the  dir  )
+
+#ls( to check the dbdir )
+
+Step 22 TO  RESTORE  THE  BACKUP DATABASE 
+
+#mysql -u root -p  
+
+password: assign the password
+
+Step 23TO RESTORE CREATE A NEW DATABASE  #####
+
+mysql>create  database new_zoom;      ( to create the database  )
+
+Query OK, 2 rows affected (0.00 sec)
+
+mysql>exit ( to come out from mysqldb )
+
+
+Step 24 TO ENTER THE MYSQL DATABASE  LOCATION #####
+
+# cd  /var/lib/mysql
+
+#mysql  -u root  -p zoom   <  /mnt/zoomback.sql
+
+Enter password: assign the password
+
+#ls( to check the contains )
+
+#cd   new_zoom  ( To enter the dbdir )
+
+#ls  ( to check the restore files )
+
+Step 25 ##### TO CHECK THE RESTORE DB INTO MYSQL DB #####
+
+#mysql -u root -p  
+
+password: assign the password
+
+#### Step 26 ### TO DISPLAY THE DATABASE #####
+
+mysql>use new_zoom;      ( to enter the db )
+
+
+mysql>show tables;    ( to check the table )
+
+
+mysql>describe linux;  ( to check the  fields )
+
+mysql>select * from linux;
+----------------------------------
+
+All Database backup command
+
+mysqldump -u USER -p --all-databases > /home/all_databases.sql
+
+restore database
+
+mysql -uroot -p newdatabase-name < /home/database.sql

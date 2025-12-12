@@ -1,0 +1,25 @@
+vi  /etc/systemd/system/bearerbox.service
+[Unit]
+Description=bearerbox
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/bearerbox
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+[Unit]
+Description=ksmppd
+After=network.target
+
+[Service]
+ExecStart=ksmppd /etc/kannel/ksmppd_plug_testing.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

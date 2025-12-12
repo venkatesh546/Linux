@@ -1,0 +1,5 @@
+forge@Zopay-pilot:~$ crontab -l
+0 2 * * * sh -x /home/forge/backup/trans.sh
+
+* * * * * cd /home/forge/zopay.me && php artisan schedule:run >> /dev/null 2>&1
+forge@Zopay-pilot:~$

@@ -1,0 +1,12 @@
+how to enable NAS ssh connectivity and port number
+----------------------------------------------------
+step 1 : 	your web browser to the following address http://nas ip address
+
+Note: At some point, EMC changed the page location to: 
+step 2 :	http://nas ip address/manage/diagnostics.html
+step 3 : 	Click the “Allow remote access for support (SSH and SFTP), and then click apply.
+SSH is now enabled
+There is one catch: the password is slightly different. Use the following credentials to NAS
+username : root
+pasword  : sohopassword
+Notice the password is your current admin password prefaced by ‘”soho”.

@@ -1,0 +1,36 @@
+Vnc Server Installation steps
+----------------------------------
+I am logged in my system with root, & now I will be installing the VNC-server.
+
+step 1 :
+yum groupinstall Desktop
+yum groupinstall "GNOME Desktop"       on centos7
+----------------------------------
+Further install 
+step2 : 
+ yum install gnome-core xfce4 firefox
+ yum install tigervnc-server
+-----------------------------------
+Now make the service on after every reboot
+step3 : 
+chkconfig vncserver on
+-----------------------------------
+Now I will assign the vncpassword for the user with the user I just created before as:
+step4:
+vncpasswd
+-----------------------------------
+Now I will make the configuration file for the vncserver  by creating file as follows
+
+step5 : 
+vi /etc/sysconfig/vncservers
+
+Give the entries like this.
+[...]
+VNCSERVERS="1:root"
+VNCSERVERARGS[1]="-geometry 1024x768"
+--------------------------------------
+Now I will restart the VNC server service as root user:
+step 6 :
+service vncserver restart
+---------------------------------------
+

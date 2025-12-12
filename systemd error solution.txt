@@ -1,0 +1,42 @@
+
+
+''echo 'if $programname == "systemd" and ($msg contains "Starting Session" or $msg contains "Started Session" or $msg contains "Created slice" or $msg contains "Starting user-") then stop'>/etc/rsyslog.d/ignore-systemd-session-slice.conf''
+systemctl restart rsyslog
+
+
+
+
+systemctl restart rsyslog
+systemd: Removed slice User Slice of root.
+systemd: Stopping User Slice of root.
+
+systemd: Starting User Slice of pcp
+systemd: Removed slice User Slice of pcp
+
+
+
+systemd: Started Session 2100 of user root
+systemd: Starting Session 2100 of user root
+
+systemd: Removed slice User Slice of pcp
+systemd: Stopping User Slice of pcp
+
+
+
+
+
+
+
+
+
+local machine
+systemd: Started Session 612 of user root
+Starting Session 612 of user root
+
+Started Session 610 of user pcp
+Starting Session 610 of user pcp
+Removed slice User Slice of pcp
+
+
+
+

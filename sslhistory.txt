@@ -1,0 +1,46 @@
+
+ 
+  958  mkdir ssltestbala
+  959  cd ssltestbala/
+  960  ls
+  961  openssl genrsa -out rootCA.key 4096
+  962  openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.crt
+  963  ls -ltrh
+  964  rm rootCA.*
+  965  openssl genrsa -out rootCA.key 4096
+  966  openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.crt
+  967  ls -ltr
+  968  openssl genrsa -out mydomain.com.key 2048
+  969  ls -ltrh
+  970  rm mydomain.com.key 
+  971  openssl genrsa -out 10.99.0.22.key 2048
+  972  ls -ltrh
+  973  openssl req -new -key 10.99.0.22.key -out 10.99.0.22.csr
+  974  ls -ltrh
+  975  openssl req -in 10.99.0.22.csr -noout -text
+  976  ls -ltrh
+  977  openssl x509 -req -in 10.99.0.22.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out 10.99.0.22.crt -days 500 -sha256
+  978  ls -ltrh
+  979  openssl x509 -in 10.99.0.22.crt -text -noout
+  980  ls
+  981  locate ssl.conf
+  982  vim /etc/httpd/conf.d/ssl.conf
+  983  pwd
+  984  ls -ltrh
+  985  vim /etc/httpd/conf.d/ssl.conf
+  986  service httpd restart
+  987  journalctl -xe
+  988  service httpd status
+  989  service httpd start
+  990  journalctl -xe
+  991  vim /etc/host
+  992  vim /etc/hosts
+  993  service httpd start
+  994  journalctl -xe
+  995  vim /etc/httpd/conf.d/ssl.conf
+  996  service httpd restart
+  997  vim /root/ssltestbala/10.99.0.22.crt
+  998  ssh tesyncindia@10.48.212.228
+  999  history
+ 1000  vim /root/ssltestbala/10.99.0.22.crt 
+ 1001  history > sslhistory.txt

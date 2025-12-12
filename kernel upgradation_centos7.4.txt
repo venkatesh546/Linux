@@ -1,0 +1,15 @@
+[root@obdserver ~]# uname -msr
+Linux 3.10.0-693.el7.x86_64 x86_64
+[root@obdserver ~]# rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+[root@obdserver ~]# rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+Retrieving https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:elrepo-release-7.0-3.el7.elrepo  ################################# [100%]
+[root@obdserver ~]# yum list available --disablerepo='*' --enablerepo=elrepo-kernel
+[root@obdserver ~]# yum --enablerepo=elrepo-kernel install kernel-ml
+[root@obdserver ~]# reboot
+[root@obdserver ~]# vim /etc/default/grub   or grub2-set-default 0
+GRUB_DEFAULT=X, and change it to GRUB_DEFAULT=0 (zero)
+[root@obdserver ~]# grub2-mkconfig -o /boot/grub2/grub.cfg
+[root@obdserver ~]# reboot

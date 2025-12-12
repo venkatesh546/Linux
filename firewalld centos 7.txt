@@ -1,0 +1,29 @@
+firewalld 
+firewall-cmd --zone=public --permanent --add-port=5666/tcp
+firewall-cmd --zone=public --permanent --add-port=15672/tcp
+firewall-cmd --zone=public --permanent --add-port=5692/tcp
+firewall-cmd --zone=public --permanent --add-port=9100/tcp
+firewall-cmd --zone=public --permanent --add-port=80/tcp
+firewall-cmd --zone=public --permanent --list-ports
+firewall-cmd --reload
+
+1) firewall-cmd --permanent --add-port=12346/tcp
+ firewall-cmd --permanent --add-port=13495/tcp
+2) firewall-cmd --permanent --add-port=8086/tcp
+   firewall-cmd --permanent --add-port=18080/tcp
+3) firewall-cmd --reload
+4) firewall-cmd --list-ports
+
+remove port numbers
+firewall-cmd --permanent --remove-port=10050/tcp
+firewall-cmd --permanent --remove-port=5692/tcp
+firewall-cmd --runtime-to-permanent 
+firewall-cmd --reload
+firewall-cmd --list-ports
+
+firewall-cmd --permanent --add-port=5666/tcp
+firewall-cmd --runtime-to-permanent 
+firewall-cmd --reload
+firewall-cmd --list-ports
+
+

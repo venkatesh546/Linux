@@ -1,0 +1,56 @@
+diagnose debug disable 
+diagnose debug reset  
+diagnose vpn ike gateway flush name "Tunel2MobitelSL"
+diagnose vpn ike log filter name "Tunel2MobitelSL"
+diagnose debug application ike -1
+diagnose debug enable 
+
+diagnose debug disable 
+diagnose debug flow trace stop 
+diagnose debug flow filter clear 
+diagnose debug reset 
+
+diagnose debug flow filter port 22
+diagnose debug flow show console enable
+diagnose debug flow show function-name enable
+diagnose debug console timestamp enable
+diagnose debug flow trace start 999
+diagnose debug enable
+
+
+Sonicwall2Forti
+
+diagnose debug disable 
+diagnose debug reset  
+diagnose vpn ike gateway flush name "Tunnel2AirtelSL"
+diagnose vpn ike log filter name "Tunnel2AirtelSL"
+diagnose debug application ike -1
+diagnose debug enable 
+
+
+diagnose debug disable 
+diagnose debug reset  
+diagnose vpn ike gateway flush name "T-Office2BSNL-S"
+diagnose vpn ike log filter name "T-Office2BSNL-S"
+diagnose debug application ike -1
+diagnose debug enable 
+
+10.147.238.114
+10.42.165.45         
+
+diagnose debug enable
+diagnose debug flow filter addr 172.16.143.162                             
+diagnose debug flow show function-name enable
+diagnose debug flow trace start 100
+
+
+
+diagnose debug flow filter addr 10.147.238.114
+diagnose debug flow show console enable
+diagnose debug flow show function-name enable
+diagnose debug console timestamp enable
+diagnose debug flow trace start 999
+diagnose debug enable
+
+
+diagnose vpn ike log-filter

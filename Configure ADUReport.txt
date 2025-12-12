@@ -1,0 +1,23 @@
+how to install hpacucli
+----------------------------------------------------------------------------------------------------
+You can directly donwload HPACUCLI utility directly and Upload 
+the VIB file into your ESXi host and execute the below command to install the HPACUCLI utility.
+
+step1:
+esxcli software vib install -f -v /tmp/hpacucli-9.40-12.0.vib 
+----------------------------------------------------------------------------------------------------
+Once it is installed. Browse towards the directory /opt/hp/hpacucli/bin and type the below command
+step2:
+/opt/hp/hpacucli/bin # ./hpacucli
+----------------------------------------------------------------------------------------------------
+Execute the below command to save the ADU report on the /tmp with the filename called “report.zip”
+step3:
+ctrl all diag file=/tmp/report.zip ris=on xml=on zip=on
+			(or)
+ctrl all diag file=/root/report.zip ris=on xml=on zip=on
+
+Thats it !!! we are done with generating ADU report for your ESXi host.
+Send it your hardware vendor to troubleshoot your disk failure issues. 
+I hope this is informative for you. Thanks for Reading !!!!
+-----------------------------------------------------------------------------------------------------
+

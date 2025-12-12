@@ -1,0 +1,16 @@
+https://serverfault.com/questions/735540/iptables-nat-pat-a-to-b-to-c-and-back
+
+iptables -t nat -A PREROUTING -i ens33 -s 10.99.10.36 -p tcp --dport 22 -j DNAT --to 172.17.2.4:2204
+iptables -t nat -A PREROUTING -i ens33 -s 10.99.10.36 -p tcp --dport 22 -j DNAT --to 10.99.0.39:2202
+ssh -t -l root -p 22 10.99.10.44 ssh -l root -p 2204 10.99.10.36
+ssh -t -l root -p 22 10.99.10.44 ssh -l root -p 2202 10.99.0.39
+
+
+
+
+ssh -t -l root -p 22 103.255.146.164 ssh -l root -p 2204 117.203.100.37
+
+
+ firewall-cmd --permanent --direct --add-rule ipv4 nat PREROUTING 1 -p tcp -d 10.99.0.39 --dport 22 -j REDIRECT --to-ports 22
+firewall-cmd --permanent --zone=public --add-forward-port=port=22:proto=tcp:toport=22:toaddr=10.99.0.39
+firewall-cmd --permanent --zone=public --query-forward-port=port=22:proto=tcp:toport=22:toaddr=10.99.0.39

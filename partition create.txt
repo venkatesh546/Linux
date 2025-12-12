@@ -1,0 +1,24 @@
+step1 : 	fdisk /dev/sdb
+:n
+:p
+enter or type 1
+enter
+p
+w
+---------------------
+step2   : 	partprobe /dev/sdb1
+step3	:	mke2fs /dev/sdb1
+step4	:	mkdir /hdd
+step5	:	mount /dev/sdb1 /hdd
+step6	:	df -h
+
+
+https://sudotoolbox.com/how-to-create-a-larger-than-2tb-partition-in-linux/
+
+fdisk -l /dev/sdb
+# parted /dev/sdb
+(parted) mklabel gpt
+(parted) unit TB
+mkpart primary 0.0GB 4398.0GB
+(parted) quit
+

@@ -1,0 +1,7 @@
+yum install  mariadb-server mariadb php php-mysql php-curl php-gd php-pear php-memcache php-pspell php-snmp php-xmlrpc
+
+systemctl start mariadb.service
+
+mysql_secure_installation
+
+CREATE USER JoomlaDBUser@localhost IDENTIFIED BY 'tesync';

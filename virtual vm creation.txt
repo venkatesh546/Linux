@@ -1,0 +1,6 @@
+grep -E 'svm|vmx' /proc/cpuinfo
+yum install quem-kvm libvirt libvirt-python libguestfs-tools virt-install -y
+
+
+
+virt-install  --name=itzgeekguest  --ram=1024  --vcpus=1  --cdrom=/tmp/CentOS-7-x86_64-DVD-1810.iso --os-type=linux --os-variant=rhel6  --network bridge=virbr0 --graphics=spice  --disk path=/var/lib/libvirt/images/itzgeekguest.dsk,size=4

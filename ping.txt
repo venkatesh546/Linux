@@ -1,0 +1,79 @@
+sig1
+
+ ping 10.179.17.98  | while read pong; do echo "$(date): $pong"; done >> 98ping.txt &
+ ping 10.179.25.106  | while read pong; do echo "$(date): $pong"; done >> 106ping.txt &
+ ping 10.147.133.6  | while read pong; do echo "$(date): $pong"; done >> 6ping.txt &
+ ping 10.179.17.162  | while read pong; do echo "$(date): $pong"; done >> 162ping.txt &
+ ping 10.179.17.66  | while read pong; do echo "$(date): $pong"; done >> 66ping.txt &
+------------------------
+sig2
+
+ping 10.179.25.162  | while read pong; do echo "$(date): $pong"; done >> 162ping.txt &
+ ping 10.179.25.106  | while read pong; do echo "$(date): $pong"; done >> 25-106ping.txt &
+ ping 10.147.133.6  | while read pong; do echo "$(date): $pong"; done >> 133-6ping.txt &
+ ping 10.179.17.162  | while read pong; do echo "$(date): $pong"; done >> 17-162ping.txt &
+ ping 10.179.17.98  | while read pong; do echo "$(date): $pong"; done >> 98ping.txt &
+ping 10.179.25.66  | while read pong; do echo "$(date): $pong"; done >> 25-66ping.txt &
+ ping 10.147.134.6  | while read pong; do echo "$(date): $pong"; done >> 134-6ping.txt &
+
+----------------------------
+
+sig3
+
+ping 10.179.17.170  | while read pong; do echo "$(date): $pong"; done >> 170ping.txt &
+ ping 10.179.25.106 | while read pong; do echo "$(date): $pong"; done >> 25-106ping.txt &
+ ping 10.179.17.98  | while read pong; do echo "$(date): $pong"; done >> 98ping.txt &
+
+---------------------------------
+sig6
+
+ping 10.179.17.74  | while read pong; do echo "$(date): $pong"; done >> 74ping.txt &
+ ping 10.179.25.138 | while read pong; do echo "$(date): $pong"; done >> 138ping.txt &
+ ping 10.179.17.138  | while read pong; do echo "$(date): $pong"; done >> 17-138ping.txt &
+
+-----------------------------------
+sig4
+
+ping 10.179.25.170  | while read pong; do echo "$(date): $pong"; done >> 170ping.txt &
+ ping 10.179.25.106 | while read pong; do echo "$(date): $pong"; done >> 106ping.txt &
+ ping 10.179.25.74  | while read pong; do echo "$(date): $pong"; done >> 74ping.txt &
+ping 10.147.134.6  | while read pong; do echo "$(date): $pong"; done >> 134-6ping.txt &
+------------------------------------
+sig5
+
+ping 10.179.17.66  | while read pong; do echo "$(date): $pong"; done >> 66ping.txt &
+ ping 10.179.17.130 | while read pong; do echo "$(date): $pong"; done >> 130ping.txt &
+ ping 10.179.25.138  | while read pong; do echo "$(date): $pong"; done >> 138ping.txt &
+
+
+
+
+nohup ping 10.179.25.162 >  162ping.txt &
+nohup ping 10.179.25.106 >  106ping.txt &
+nohup ping 10.147.133.6 >  133-6ping.txt &
+nohup ping 10.179.17.162 >  17-162ping.txt &
+nohup ping 10.179.17.98 >  98ping.txt &
+nohup ping 10.179.25.66 >  66ping.txt &
+nohup ping 10.147.134.6 >  6ping.txt &
+
+	
+
+nohup ping 10.179.17.170 >  170ping.txt &
+nohup ping 10.179.25.106 >  106ping.txt &
+nohup ping 10.179.17.98 >  98ping.txt &
+
+
+nohup ping 10.179.17.74 >  74ping.txt &
+nohup ping 10.179.25.138 >  138ping.txt &
+nohup ping 10.179.17.138 >  17-138ping.txt &
+
+
+nohup ping 10.179.25.170 >  170ping.txt &
+nohup ping 10.179.25.106 >  106ping.txt &
+nohup ping 10.179.25.74 >  74ping.txt &
+nohup ping 10.147.134.6>  6ping.txt &
+
+
+nohup ping 10.179.17.66 >  66ping.txt &
+nohup ping 10.179.17.130 >  130ping.txt &
+nohup ping 10.179.25.138 >  138ping.txt &

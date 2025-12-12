@@ -1,0 +1,41 @@
+Redis upgradation on centos 7.5
+----------------------------------------
+rpm -qa | grep redis
+rpm -e redis-3.2.3-1.el7.remi.x86_64
+Download latest verstion from internet
+mv /home/redis/redis-5.0.3-1.el7.remi.x86_64.rpm /usr/src/
+mv /home/redis/redis-devel-5.0.3-1.el7.remi.x86_64.rpm /usr/src/
+cd /usr/src/
+ls -ltrh
+rpm -ivh redis-5.0.3-1.el7.remi.x86_64.rpm
+rpm -ivh redis-devel-5.0.3-1.el7.remi.x86_64.rpm
+systemctl status redis
+systemctl start redis
+systemctl enable redis
+redis-server --version
+vim /etc/redis.conf
+dir /var/lib/redis
+requirepass tesync12
+appendonly yes
+ save and exit
+systemctl restart redis
+cd /var/lib/redis
+ls -ltrh
+mv /var/lib/redis /home/tesync/
+vim /etc/redis.conf
+change dir /var/lib/redis to /home/tesync/redis
+save and exit
+systemctl restart redis
+systemctl status redis
+
+
+If u have previous redis backup moved to exitsting dir(/home/venkatesh/redis)
+mv /home/redis/* /home/venkatesh/redis
+cd /home/venkatesh/redis 
+ls -ltrh
+systemctl restart redis
+systemctl status redis
+redis-cli
+
+
+

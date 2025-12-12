@@ -1,0 +1,27 @@
+create local repo
+----------------------------
+First, mount your CentOS 7 installation DVD
+#mount /dev/cdrom /mnt/
+#mkdir /localrepo
+#cp -r /mnt/cdrom /localrepo
+#cd /localrepo/Packages
+Install dependencies packages
+#rpm -ivh libxml2-python-2.9.1-5.el7.x86_64.rpm 
+#rpm -ivh deltarpm-3.6-3.el7.x86_64.rpm 
+#rpm -ivh python-deltarpm-3.6-3.el7.x86_64.rpm
+#rpm -ivh createrepo-0.9.9-23.el7.noarch.rpm
+#createrepo -v  /localrepo/
+---------------------------------
+Once you copied all the files, create a repository file called “localrepo.repo” under /etc/yum.repos.d/
+#vim /etc/yum.repos.d/localrepo.repo
+[localrepo]
+name=Unixmen Repository
+baseurl=file:///localrepo/
+gpgcheck=0
+enabled=1
+
+save and exit
+--------------
+#yum repolist
+#yum install vsftpd
+----------------------------

@@ -1,0 +1,73 @@
+Python2.7.6 Installation on centos 6.6
+URL  : https://github.com/h2oai/h2o-2/wiki/installing-python-2.7-on-centos-6.3.-follow-this-sequence-exactly-for-centos-machine-only
+------------------------------
+step 1 : yum groupinstall 'Development tools' 
+step 2 : yum install -y zlib-devel openssl-devel sqlite-devel bzip2-devel 
+step3 : yum install -y centos-release-SCL
+step 4: yum install -y python27
+step 5 : which python 
+step 6 :  python -V
+step 7: ls -ltr /usr/local/bin | grep easy_
+step 8: ls -ltr /usr/bin/easy*
+step 9: python -V
+Centos relies on python 2.6 for yum
+----------------------------------------------
+How to install Python 2.7.6 on CentOS 6.6
+Step 1: Install development tools
+yum groupinstall "Development tools" 
+yum install -y zlib-devel openssl-devel sqlite-devel bzip2-devel 
+yum install -y centos-release-SCL
+yum install -y python27
+-------------------------------------------
+step 2 : Download, compile and install Python
+cd /opt
+wget --no-check-certificate https://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
+tar xf Python-2.7.6.tar.xz
+cd Python-2.7.6
+./configure --prefix=/usr/local
+make && make altinstall
+ls -ltr /usr/bin/python*
+ls -ltr /usr/local/bin/python*
+---------------------------------------
+step 3 : If things don't look right, you might need to create a symbolic link in /usr/local/bin
+cd /usr/local/bin
+ls -ltr python*
+-----------------------------------
+step 4 :  checking the $PATH for root. 
+echo $PATH
+ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+which python
+-------------------------------------
+step 5 : Installing and configuring distribute (setuptools)
+wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py
+sudo /usr/local/bin/python2.7 ez_setup.py
+sudo /usr/local/bin/easy_install-2.7 pip
+which pip
+which easy_install
+ls -ltr /usr/local/bin/easy_install*
+sudo /usr/local/bin/easy_install-2.7 requests
+sudo /usr/local/bin/easy_install-2.7 psutil
+sudo /usr/local/bin/easy_install-2.7 paramiko
+----------------------------------------
+step 6 :  Check first though if pip and easy_install act right after install
+cd /usr/local/bin
+ls -ltr pip*
+which pip
+which easy_install
+pip --version
+easy_install --version
+pip2.7 --version
+/usr/bin/pip --version
+/usr/bin/easy_install --version
+---------------------------------
+step 7 : If this doesn't cause a problem due to $PATH in root or users 
+cd /usr/local/bin
+mv pip pip2.6
+mv easy_install easy_install-2.6
+ln -s pip2.7 pip
+ln -s easy_install-2.7 easy_install
+--------------------------------
+If Make altinstall error do this
+we have deleted manually with sudo rm -R /usr/local/lib/python2.7 folder with python dist which causes error. Then I reinstall python.
+
+

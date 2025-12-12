@@ -1,0 +1,164 @@
+Daily Using LInux Basic commands on CENTOS/RHEL 6
+-----------------------------------------------------------------------------------------
+Dependance packages...
+yum groupinstall "Development Tools" "Development Libraries" "GNOME Software Development" "KDE Software Development" "X Software Development" "Legacy Software Development"
+
+Os type,bit and kernel version
+	cat /etc/issue
+	getconf LONG_BIT	
+	uname -r
+
+cache memory
+	free -m
+	sync; echo 3 > /proc/sys/vm/drop_caches
+	free -m
+
+hdd size
+	df -h
+
+pirticular dir size
+	cd /opt/test
+	du -sh
+
+partitions
+	fdisk -l
+
+perminent partitions
+	vim /etc/fstab
+
+hardware raid level on linux
+	lshw -short -C disk 
+
+directory listing
+	ls -ltrh
+
+change dir
+	mkdir test
+	cd dirname
+
+show current dir
+	pwd
+
+create a dir from any where  for example give below
+	mkdir /opt/<dir_name>  or mkdir /<dir_name>
+	mkdir -p /root/<dir_name>		(create a sub directory)
+	mkdir -p /root/opt/test/<dir_name>
+
+remove directories or files
+	rm -rf /root/dirname
+	rm -rf /root/finame
+
+copy file1 to file2  or copy dir1 to dir2
+	cp file1 file2
+	cp -r dir1 dir2
+
+move or remane file1 to file2
+	mv file1 file2
+
+create a file
+	touch file1
+	vim file1
+
+places standard input into file
+	cat > file1
+
+output of last 10 lines
+	tail -f file1
+
+output of first 10 lines
+	head file1
+
+display your current active process
+	ps -aef |grep http
+
+display all running process
+	top
+
+file permissions
+	chmod 777 file or dir  (read,write and execute for all)
+	chmod 755 file	(rwx for owner,rw for group,rw for others)
+ssh
+	ssh user@host	or ssh user@ip add
+	ssh -p port user@host (or) ip
+
+search pattern in file
+	http grep |port
+	locate file
+
+system info
+	date	
+	cal
+	uptime
+	w	(display who is online)
+	whoami   	(who are loged)
+	cat /proc/cpuinfo	(cpu information)
+	cat /proc/meminfo
+compress
+	tar -xzf file.tar.gz	  	(compress file)
+	tar -zvcf test.tar.g  test	(create tar.gz file)
+Network
+	ping host		(ping host or ip add)
+	wget file		(download file)
+Installation 
+	./configure
+	make
+	make install
+	rpm -ivh package name         (rpm files only) 
+	yum install package name
+uninstall
+	change dir   cd dirname
+	make distclean
+	make clean
+	make clean all
+	rpm -e <package name>
+	yum remove <package name>
+
+mount partition and unmount
+	mount
+	umount -f -l <mount_name>
+
+create a user tom and create another user max but non interactive mode
+	useradd  -u tom
+	passwd tom
+	useradd -u /sbin/nologin/max
+	vim /etc/passwd
+Delete a user
+	userdel -r tom
+bios level
+	dmidecode -t system	(server serial number)
+	dmidecode -t memory  	(physically RAM)
+	dmidecode -t processor	(server process)
+	dmidecode -t 39
+	dmidecode -t 8
+	lspci | egrep -i --color 'network|ethernet'
+	lshw -class network
+
+
+selinux 
+	vim /etc/selinux/config
+
+iptables
+
+	service iptables status
+	vim /etc/sysconfig/iptables
+
+port running 
+	netstat -antp |grep http
+	netstat -antp |grep mysql
+
+ethernet card
+	ethtool eth0   or eth1 or eth2 
+
+last reboot and users
+	last reboot
+	w
+
+ethernet settings
+	vim /etc/sysconfig/network-scripts/ifcfg-eth0
+
+ hostname
+	vim /etc/hosts
+	vim /etc/sysconfig/network
+
+thankq for watching this video.....
+

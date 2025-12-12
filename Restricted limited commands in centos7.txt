@@ -1,0 +1,24 @@
+cp /bin/bash /bin/rbash
+useradd -s /bin/rbash test
+mkdir /home/test/commands
+chmod o+x /bin/rbash
+passwd test
+chown test.test /home/test/commands
+cp /usr/bin/free /home/test/commands
+cp /usr/bin/top /home/test/commands
+cp /usr/bin/cd /home/test/commands
+cp /usr/bin/more /home/test/commands
+cp /usr/bin/grep /home/test/commands
+cp /usr/bin/zgrep /home/test/commands
+where free
+chmod 755 /home/test/commands/free
+chmod 755 /home/test/commands/top
+chmod 755 /home/test/commands/cd
+chmod 755 /home/test/commands/more
+chmod 755 /home/test/commands/grep
+chmod 755 /home/test/commands/zgrep
+vim /home/test/.bash_profile
+PATH=$HOME/commands 
+
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin

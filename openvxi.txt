@@ -1,0 +1,88 @@
+yum update
+yum groupinstall 'Development Tools'
+
+cd /usr/src/
+
+Xercesc:
+--------
+http://archive.apache.org/dist/xerces/c/2/sources/
+https://wiki.apache.org/couchdb/Installing_SpiderMonkey
+wget http://archive.apache.org/dist/xerces/c/2/sources/xerces-c-src_2_8_0.tar.gz
+tar -zxvf xerces-c-src_2_8_0.tar.gz
+cd xerces-c-src_2_8_0/src/xercesc/
+export XERCESCROOT=/usr/src/xerces-c-src_2_8_0
+./runConfigure -plinux -cgcc -xg++ -minmem -nsocket -tnative -rpthread
+make
+make install
+cd ../../samples/
+./runConfigure -plinux -cgcc -xg++ -rpthread
+
+
+SpiderMoneky:
+-------------
+http://ftp.mozilla.org/pub/js/older-packages/
+wget http://ftp.mozilla.org/pub/js/older-packages/js-1.5-rc6a.tar.gz
+tar -zxvf js-1.5-rc6a.tar.gz
+cd js/src
+vim jsprf.c +58 change VA_COPY to va_copy
+make BUILD_OPT=1 -f Makefile.ref
+make BUILD_OPT=1 JS_DIST=/usr/local -f Makefile.ref export
+
+openssl
+----------
+yum install openssl*
+
+
+-------------
+-------------
+OpenVXI:
+------------
+-------------
+
+wget http://downloads.sourceforge.net/project/openvxi/OpenVXI/OpenVXI%203.4/openvxi-3.4.zip?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fopenvxi%2F&ts=1457959543&use_mirror=nchc
+
+unzip openvxi-3.4.zip
+
+cd openvxi-3.4/src
+export SWISBSDK=/usr/src/openvxi-3.4
+export XERCESDIR=/usr/src/xerces-c-src_2_8_0
+export SPIDERMONKEYDIR=/usr/src/js
+
+cd VXIinterfaces
+make
+cd ../swichar/
+vi SWIprintf.cpp +685 comment 685 and 686 by prefixing //
+make all-shared
+
+cd ../value/
+make all-shared
+
+cd ../trd/
+make all-shared
+
+cd ../log/
+make all-shared
+
+cd ../cache
+vi SBinetInternal.h +45 and add this : #include <string.h>
+make all-shared
+
+
+cd ../inet
+vi SBinetInternal.h +45 and add this : #include <string.h> and  #include <stdlib.h>
+vi SBinetSSLsocket.hpp +64 delete the line and add  this :  virtual SWIstream::Result close();
+vi SBinetSSLsocket.cpp +150 delete the line and add  this : _meth = (ssl_method_st*)SSLv23_client_method();
+make all-shared
+
+cd ../jsi/
+vi SBjsiInternal.h +55 and add this : #include <string.h>
+make all-shared
+
+
+cd ../VXI
+vi progs/ValidateDoc.cpp +47 #include <stdio.h> #include <string.h>
+make all-shared
+
+
+cd ../VXIclient/
+make all-shared

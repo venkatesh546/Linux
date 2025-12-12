@@ -1,0 +1,20 @@
+Reset the Current PHP Module
+dnf module reset php
+dnf module enable php:remi-8.2
+dnf install -y php php-pecl-memcache php-pecl-memcached
+php -v
+php -m | grep -E 'memcache|memcached'
+
+
+php-mbstring-8.2.13-1.module_el8+765+677b369c.x86_64
+php-devel-8.2.13-1.module_el8+765+677b369c.x86_64
+php-pdo-8.2.13-1.module_el8+765+677b369c.x86_64
+php-cli-8.2.13-1.module_el8+765+677b369c.x86_64
+php-xml-8.2.13-1.module_el8+765+677b369c.x86_64
+php-mysqlnd-8.2.13-1.module_el8+765+677b369c.x86_64
+php-process-8.2.13-1.module_el8+765+677b369c.x86_64
+php-fpm-8.2.13-1.module_el8+765+677b369c.x86_64
+php-pear-1.10.14-1.module_el8+765+677b369c.noarch
+php-opcache-8.2.13-1.module_el8+765+677b369c.x86_64
+php-common-8.2.13-1.module_el8+765+677b369c.x86_64
+php-8.2.13-1.module_el8+765+677b369c.x86_64

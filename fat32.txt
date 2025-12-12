@@ -1,0 +1,5 @@
+mount in fat32 filesystem type
+
+[root@localhost ~]# mkfs.vfat /dev/sdb1
+mkfs.vfat 3.0.9 (31 Jan 2010)
+[root@localhost ~]# mount -t vfat /dev/sdb1 /media/usb/

@@ -1,0 +1,62 @@
+https://www.centlinux.com/2020/01/how-to-upgrade-centos-7-to-8-server.html
+
+[root@obdserver ~]# cat /etc/redhat-release
+CentOS Linux release 7.9.2009 (Core)
+[root@centos8 ~]# uname -r
+4.18.0-240.10.1.el8_3.x86_64
+[root@obdserver ~]# httpd -v
+Server version: Apache/2.4.6 (CentOS)
+Server built:   Nov 16 2020 16:18:20
+[root@obdserver ~]# php -v
+PHP 5.4.16 (cli) (built: Apr  1 2020 04:07:17)
+[root@obdserver ~]# mysql -v
+Server version: 5.5.68-MariaDB MariaDB Server
+[root@obdserver ~]# yum install -y epel-release.noarch
+[root@obdserver ~]# yum makecache fast
+[root@obdserver ~]# yum install -y yum-utils rpmconf
+[root@obdserver ~]# rpmconf -a
+[root@obdserver ~]# package-cleanup --leaves
+[root@obdserver ~]# package-cleanup --orphans
+[root@obdserver ~]# yum remove -y bind-libs-lite-9.11.4-9.P2.el7.x86_64 libsysfs-2.1.0-16.el7.x86_64 kernel-3.10.0-957.el7.x86_64
+[root@obdserver ~]# yum install -y dnf
+[root@obdserver ~]# dnf remove -y yum yum-metadata-parser
+[root@obdserver ~]# rm -Rf /etc/yum
+[root@obdserver ~]# dnf makecache
+[root@obdserver ~]# dnf upgrade -y
+[root@obdserver ~]#dnf install http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/centos-linux-repos-8-2.el8.noarch.rpm http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/centos-linux-release-8.3-1.2011.el8.noarch.rpm http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/centos-gpg-keys-8-2.el8.noarch.rpm
+[root@obdserver ~]# dnf -y upgrade https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+[root@obdserver ~]# dnf clean all
+[root@obdserver ~]# rpm -e `rpm -q kernel`
+[root@obdserver ~]# rpm -e --nodeps sysvinit-tools
+[root@obdserver ~]#dnf -y --releasever=8 --allowerasing --setopt=deltarpm=false distro-sync   (not working)
+[root@obdserver ~]# dnf install -y kernel-core --best --allowerasing
+[root@obdserver ~]# dnf -y groupupdate "Core" "Minimal Install" --best --allowerasing
+[root@obdserver ~]#init 6
+---------------------------------------
+https://www.techsupportpk.com/2019/11/how-to-upgrade-from-centos-7-to-centos-8.html
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install rpmconf yum-utils
+rpmconf -a
+package-cleanup --leaves
+package-cleanup --orphans
+yum install -y dnf
+dnf -y remove yum yum-metadata-parser
+rm -Rf /etc/yum
+dnf -y upgrade
+dnf -y upgrade http://mirror.bytemark.co.uk/centos/8/BaseOS/x86_64/os/Packages/centos-release-8.0.0.1905.0.9.el8.x86_64.rpm
+dnf -y upgrade https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf clean all
+rpm -e `rpm -q kernel`
+rpm -e --nodeps sysvinit-tools
+dnf -y --releasever=8 --allowerasing --setopt-deltarpm=false distro-sync
+rpmconf -a
+rpm -e kernel-core
+dnf -y install kernel-core
+ROOTDEV=`ls /dev/+da|head -l`;
+echo "Detected root as $ROOTdev..."
+grub2-install $ROOTDEV
+dnf -y groupupdate "Core" "Minimal Install" 
+
+
+
+

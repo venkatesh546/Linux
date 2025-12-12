@@ -1,0 +1,42 @@
+How to install GLPI configuration on centos 6.7
+--------------------------------------------------------
+GLPI Server System Details-
+Operating System- Centos-6.7
+RequiredPackages- Apache (httpd), php-mysql, php-mbstring, mysql-server, mysql-devel
+Server IP-    x.x.x.x
+-----------------------------------------------------------
+step 1 : Install Install Some Packages..
+Apache:  here it is check the packages  rpm -qa |grep httpd*
+# yum install httpd httpd-server httpd-devel
+# yum install php httpd 
+Mysql:
+# yum install mysql-server mysql-devel
+# yum install php-mysql php-mbstring
+Note: php version is 5.45 is required for dependent.
+-----------------------------------------------------------
+step 2 : Now Restart httpd and mysqld services..
+# /etc/init.d/httpd restart
+# /etc/init.d/mysqld restart
+----------------------------------------------------------
+step 3 : Set mysql databse For GLPI-
+# mysql -u root
+mysql> create database glpi;
+mysql> grant all privileges on glpi.* to glpi@localhost identified by 'glpi';
+mysql> flush privileges;
+mysql> exit
+ /etc/init.d/mysqld restart
+------------------------------------------------------
+Download and install glpi..
+# cd /var/www/html
+# tar -zxvf glpi-0.84.3.tar.gz
+# cd glpi/
+# ll
+# chown apache:apache -R files/
+# chown apache:apache -R config/
+# chmod -R 777 files/
+# chmod -R 777 config/
+# /etc/init.d/httpd restart
+-----------------------------------------------------
+Now install some components to glpi proper functionality..Open web Browser and type URL..
+http://server.ashu.com/glpi/install/install.php
+----------------------------------------------------

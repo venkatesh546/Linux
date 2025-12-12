@@ -1,0 +1,27 @@
+date='date %Y%m%d'
+cp -R /home/tesync/src/ /home/backups/synwaybk/src_$date
+cp -R /home/tesync/bin/  /home/backups/synwaybk/bin_$date
+mysqldump --user=root --password=tesync --all-databases > /home/backups/synwaybk/all-databases_$date.sql
+cd /home/backups/synwaybk/
+mkdir weeklysynwaybk$date && mv src_* weeklysynwaybk$date && bin_* weeklysynwaybk$date mv *.sql weeklysynwaybk$date
+
+tar -cvzf weeklysynwaybk$date.tar.gz weeklysynwaybk$date
+rm -rf weeklysynwaybk$date*
+-------------------------------------------------------
+date=`date +%b-%d-%y`
+cp -R /etc/asterisk/ /home/app1user/scriptasteriskbk/asterisk_$date
+cp -R /home/asterisk/tesync/ /home/app1user/scriptasteriskbk/tesync_$date
+cp -r /content/ /home/app1user/scriptasteriskbk/content_$date
+cp -r /var/www/html/ /home/app1user/scriptasteriskbk/html_$date
+cp -r /home/trace/ /home/app1user/scriptasteriskbk/trace_$date
+cp -r /etc/wanpipe/  /home/app1user/scriptasteriskbk/wanpipe_$date
+cp -r /etc/dahdi/ /home/app1user/scriptasteriskbk/dahdi_$date
+cp -r /var/lib/asterisk/agi-bin/ /home/app1user/scriptasteriskbk/agi-bin_$date
+cp -r /home/app1user/ /home/app1user/scriptasteriskbk/app1user_$date
+cp -r /root/ivrScript/ /home/app1user/scriptasteriskbk/ivrscript_$date
+mysqldump --user=root --password=tesync --all-databases > /home/app1user/scriptasteriskbk/alldb_$date.sql
+cd /home/app1user/scriptasteriskbk/
+mkdir asteriskbk$date && mv asterisk_* asteriskbk$date && mv tesync_* asteriskbk$date && mv content_* asteriskbk$date && mv html_* asteriskbk$date && mv trace_* asteriskbk$date && mv wanpipe_* asteriskbk$date && mv dahdi_* asteriskbk$date && mv agi-bin_* asteriskbk$date && mv app1user_* asteriskbk$date
+tar -zcvf asteriskbk$date.tar.gz asteriskbk$date
+rm -rf asteriskbk$date
+
