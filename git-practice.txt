@@ -1,0 +1,320 @@
+1-Git >
+-------------
+Introduction-->Git is version control system, we can track the code and view logs, git is peace of sw and GitHub is push the code in central repo, need to create GitHub account.
+Create a multiple files and directories in Linux by using below commands
+touch file{1..5}
+mkdir dir{1..5}
+Enter into files and dir and then add the content
+cd dir1
+touch test1
+cd ..
+ls -ltrh
+rm -rf dir{1..5}
+rm -rf file1
+history
+---------------------------
+2-Git
+mkdir venkatesh
+cd venaketsh
+git init
+git config --global user.name venkatesh
+git config --global user.email venkatesh@gmail.com
+touch file1 file2 file3 file4 
+git status
+git add file1 or git add  . (all files moved to staging state)
+git status
+git commit -m "my first commit"
+git status
+git log
+git show cid
+
+Ashwin is working on Ban
+git config --global user.name ashwin
+git config --global user.email ashwin@gmail.com
+touch ashwin{1..4}
+git status
+git add .
+git status
+git commit -m "Ashwin created new files from ban"
+git log
+git show cid
+
+3- Git- Create GitHub account with existing gmail
+Create new repo in GitHub repo name:b17projectrepo
+here i am not using existing local repo, i am using remote repo and terminal create new dir mkdir Ashwin
+cd Ashwin
+git clone https://github.com/devopstraininghub/b17projectrepo.git
+ls -ltrh
+cd b17projectrepo
+touch java
+git status 
+git add .
+git commit -m "java file"
+git status
+git log
+git show cid
+touch devops
+git status
+git add .
+git commit -m "devops file commit"
+git log
+git push
+Check in Githud repolist in browser
+touch aws python
+git add .
+git commit -m "aws python commit"
+git push
+File modification
+vim aws
+added content
+:wq
+git status
+git add .
+git commit -m "added content"
+git push
+Remove file
+rm -rf java
+git status
+git add .
+git commit "deleted java file"
+git push
+
+Collrabarative working together
+login with server
+git clone https://github.com/devopstraininghub/b17projectrepo.git
+cd b17projectrepo
+ls -ltrh
+touch ramani
+git add .
+git status
+git commit -m "ramani added new file"
+git log
+git push
+If getting permission denied need to get access collrabarators access
+git push
+
+Ashwin is working at Ban
+touch filejava
+git add .
+git commit -m "new java code added"
+git push
+if getting error
+git --rebase
+git push
+----------------------
+4 Git Branching & Git merge
+Branch is copy of data
+mkdir venkatesh
+git clone <url>
+cd b17projectrepo
+ls -ltrh
+git show cid
+now create branch
+git branch
+git branch featurebranch
+git checkout featurebranch
+ls -ltrh
+touch videocall-1 vc2 vc3
+git status
+git add .
+git commit -m "videocall code"
+git log
+touch v4 vc5 vc6
+git add .
+git commit -m "videoscall added"
+git branch
+git checkout main
+ls -ltrh
+git merge featurebranch
+git log
+ls -ltrh
+git push origin featurebranch
+git branch madukirab
+git branch
+git checkout madhukiran
+ls -ltrh
+rm -rf *
+ls -ltrh
+git status
+git add .
+git commit -m "deleted all from madhukiran"
+ls -ltrh
+touch mk1 mk2 mk3
+git add .
+git commit -m "mkbranch commit"
+dont merge in main branch because all files will be deleted.
+git push origin madhukiran
+
+Cherry-Pick concept;- Only merge selected files 
+create dir and create empty repo
+mkdir cherrypick
+cd cherrypick
+git init 
+touch test
+git add .
+git commit -m "test file for branch creation"
+touch file1 file2 file3
+git add . && git commit -m "files"
+git branch cpb
+git checkout cpb
+ls -ltrh
+touch a b
+git status
+git add . && git commit -m "add a b"
+touch c
+git add . && git commit -m :add c"
+git log
+touch d e f g
+git add . && git commit -m : add d e f g files"
+git log
+ls -ltrh
+git checkout master
+ls -ltrh
+git cherry-pick <cmmitid>
+
+Code forwardind parellely
+git status
+touch sachin
+git add . && git commit -m "sachine file"
+git status
+git checkout -b rel
+touch r1 
+git add . && git comit -m "r1"
+git checkout master
+touch m1
+git add . && git commit -m "m1"
+git checkout rel
+touch r2
+git add . && git commit -m "r2"
+git checkout master
+git merge rel
+its opned vim editer
+:wq
+automaticaly merged
+git push origin rel
+-----------------------
+5 git conflict
+Create dir conflict mkdir conflick
+git init
+touch m1
+git add .  && git commit -m "m1"
+git branch
+git checkout -b rel
+touch a b c
+git add . && git commit -m "a b c"
+git checkout master
+touch d e f 
+git add . && git commit -m "d e f"
+vim hero
+i am hero:wq
+git add . && git commit -m "hero"
+git checkout rel
+touch hero
+venkat is here
+:wq
+git add . && git commit -m "venkat hero"
+git checkout master
+vim hero (added two lines and save and exit)
+git add . && git commit -m "modified file hero"
+git checkout rel
+vim hero (again midified hero file in rel branch and save and exit)
+git checkout master
+git merge rel
+merge failed; two develpoers sit together, discss and update the hero file ; create merge hero file
+vim hero
+delete and modify hero file and save and exit
+git add . && git commit -m "final hero code"
+git status
+------------
+Amed
+touch file1
+git add . && git commit -m "files add"
+git commit --amed -m "file modified"
+git commit --amed -m "new file" -m "ticket # 1234"
+git log
+git log --online -10
+git log --online --since="2025-12-18"
+git config --list
+----------
+6- Git Pull Request / Merge request
+git clone copy url
+ls -ltrh
+cd b17projectrepo
+git branch -a
+git checkout swathi
+git checkout -b swathiM
+ls -ltrh
+touch sm1 sm2 sm3
+git status
+git add . && git commit -m "sm1 sm2 sm3"
+touch sm4 sm5 sm5
+git add . && git commit -m "sm4 sm5 sm6"
+git checkout swathi
+ls -ltrh
+git push orgin swathiM
+Merge request on Github account; raise pull request
+
+7-Git reset and tag ; staging to workspace
+git init
+git status
+touch testfile
+git status
+git add . && git commit -m "testfile"
+git log
+touch aws java k8s docker
+git status
+git add . && git commit -m :prod files"
+git status
+touch madhu
+git add .
+git reset HEAD madhu (staging to ws)
+git add . && git commit -m "madhu"
+git log
+git reset --soft comit-id n-1 (LR to staging)
+git log
+git reset --mixed cid n-1  --> LR to Waorkspace 
+
+Tag is basicaly labbling something
+mkdir gittab
+cd gittag
+git clone url
+cd b17projectrepo
+ls -trh
+git log 
+git tag T_venkatfinalcode  (complete project)
+git push origin T_venkatfinalcode
+git log
+git tag T_DB1 130a9dc219d133e9d2acb26afd813968def3f533 
+git tag
+git push origin T_DB1
+git log
+git tag 
+git tag T_prod d2fb2a4760f84adb26ad8891746b70d3cf7862dc
+git tag
+git push origin T_prod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
