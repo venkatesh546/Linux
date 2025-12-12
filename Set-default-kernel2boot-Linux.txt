@@ -1,0 +1,23 @@
+Set default kernel to boot Linux server | boot up Linux server with OLD kernel
+check kernel package lists:
+rpm -qa | grep kernel
+cat /etc/default/grub 
+here GRUB_Default=saved means latest kernel 
+cat /boot/grub2/grubenv
+saved_entry=0 (new kernel)
+grub2-set-default 1
+cat /boot/grub2/grubenv
+saved_entry=1  (this is for old kernel)
+grub2-mkconfig -o /boot/grub2/grub.cfg
+init 6
+uname -r
+-------------
+boot into new kernel
+vim /etc/default/grub
+GRUB_DEFAULT=saved replace with 0
+save the file
+grub2-mkconfig -o /boot/grub2/grub.cfg
+init 6
+
+
+ 
