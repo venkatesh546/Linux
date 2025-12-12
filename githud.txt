@@ -1,0 +1,26 @@
+git init 
+git config --global user.name "venkatesh546"
+git config --global user.email "kondapalli.venkatesh1@gmail.com"
+touch file{1..10}
+git add .
+git commit -m "message"
+git status 
+git log
+git show <id>
+git pull --rebase origin main
+git checkout -b release
+git commit --amed -m "madhukiran modified"
+git commit --amed -m "ALL vc files commited" -m "Ticket # 1234"
+git log --oneline
+git log --auther Venkatesh
+git log --oneline -10
+git log --since="2025-12-3"
+git config --list
+git config --global alias.s "status"
+git config --global --unset alias.s "status"
+git s
+only for modified files : git commit -am "message"
+git branch -d branchname   (to delete branch)
+git push origin -d branchname
+
+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
