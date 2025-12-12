@@ -1,0 +1,981 @@
+[1567881000] LOG ROTATION: DAILY
+[1567881000] LOG VERSION: 2.0
+[1567881000] CURRENT HOST STATE: db1-vm1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.61 ms
+[1567881000] CURRENT HOST STATE: db2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.41 ms
+[1567881000] CURRENT HOST STATE: primary-server;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.39 ms
+[1567881000] CURRENT HOST STATE: pservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.38 ms
+[1567881000] CURRENT HOST STATE: pservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.31 ms
+[1567881000] CURRENT HOST STATE: qservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.34 ms
+[1567881000] CURRENT HOST STATE: qservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.43 ms
+[1567881000] CURRENT HOST STATE: redis-1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.24 ms
+[1567881000] CURRENT HOST STATE: redis-2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.35 ms
+[1567881000] CURRENT HOST STATE: rq-1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.23 ms
+[1567881000] CURRENT HOST STATE: rq-2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.36 ms
+[1567881000] CURRENT HOST STATE: secondary-server;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.36 ms
+[1567881000] CURRENT HOST STATE: sig2-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.48 ms
+[1567881000] CURRENT HOST STATE: sig3-vm1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.47 ms
+[1567881000] CURRENT HOST STATE: sig3-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.44 ms
+[1567881000] CURRENT HOST STATE: sig4-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.46 ms
+[1567881000] CURRENT HOST STATE: sig5-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.35 ms
+[1567881000] CURRENT HOST STATE: sig6-vm1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.51 ms
+[1567881000] CURRENT HOST STATE: sig6-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.49 ms
+[1567881000] CURRENT HOST STATE: sigqscluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.45 ms
+[1567881000] CURRENT HOST STATE: sigqscluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.40 ms
+[1567881000] CURRENT HOST STATE: smscapp1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.34 ms
+[1567881000] CURRENT HOST STATE: smscapp2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.37 ms
+[1567881000] CURRENT HOST STATE: sservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.34 ms
+[1567881000] CURRENT HOST STATE: sservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.40 ms
+[1567881000] CURRENT HOST STATE: webserver1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.52 ms
+[1567881000] CURRENT HOST STATE: webserver2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.06 ms
+[1567881000] CURRENT HOST STATE: webservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.39 ms
+[1567881000] CURRENT HOST STATE: webservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.30 ms
+[1567881000] CURRENT SERVICE STATE: db1-vm1;PING;CRITICAL;HARD;3;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567881000] CURRENT SERVICE STATE: db2;CPU Load;OK;HARD;1;OK - load average: 0.89, 0.81, 0.54
+[1567881000] CURRENT SERVICE STATE: db2;CPU_Procs;OK;HARD;1;CPU OK: 334 processes
+[1567881000] CURRENT SERVICE STATE: db2;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1567881000] CURRENT SERVICE STATE: db2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 90647 MB (40% inode=99%):
+[1567881000] CURRENT SERVICE STATE: db2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44493 MB (86% inode=99%):
+[1567881000] CURRENT SERVICE STATE: db2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: db2;Mariadb status;OK;HARD;1;PROCS OK: 1 process with command name 'mysqld'
+[1567881000] CURRENT SERVICE STATE: db2;Memory;OK;HARD;1;OK - 48.9% (24083812 kB) free.
+[1567881000] CURRENT SERVICE STATE: db2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: db2;Total Processes;OK;HARD;1;PROCS OK: 328 processes
+[1567881000] CURRENT SERVICE STATE: primary-server;CPU Load;OK;HARD;1;OK - load average: 0.62, 0.72, 0.58
+[1567881000] CURRENT SERVICE STATE: primary-server;CPU_Procs;OK;HARD;1;CPU OK: 337 processes
+[1567881000] CURRENT SERVICE STATE: primary-server;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: primary-server;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 97490 MB (43% inode=99%):
+[1567881000] CURRENT SERVICE STATE: primary-server;HDD_Root status;OK;HARD;1;DISK OK - free space: / 39112 MB (76% inode=99%):
+[1567881000] CURRENT SERVICE STATE: primary-server;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: primary-server;Memory;WARNING;HARD;3;WARNING - 15.6% (3816176 kB) free!
+[1567881000] CURRENT SERVICE STATE: primary-server;Nginx Status;OK;HARD;1;NGINX OK -  0.088 sec. response time, Active: 0 (Writing: 0 Reading: 0 Waiting: 0) ReqPerSec: 0.000 ConnPerSec: 0.000 ReqPerConn: 0.000
+[1567881000] CURRENT SERVICE STATE: primary-server;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: primary-server;Total Processes;OK;HARD;1;PROCS OK: 338 processes
+[1567881000] CURRENT SERVICE STATE: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.68, 0.75, 0.89
+[1567881000] CURRENT SERVICE STATE: pservercluster1;CPU_Procs;CRITICAL;HARD;3;CPU CRITICAL: 3 crit, 2 warn out of 338 processes
+[1567881000] CURRENT SERVICE STATE: pservercluster1;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: pservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 149715 MB (67% inode=99%):
+[1567881000] CURRENT SERVICE STATE: pservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40239 MB (78% inode=99%):
+[1567881000] CURRENT SERVICE STATE: pservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (182240 kB) free!
+[1567881000] CURRENT SERVICE STATE: pservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: pservercluster1;Total Processes;OK;HARD;1;PROCS OK: 336 processes
+[1567881000] CURRENT SERVICE STATE: pservercluster2;CPU Load;OK;HARD;1;OK - load average: 1.43, 1.28, 1.19
+[1567881000] CURRENT SERVICE STATE: pservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 336 processes
+[1567881000] CURRENT SERVICE STATE: pservercluster2;Current Users;OK;HARD;1;USERS OK - 4 users currently logged in
+[1567881000] CURRENT SERVICE STATE: pservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 112128 MB (49% inode=99%):
+[1567881000] CURRENT SERVICE STATE: pservercluster2;HDD_Root status;WARNING;HARD;3;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567881000] CURRENT SERVICE STATE: pservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: pservercluster2;Memory;OK;HARD;1;OK - 79.7% (19536248 kB) free.
+[1567881000] CURRENT SERVICE STATE: pservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: pservercluster2;Total Processes;OK;HARD;1;PROCS OK: 334 processes
+[1567881000] CURRENT SERVICE STATE: qservercluster1;CPU Load;OK;HARD;1;OK - load average: 1.67, 2.34, 2.64
+[1567881000] CURRENT SERVICE STATE: qservercluster1;CPU_Procs;CRITICAL;HARD;3;CPU CRITICAL: 1 crit, 0 warn out of 330 processes
+[1567881000] CURRENT SERVICE STATE: qservercluster1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1567881000] CURRENT SERVICE STATE: qservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224641 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: qservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40756 MB (79% inode=99%):
+[1567881000] CURRENT SERVICE STATE: qservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: qservercluster1;Memory;OK;HARD;1;OK - 91.3% (44941836 kB) free.
+[1567881000] CURRENT SERVICE STATE: qservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: qservercluster1;Total Processes;OK;HARD;1;PROCS OK: 329 processes
+[1567881000] CURRENT SERVICE STATE: qservercluster2;CPU Load;OK;HARD;1;OK - load average: 0.08, 0.07, 0.29
+[1567881000] CURRENT SERVICE STATE: qservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 339 processes
+[1567881000] CURRENT SERVICE STATE: qservercluster2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: qservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 216756 MB (96% inode=99%):
+[1567881000] CURRENT SERVICE STATE: qservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 27137 MB (53% inode=98%):
+[1567881000] CURRENT SERVICE STATE: qservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: qservercluster2;Memory;OK;HARD;1;OK - 93.6% (46102836 kB) free.
+[1567881000] CURRENT SERVICE STATE: qservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: qservercluster2;Total Processes;OK;HARD;1;PROCS OK: 339 processes
+[1567881000] CURRENT SERVICE STATE: redis-1;CPU Load;OK;HARD;1;OK - load average: 0.37, 0.40, 0.56
+[1567881000] CURRENT SERVICE STATE: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 403 processes
+[1567881000] CURRENT SERVICE STATE: redis-1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1567881000] CURRENT SERVICE STATE: redis-1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 372210 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44244 MB (86% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-1;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /vns1 529953 MB (49% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: redis-1;Memory;OK;HARD;1;OK - 72.2% (95190544 kB) free.
+[1567881000] CURRENT SERVICE STATE: redis-1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: redis-1;Total Processes;OK;HARD;1;PROCS OK: 402 processes
+[1567881000] CURRENT SERVICE STATE: redis-2;CPU Load;OK;HARD;1;OK - load average: 1.91, 1.79, 1.39
+[1567881000] CURRENT SERVICE STATE: redis-2;CPU_Procs;OK;HARD;1;CPU OK: 378 processes
+[1567881000] CURRENT SERVICE STATE: redis-2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: redis-2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 345211 MB (92% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44373 MB (86% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-2;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /vns1 1069171 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: redis-2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: redis-2;Memory;OK;HARD;1;OK - 60.8% (80137364 kB) free.
+[1567881000] CURRENT SERVICE STATE: redis-2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: redis-2;Total Processes;OK;HARD;1;PROCS OK: 378 processes
+[1567881000] CURRENT SERVICE STATE: rq-1;CPU Load;WARNING;HARD;3;WARNING - load average: 14.39, 14.78, 15.01
+[1567881000] CURRENT SERVICE STATE: rq-1;CPU_Procs;CRITICAL;HARD;3;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567881000] CURRENT SERVICE STATE: rq-1;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: rq-1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 401278 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 43237 MB (84% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-1;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /rq1vns1 1068147 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: rq-1;Memory;OK;HARD;1;OK - 79.0% (104142312 kB) free.
+[1567881000] CURRENT SERVICE STATE: rq-1;Total Processes;OK;HARD;1;PROCS OK: 357 processes
+[1567881000] CURRENT SERVICE STATE: rq-2;CPU Load;OK;HARD;1;OK - load average: 0.05, 0.03, 0.05
+[1567881000] CURRENT SERVICE STATE: rq-2;CPU_Procs;OK;HARD;1;CPU OK: 348 processes
+[1567881000] CURRENT SERVICE STATE: rq-2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: rq-2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 401267 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44994 MB (87% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-2;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /rq2vns2 1068147 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: rq-2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: rq-2;Memory;OK;HARD;1;OK - 97.2% (128179088 kB) free.
+[1567881000] CURRENT SERVICE STATE: rq-2;Total Processes;OK;HARD;1;PROCS OK: 349 processes
+[1567881000] CURRENT SERVICE STATE: secondary-server;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.05, 0.25
+[1567881000] CURRENT SERVICE STATE: secondary-server;CPU_Procs;OK;HARD;1;CPU OK: 357 processes
+[1567881000] CURRENT SERVICE STATE: secondary-server;Current Users;WARNING;HARD;3;USERS WARNING - 8 users currently logged in
+[1567881000] CURRENT SERVICE STATE: secondary-server;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 145417 MB (64% inode=99%):
+[1567881000] CURRENT SERVICE STATE: secondary-server;HDD_Root status;OK;HARD;1;DISK OK - free space: / 37960 MB (74% inode=99%):
+[1567881000] CURRENT SERVICE STATE: secondary-server;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: secondary-server;Memory Status;OK;HARD;1;OK - 24.2% (5938464 kB) free.
+[1567881000] CURRENT SERVICE STATE: secondary-server;Nginx Status;OK;HARD;1;NGINX OK -  0.087 sec. response time, Active: 0 (Writing: 0 Reading: 0 Waiting: 0) ReqPerSec: 0.000 ConnPerSec: 0.000 ReqPerConn: 0.000
+[1567881000] CURRENT SERVICE STATE: secondary-server;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: secondary-server;Total Processes;OK;HARD;1;PROCS OK: 356 processes
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;CPU Load;OK;HARD;1;OK - load average: 0.26, 0.18, 0.11
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;CPU_Procs;OK;HARD;1;CPU OK: 259 processes
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 96717 MB (69% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;Memory;OK;HARD;1;OK - 92.2% (32129264 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig2-vm2;Total Processes;OK;HARD;1;PROCS OK: 259 processes
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.02
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;CPU_Procs;OK;HARD;1;CPU OK: 263 processes
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 60342 MB (50% inode=96%):
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;Memory;OK;HARD;1;OK - 98.5% (23218892 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig3-vm1;Total Processes;OK;HARD;1;PROCS OK: 260 processes
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;CPU Load;OK;HARD;1;OK - load average: 0.02, 0.04, 0.05
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;CPU_Procs;OK;HARD;1;CPU OK: 307 processes
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 89093 MB (74% inode=96%):
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;Memory;OK;HARD;1;OK - 91.9% (21664996 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig3-vm2;Total Processes;OK;HARD;1;PROCS OK: 304 processes
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;CPU Load;OK;HARD;1;OK - load average: 0.03, 0.04, 0.05
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;CPU_Procs;OK;HARD;1;CPU OK: 241 processes
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 77764 MB (60% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;Memory;OK;HARD;1;OK - 93.4% (32530716 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig4-vm2;Total Processes;OK;HARD;1;PROCS OK: 241 processes
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;CPU Load;OK;HARD;1;OK - load average: 0.56, 0.63, 0.63
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;CPU_Procs;WARNING;HARD;3;CPU WARNING: 1 warn out of 316 processes
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 236916 MB (94% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;Memory;OK;HARD;1;OK - 86.2% (30204096 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig5-vm2;Total Processes;OK;HARD;1;PROCS OK: 316 processes
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.00, 0.00
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;CPU_Procs;OK;HARD;1;CPU OK: 260 processes
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 72028 MB (60% inode=96%):
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;Memory;OK;HARD;1;OK - 98.5% (23165160 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig6-vm1;Total Processes;OK;HARD;1;PROCS OK: 260 processes
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.01
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;CPU_Procs;OK;HARD;1;CPU OK: 259 processes
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 73184 MB (61% inode=96%):
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;Memory;OK;HARD;1;OK - 98.5% (23164936 kB) free.
+[1567881000] CURRENT SERVICE STATE: sig6-vm2;Total Processes;OK;HARD;1;PROCS OK: 259 processes
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.03, 0.18
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;CPU_Procs;OK;HARD;1;CPU OK: 354 processes
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;Current Users;WARNING;HARD;3;USERS WARNING - 7 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224103 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 41076 MB (80% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.5% (242564 kB) free!
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: sigqscluster1;Total Processes;OK;HARD;1;PROCS OK: 354 processes
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.05
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;CPU_Procs;OK;HARD;1;CPU OK: 288 processes
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 195640 MB (87% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 27891 MB (54% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;Memory;OK;HARD;1;OK - 96.1% (47367676 kB) free.
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: sigqscluster2;Total Processes;OK;HARD;1;PROCS OK: 288 processes
+[1567881000] CURRENT SERVICE STATE: smscapp1;CPU Load;OK;HARD;1;OK - load average: 1.37, 1.38, 1.47
+[1567881000] CURRENT SERVICE STATE: smscapp1;CPU_Procs;OK;HARD;1;CPU OK: 567 processes
+[1567881000] CURRENT SERVICE STATE: smscapp1;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1567881000] CURRENT SERVICE STATE: smscapp1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 81045 MB (36% inode=99%):
+[1567881000] CURRENT SERVICE STATE: smscapp1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 39123 MB (76% inode=98%):
+[1567881000] CURRENT SERVICE STATE: smscapp1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: smscapp1;Memory;OK;HARD;1;OK - 30.0% (14788368 kB) free.
+[1567881000] CURRENT SERVICE STATE: smscapp1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: smscapp1;Total Processes;WARNING;HARD;3;PROCS WARNING: 567 processes
+[1567881000] CURRENT SERVICE STATE: smscapp2;CPU Load;OK;HARD;1;OK - load average: 1.87, 1.32, 1.32
+[1567881000] CURRENT SERVICE STATE: smscapp2;CPU_Procs;OK;HARD;1;CPU OK: 530 processes
+[1567881000] CURRENT SERVICE STATE: smscapp2;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1567881000] CURRENT SERVICE STATE: smscapp2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 176038 MB (78% inode=99%):
+[1567881000] CURRENT SERVICE STATE: smscapp2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 38878 MB (75% inode=98%):
+[1567881000] CURRENT SERVICE STATE: smscapp2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: smscapp2;Memory;OK;HARD;1;OK - 89.2% (43955764 kB) free.
+[1567881000] CURRENT SERVICE STATE: smscapp2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: smscapp2;Total Processes;OK;HARD;1;PROCS OK: 530 processes
+[1567881000] CURRENT SERVICE STATE: sservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.53, 0.55, 0.58
+[1567881000] CURRENT SERVICE STATE: sservercluster1;CPU_Procs;CRITICAL;HARD;3;CPU CRITICAL: 3 crit, 3 warn out of 302 processes
+[1567881000] CURRENT SERVICE STATE: sservercluster1;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 137614 MB (62% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 41427 MB (80% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sservercluster1;Memory;OK;HARD;1;OK - 67.2% (16461280 kB) free.
+[1567881000] CURRENT SERVICE STATE: sservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: sservercluster1;Total Processes;OK;HARD;1;PROCS OK: 301 processes
+[1567881000] CURRENT SERVICE STATE: sservercluster2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.05
+[1567881000] CURRENT SERVICE STATE: sservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 314 processes
+[1567881000] CURRENT SERVICE STATE: sservercluster2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: sservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 215272 MB (97% inode=99%):
+[1567881000] CURRENT SERVICE STATE: sservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 35657 MB (69% inode=98%):
+[1567881000] CURRENT SERVICE STATE: sservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: sservercluster2;Memory;OK;HARD;1;OK - 96.2% (23575616 kB) free.
+[1567881000] CURRENT SERVICE STATE: sservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: sservercluster2;Total Processes;OK;HARD;1;PROCS OK: 312 processes
+[1567881000] CURRENT SERVICE STATE: webserver1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.15, 0.37
+[1567881000] CURRENT SERVICE STATE: webserver1;CPU_Procs;OK;HARD;1;CPU OK: 358 processes
+[1567881000] CURRENT SERVICE STATE: webserver1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1567881000] CURRENT SERVICE STATE: webserver1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224832 MB (99% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webserver1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40269 MB (78% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webserver1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: webserver1;Memory;OK;HARD;1;OK - 91.3% (22354240 kB) free.
+[1567881000] CURRENT SERVICE STATE: webserver1;Nginx_status;OK;HARD;1;NGINX OK -  0.082 sec. response time, Active: 1 (Writing: 1 Reading: 0 Waiting: 0) ReqPerSec: 0.002 ConnPerSec: 0.002 ReqPerConn: 1.010
+[1567881000] CURRENT SERVICE STATE: webserver1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: webserver1;Total Processes;OK;HARD;1;PROCS OK: 359 processes
+[1567881000] CURRENT SERVICE STATE: webserver2;CPU_Procs;OK;HARD;1;CPU OK: 411 processes
+[1567881000] CURRENT SERVICE STATE: webserver2;Current Load;OK;HARD;1;OK - load average: 0.08, 0.04, 0.05
+[1567881000] CURRENT SERVICE STATE: webserver2;Current Users;OK;HARD;1;USERS OK - 18 users currently logged in
+[1567881000] CURRENT SERVICE STATE: webserver2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 80595 MB (35.86% inode=100%):
+[1567881000] CURRENT SERVICE STATE: webserver2;HTTP;OK;HARD;1;HTTP OK: HTTP/1.1 200 OK - 355 bytes in 0.001 second response time
+[1567881000] CURRENT SERVICE STATE: webserver2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: webserver2;Memory;OK;HARD;1;OK - 31.4% (7704448 kB) free.
+[1567881000] CURRENT SERVICE STATE: webserver2;PING;OK;HARD;1;PING OK - Packet loss = 0%, RTA = 0.06 ms
+[1567881000] CURRENT SERVICE STATE: webserver2;Root Partition;OK;HARD;1;DISK OK - free space: / 15697 MB (30.67% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webserver2;SSH;OK;HARD;1;SSH OK - OpenSSH_7.4 (protocol 2.0)
+[1567881000] CURRENT SERVICE STATE: webserver2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: webserver2;Total Processes;OK;HARD;1;PROCS OK: 155 processes with STATE = RSZDT
+[1567881000] CURRENT SERVICE STATE: webservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.02, 0.05
+[1567881000] CURRENT SERVICE STATE: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 328 processes
+[1567881000] CURRENT SERVICE STATE: webservercluster1;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1567881000] CURRENT SERVICE STATE: webservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: / 22549 MB (44% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: /home 69909 MB (31% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: webservercluster1;Memory;WARNING;HARD;3;WARNING - 16.6% (2704468 kB) free!
+[1567881000] CURRENT SERVICE STATE: webservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: webservercluster1;Total Processes;OK;HARD;1;PROCS OK: 328 processes
+[1567881000] CURRENT SERVICE STATE: webservercluster2;CPU Load;OK;HARD;1;OK - load average: 0.75, 0.85, 0.86
+[1567881000] CURRENT SERVICE STATE: webservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 298 processes
+[1567881000] CURRENT SERVICE STATE: webservercluster2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1567881000] CURRENT SERVICE STATE: webservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 222487 MB (98% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40335 MB (78% inode=99%):
+[1567881000] CURRENT SERVICE STATE: webservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1567881000] CURRENT SERVICE STATE: webservercluster2;Memory;OK;HARD;1;OK - 54.2% (8807232 kB) free.
+[1567881000] CURRENT SERVICE STATE: webservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1567881000] CURRENT SERVICE STATE: webservercluster2;Total Processes;OK;HARD;1;PROCS OK: 296 processes
+[1567881214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567881415] SERVICE ALERT: sservercluster1;Memory;WARNING;SOFT;1;WARNING - 11.4% (2801492 kB) free!
+[1567881455] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567881476] SERVICE ALERT: pservercluster2;CPU_Procs;CRITICAL;SOFT;1;CHECK_NRPE: Socket timeout after 10 seconds.
+[1567881487] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (181696 kB) free!
+[1567881535] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (186568 kB) free!
+[1567881600] SERVICE ALERT: pservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 341 processes
+[1567881607] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.7% (183192 kB) free!
+[1567881655] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (200664 kB) free!
+[1567881655] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (200664 kB) free!
+[1567881696] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567881727] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.9% (213388 kB) free!
+[1567881727] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.9% (213388 kB) free!
+[1567881755] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (236388 kB) free!
+[1567881814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567881823] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567881946] SERVICE ALERT: redis-1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 403 processes
+[1567882057] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 2 warn out of 342 processes
+[1567882066] SERVICE ALERT: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 402 processes
+[1567882414] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1567882414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567882414] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567882653] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 299 processes
+[1567882896] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192924 kB) free!
+[1567883013] Auto-save of retention data completed successfully.
+[1567883014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567883615] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567883646] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2704988 kB) free!
+[1567884099] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 10 users currently logged in
+[1567884213] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 16.70, 16.37, 15.66
+[1567884214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567884347] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 321 processes
+[1567884384] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3798892 kB) free!
+[1567884454] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 328 processes
+[1567884697] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 38.1% (9399376 kB) free.
+[1567884697] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 38.1% (9399376 kB) free.
+[1567884814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567885055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567885255] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (204696 kB) free!
+[1567885297] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567885297] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;1;WARNING - 19.6% (4844548 kB) free!
+[1567885327] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (187816 kB) free!
+[1567885355] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (262836 kB) free!
+[1567885414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567885417] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;2;WARNING - 16.0% (3946156 kB) free!
+[1567885423] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567885537] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 13.6% (3358096 kB) free!
+[1567885537] SERVICE ALERT: pservercluster1;Memory;WARNING;HARD;3;WARNING - 13.6% (3358096 kB) free!
+[1567885657] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 336 processes
+[1567886014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567886014] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567886014] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567886137] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (185852 kB) free!
+[1567886137] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (185852 kB) free!
+[1567886253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 4 warn out of 297 processes
+[1567886613] Auto-save of retention data completed successfully.
+[1567886614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567886750] SERVICE ALERT: pservercluster1;CPU Load;WARNING;SOFT;1;WARNING - load average: 6.67, 6.01, 5.09
+[1567886870] SERVICE ALERT: pservercluster1;CPU Load;WARNING;SOFT;2;WARNING - load average: 6.88, 6.26, 5.29
+[1567886990] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 5.93, 6.35, 5.46
+[1567886990] SERVICE ALERT: pservercluster1;CPU Load;WARNING;HARD;3;WARNING - load average: 5.93, 6.35, 5.46
+[1567887214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567887246] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2703904 kB) free!
+[1567887590] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;OK;notify-service-by-email;OK - load average: 3.17, 3.02, 3.96
+[1567887590] SERVICE ALERT: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 3.17, 3.02, 3.96
+[1567887813] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 17.12, 16.34, 15.96
+[1567887814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567887947] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567887984] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3791932 kB) free!
+[1567888054] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 331 processes
+[1567888298] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 10 users currently logged in
+[1567888414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567888655] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567888666] SERVICE ALERT: redis-1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 403 processes
+[1567888786] SERVICE ALERT: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 403 processes
+[1567888855] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (186404 kB) free!
+[1567888897] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567888927] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192904 kB) free!
+[1567888955] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (228336 kB) free!
+[1567889014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567889023] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567889257] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 3 warn out of 338 processes
+[1567889596] SERVICE ALERT: smscapp1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.5% (245136 kB) free!
+[1567889614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567889614] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567889614] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567889716] SERVICE ALERT: smscapp1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.5% (239240 kB) free!
+[1567889737] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (174780 kB) free!
+[1567889836] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (227968 kB) free!
+[1567889836] SERVICE ALERT: smscapp1;Memory;CRITICAL;HARD;3;CRITICAL - 0.5% (227968 kB) free!
+[1567889853] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 299 processes
+[1567890213] Auto-save of retention data completed successfully.
+[1567890214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567890697] SERVICE ALERT: webservercluster2;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 303 processes
+[1567890814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567890817] SERVICE ALERT: webservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 296 processes
+[1567890846] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2705108 kB) free!
+[1567891036] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;OK;notify-service-by-email;OK - 89.9% (44286956 kB) free.
+[1567891036] SERVICE ALERT: smscapp1;Memory;OK;HARD;1;OK - 89.9% (44286956 kB) free.
+[1567891413] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 15.56, 16.02, 15.68
+[1567891414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567891547] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 298 processes
+[1567891584] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3791112 kB) free!
+[1567891654] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 331 processes
+[1567891898] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567892014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567892255] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 566 processes
+[1567892455] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 46.1% (11294884 kB) free.
+[1567892455] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 46.1% (11294884 kB) free.
+[1567892497] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567892527] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 59.7% (14627992 kB) free.
+[1567892527] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 59.7% (14627992 kB) free.
+[1567892555] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (244736 kB) free!
+[1567892614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567892614] SERVICE ALERT: sig6-vm2;CPU_Procs;CRITICAL;SOFT;1;CPU CRITICAL: 1 crit, 0 warn out of 264 processes
+[1567892623] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567892734] SERVICE ALERT: sig6-vm2;CPU_Procs;OK;HARD;1;CPU OK: 259 processes
+[1567892857] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 336 processes
+[1567893214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567893214] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567893214] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1567893337] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195672 kB) free!
+[1567893453] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 300 processes
+[1567893813] Auto-save of retention data completed successfully.
+[1567893814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567894414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567894446] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2702940 kB) free!
+[1567895013] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 13.44, 14.39, 14.68
+[1567895014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567895147] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567895185] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3797384 kB) free!
+[1567895254] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 330 processes
+[1567895498] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567895614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567895855] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567896097] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567896155] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.4% (212444 kB) free!
+[1567896214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567896223] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8676 MB (16% inode=98%):
+[1567896457] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 333 processes
+[1567896814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567896814] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567896814] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567896937] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (193052 kB) free!
+[1567897053] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 296 processes
+[1567897413] Auto-save of retention data completed successfully.
+[1567897414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567898014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567898046] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2698860 kB) free!
+[1567898613] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 12.76, 14.13, 14.83
+[1567898614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567898747] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567898854] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 332 processes
+[1567899098] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567899214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567899384] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3794108 kB) free!
+[1567899455] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567899697] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567899756] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (226576 kB) free!
+[1567899814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567899823] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8675 MB (16% inode=98%):
+[1567900057] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 333 processes
+[1567900414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567900414] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567900414] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1567900537] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (178032 kB) free!
+[1567900653] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 297 processes
+[1567901013] Auto-save of retention data completed successfully.
+[1567901014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567901614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567901646] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2704132 kB) free!
+[1567902213] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.30, 15.30, 15.51
+[1567902214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567902347] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567902455] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 331 processes
+[1567902698] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567902814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567902984] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 15.5% (3790200 kB) free!
+[1567903055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567903186] SERVICE ALERT: redis-1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 407 processes
+[1567903297] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567903306] SERVICE ALERT: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 409 processes
+[1567903414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567903423] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8675 MB (16% inode=98%):
+[1567903657] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 2 warn out of 340 processes
+[1567903955] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (243424 kB) free!
+[1567904014] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567904014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567904014] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567904137] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (193820 kB) free!
+[1567904253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 300 processes
+[1567904455] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (179536 kB) free!
+[1567904537] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;1;CHECK_NRPE: Socket timeout after 10 seconds.
+[1567904575] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (195992 kB) free!
+[1567904576] SERVICE ALERT: webserver2;CPU_Procs;CRITICAL;SOFT;1;CPU CRITICAL: 1 crit, 0 warn out of 467 processes
+[1567904613] Auto-save of retention data completed successfully.
+[1567904614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567904636] SERVICE ALERT: webserver2;CPU_Procs;OK;HARD;1;CPU OK: 461 processes
+[1567904660] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (189232 kB) free!
+[1567904696] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (171816 kB) free!
+[1567904696] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (171816 kB) free!
+[1567904780] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195256 kB) free!
+[1567904780] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (195256 kB) free!
+[1567905214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567905247] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.7% (2706848 kB) free!
+[1567905813] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 17.71, 16.04, 15.53
+[1567905814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567905948] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 298 processes
+[1567906298] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567906414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567906584] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 13.9% (3398784 kB) free!
+[1567906654] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567906655] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567906897] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567907014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567907024] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8675 MB (16% inode=98%):
+[1567907257] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 3 warn out of 346 processes
+[1567907555] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (233672 kB) free!
+[1567907614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567907614] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567907614] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567907738] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192672 kB) free!
+[1567907854] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 5 crit, 3 warn out of 310 processes
+[1567908213] Auto-save of retention data completed successfully.
+[1567908214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567908297] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (193928 kB) free!
+[1567908381] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192652 kB) free!
+[1567908814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567909413] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.80, 15.62, 16.28
+[1567909414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567909446] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.7% (2708064 kB) free!
+[1567909898] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567910014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567910147] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567910184] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 13.9% (3412476 kB) free!
+[1567910254] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567910255] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567910497] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567910614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567910858] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 3 warn out of 346 processes
+[1567911155] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (231172 kB) free!
+[1567911214] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567911214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567911214] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567911224] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8674 MB (16% inode=98%):
+[1567911338] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (173008 kB) free!
+[1567911813] Auto-save of retention data completed successfully.
+[1567911814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567911981] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (173912 kB) free!
+[1567912054] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 300 processes
+[1567912414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567912496] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (171604 kB) free!
+[1567913013] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 18.36, 17.13, 16.32
+[1567913014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567913046] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.7% (2708700 kB) free!
+[1567913498] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567913614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567913747] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567913784] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 14.5% (3551144 kB) free!
+[1567913854] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567913855] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567914097] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567914214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567914756] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (386224 kB) free!
+[1567914814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567914814] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567914814] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567915057] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 340 processes
+[1567915413] Auto-save of retention data completed successfully.
+[1567915414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567915423] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567915537] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 1.0% (236828 kB) free!
+[1567915906] SERVICE ALERT: redis-1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 402 processes
+[1567916014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567916026] SERVICE ALERT: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 400 processes
+[1567916096] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (189956 kB) free!
+[1567916180] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (174392 kB) free!
+[1567916253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 302 processes
+[1567916613] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 16.32, 16.24, 16.06
+[1567916614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567916646] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2702404 kB) free!
+[1567917098] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567917214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567917347] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567917384] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 13.9% (3395324 kB) free!
+[1567917454] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567917455] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567917697] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567917814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567918414] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567918414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567918414] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567918657] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 340 processes
+[1567918955] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (237604 kB) free!
+[1567919013] Auto-save of retention data completed successfully.
+[1567919014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567919023] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567919138] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (203384 kB) free!
+[1567919614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567919696] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (185304 kB) free!
+[1567919780] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (200816 kB) free!
+[1567919853] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 300 processes
+[1567920213] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.62, 14.73, 15.12
+[1567920214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567920246] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2699400 kB) free!
+[1567920698] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567920814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567920824] SERVICE ALERT: secondary-server;Memory Status;WARNING;SOFT;1;WARNING - 19.9% (4881624 kB) free!
+[1567920944] SERVICE ALERT: secondary-server;Memory Status;WARNING;SOFT;2;WARNING - 19.8% (4861328 kB) free!
+[1567920947] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567920984] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 13.2% (3240972 kB) free!
+[1567921054] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 328 processes
+[1567921055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567921064] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 19.8% (4841788 kB) free!
+[1567921064] SERVICE ALERT: secondary-server;Memory Status;WARNING;HARD;3;WARNING - 19.8% (4841788 kB) free!
+[1567921297] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567921414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567922014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567922014] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567922014] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567922257] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 339 processes
+[1567922555] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.4% (214800 kB) free!
+[1567922613] Auto-save of retention data completed successfully.
+[1567922614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567922623] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567923214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567923296] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (183692 kB) free!
+[1567923337] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192448 kB) free!
+[1567923380] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (179172 kB) free!
+[1567923454] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 304 processes
+[1567923813] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 16.55, 16.00, 15.90
+[1567923814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567923846] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2699512 kB) free!
+[1567924298] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567924414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567924547] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567924584] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 12.3% (3011744 kB) free!
+[1567924654] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567924655] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567924664] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 19.5% (4778680 kB) free!
+[1567924897] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567925014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567925614] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567925614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567925614] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567925747] SERVICE ALERT: secondary-server;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 362 processes
+[1567925857] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 340 processes
+[1567925867] SERVICE ALERT: secondary-server;CPU_Procs;WARNING;SOFT;2;CPU WARNING: 1 warn out of 361 processes
+[1567925987] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 363 processes
+[1567925987] SERVICE ALERT: secondary-server;CPU_Procs;WARNING;HARD;3;CPU WARNING: 1 warn out of 363 processes
+[1567926098] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;primary-server;Memory;1567926097
+[1567926098] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;OK;notify-service-by-email;OK - 93.7% (22958468 kB) free.
+[1567926098] SERVICE ALERT: primary-server;Memory;OK;HARD;1;OK - 93.7% (22958468 kB) free.
+[1567926103] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;primary-server;Memory;1567926102
+[1567926112] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567926110
+[1567926112] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 90.7% (22380748 kB) free.
+[1567926112] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 90.7% (22380748 kB) free.
+[1567926115] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567926114
+[1567926123] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1567926122
+[1567926124] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 90.0% (22058608 kB) free.
+[1567926124] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 90.0% (22058608 kB) free.
+[1567926128] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1567926126
+[1567926133] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1567926131
+[1567926144] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567926143
+[1567926145] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 80.7% (39774820 kB) free.
+[1567926145] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 80.7% (39774820 kB) free.
+[1567926148] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567926147
+[1567926152] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567926151
+[1567926156] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567926155
+[1567926164] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1567926163
+[1567926164] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 94.4% (23147936 kB) free.
+[1567926164] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 94.4% (23147936 kB) free.
+[1567926168] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1567926167
+[1567926172] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1567926171
+[1567926176] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1567926175
+[1567926184] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1567926183
+[1567926184] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;OK;notify-service-by-email;OK - 90.1% (14649984 kB) free.
+[1567926184] SERVICE ALERT: webservercluster1;Memory;OK;HARD;1;OK - 90.1% (14649984 kB) free.
+[1567926188] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1567926186
+[1567926192] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1567926191
+[1567926196] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1567926195
+[1567926213] Auto-save of retention data completed successfully.
+[1567926214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567926223] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567926814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567927413] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 17.71, 17.06, 16.83
+[1567927414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567927653] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 308 processes
+[1567927898] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567928014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567928148] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567928254] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567928255] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567928264] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 17.9% (4386960 kB) free!
+[1567928497] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567928614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567929116] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (182940 kB) free!
+[1567929214] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567929214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567929214] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567929236] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.7% (173264 kB) free!
+[1567929356] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195812 kB) free!
+[1567929356] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (195812 kB) free!
+[1567929457] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 339 processes
+[1567929587] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 363 processes
+[1567929813] Auto-save of retention data completed successfully.
+[1567929814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567929823] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567930414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567931013] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 15.42, 15.99, 16.47
+[1567931014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567931253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 304 processes
+[1567931498] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567931614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567931854] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567931855] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567931864] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 17.0% (4164936 kB) free!
+[1567932098] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567932214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567932347] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567932814] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1567932814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567932814] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567932956] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192988 kB) free!
+[1567933057] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 335 processes
+[1567933187] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 363 processes
+[1567933356] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;1;WARNING - 17.7% (8733928 kB) free!
+[1567933413] Auto-save of retention data completed successfully.
+[1567933414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567933423] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567933476] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;2;WARNING - 16.4% (8067420 kB) free!
+[1567933597] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;WARNING;notify-service-by-email;WARNING - 15.1% (7445752 kB) free!
+[1567933597] SERVICE ALERT: sigqscluster1;Memory;WARNING;HARD;3;WARNING - 15.1% (7445752 kB) free!
+[1567934015] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567934139] SERVICE ALERT: webservercluster1;CPU_Procs;CRITICAL;SOFT;1;CPU CRITICAL: 1 crit, 0 warn out of 326 processes
+[1567934197] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 9.6% (4745024 kB) free!
+[1567934197] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 9.6% (4745024 kB) free!
+[1567934259] SERVICE ALERT: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 326 processes
+[1567934613] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 16.04, 15.73, 15.56
+[1567934614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567934853] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 302 processes
+[1567935099] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567935214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567935454] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 330 processes
+[1567935464] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.6% (4077784 kB) free!
+[1567935814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567935947] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567936055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567936297] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567936414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567936414] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567936414] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567936556] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (179724 kB) free!
+[1567936657] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 335 processes
+[1567936788] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 361 processes
+[1567937013] Auto-save of retention data completed successfully.
+[1567937014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567937023] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567937614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567937797] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (233708 kB) free!
+[1567938213] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.75, 15.83, 15.51
+[1567938214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567938453] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 303 processes
+[1567938814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567938838] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567938837
+[1567938839] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 93.4% (23053856 kB) free.
+[1567938839] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 93.4% (23053856 kB) free.
+[1567938842] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567938841
+[1567938845] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567938844
+[1567938876] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567938875
+[1567938877] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 82.5% (40678468 kB) free.
+[1567938877] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 82.5% (40678468 kB) free.
+[1567938881] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567938879
+[1567938884] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567938883
+[1567939054] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567939064] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.6% (4070880 kB) free!
+[1567939298] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567939414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567939547] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567939655] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567939662] SERVICE ALERT: sservercluster1;CPU Load;WARNING;SOFT;1;WARNING - load average: 19.20, 16.35, 7.43
+[1567939782] SERVICE ALERT: sservercluster1;CPU Load;WARNING;SOFT;2;WARNING - load average: 3.86, 11.43, 6.70
+[1567939790] SERVICE ALERT: pservercluster1;CPU Load;WARNING;SOFT;1;WARNING - load average: 7.04, 14.94, 9.08
+[1567939897] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 8 users currently logged in
+[1567939902] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 1.09, 7.89, 5.98
+[1567939902] SERVICE ALERT: sservercluster1;CPU Load;WARNING;HARD;3;WARNING - load average: 1.09, 7.89, 5.98
+[1567939910] SERVICE ALERT: pservercluster1;CPU Load;WARNING;SOFT;2;WARNING - load average: 2.36, 10.63, 8.22
+[1567940014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567940014] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567940014] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567940030] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 0.79, 7.30, 7.29
+[1567940030] SERVICE ALERT: pservercluster1;CPU Load;WARNING;HARD;3;WARNING - load average: 0.79, 7.30, 7.29
+[1567940045] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;1;WARNING - 17.0% (4196488 kB) free!
+[1567940165] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;2;WARNING - 14.4% (3546368 kB) free!
+[1567940257] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 4 warn out of 336 processes
+[1567940285] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 14.3% (3521632 kB) free!
+[1567940285] SERVICE ALERT: pservercluster1;Memory;WARNING;HARD;3;WARNING - 14.3% (3521632 kB) free!
+[1567940502] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU Load;OK;notify-service-by-email;OK - load average: 0.42, 1.55, 3.42
+[1567940502] SERVICE ALERT: sservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.42, 1.55, 3.42
+[1567940613] Auto-save of retention data completed successfully.
+[1567940614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567940623] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8672 MB (16% inode=98%):
+[1567940630] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;OK;notify-service-by-email;OK - load average: 1.79, 2.18, 4.38
+[1567940630] SERVICE ALERT: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 1.79, 2.18, 4.38
+[1567940885] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (170248 kB) free!
+[1567940885] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (170248 kB) free!
+[1567940988] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 360 processes
+[1567941214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567941813] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 16.17, 15.71, 15.56
+[1567941814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567942053] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 299 processes
+[1567942414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567942654] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 328 processes
+[1567942664] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.6% (4067536 kB) free!
+[1567942898] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567943014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567943147] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567943255] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567943497] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 8 users currently logged in
+[1567943614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567943614] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567943614] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 353 processes
+[1567943857] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 336 processes
+[1567944213] Auto-save of retention data completed successfully.
+[1567944214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567944223] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8673 MB (16% inode=98%):
+[1567944485] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (185740 kB) free!
+[1567944814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567945187] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 359 processes
+[1567945413] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 17.47, 16.53, 16.02
+[1567945414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567945653] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 298 processes
+[1567946014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567946254] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567946265] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.6% (4065908 kB) free!
+[1567946498] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567946614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567946747] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 299 processes
+[1567946855] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567947097] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 8 users currently logged in
+[1567947214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567947214] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567947214] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567947457] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 336 processes
+[1567947813] Auto-save of retention data completed successfully.
+[1567947814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567947823] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8672 MB (16% inode=98%):
+[1567947884] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;1;WARNING - 18.8% (9266008 kB) free!
+[1567948004] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;2;WARNING - 17.9% (8843440 kB) free!
+[1567948085] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (178888 kB) free!
+[1567948124] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;WARNING;notify-service-by-email;WARNING - 17.0% (8391524 kB) free!
+[1567948124] SERVICE ALERT: sigqscluster1;Memory;WARNING;HARD;3;WARNING - 17.0% (8391524 kB) free!
+[1567948414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567948787] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 360 processes
+[1567949013] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 15.39, 15.43, 15.61
+[1567949014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567949253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 4 warn out of 300 processes
+[1567949614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567949854] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 328 processes
+[1567950098] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567950214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567950347] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567950464] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.6% (4058624 kB) free!
+[1567950697] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 8 users currently logged in
+[1567950814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567950814] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567950814] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1567951055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 566 processes
+[1567951057] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 3 warn out of 337 processes
+[1567951085] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 92.5% (22826808 kB) free.
+[1567951085] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 92.5% (22826808 kB) free.
+[1567951413] Auto-save of retention data completed successfully.
+[1567951414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567951423] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8672 MB (16% inode=98%):
+[1567951724] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 8.9% (4394624 kB) free!
+[1567951724] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 8.9% (4394624 kB) free!
+[1567952014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567952387] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 359 processes
+[1567952613] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 17.24, 17.05, 16.38
+[1567952614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567952854] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 2 crit, 4 warn out of 298 processes
+[1567953214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567953454] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567953698] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567953814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567953947] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 298 processes
+[1567954064] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.5% (4052948 kB) free!
+[1567954297] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567954414] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 356 processes
+[1567954414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567954414] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567954430] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;SOFT;1;CRITICAL - load average: 135.13, 67.98, 27.64
+[1567954550] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;SOFT;2;CRITICAL - load average: 139.97, 92.00, 41.33
+[1567954655] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 565 processes
+[1567954657] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 3 warn out of 448 processes
+[1567954670] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;CRITICAL;notify-service-by-email;CRITICAL - load average: 118.67, 103.35, 51.83
+[1567954670] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;HARD;3;CRITICAL - load average: 118.67, 103.35, 51.83
+[1567954933] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;1;WARNING - 18.3% (4481492 kB) free!
+[1567955013] Auto-save of retention data completed successfully.
+[1567955014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567955023] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 7516 MB (14% inode=98%):
+[1567955042] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567955040
+[1567955042] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 82.5% (40654812 kB) free.
+[1567955042] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 82.5% (40654812 kB) free.
+[1567955047] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1567955045
+[1567955053] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;2;WARNING - 17.0% (4159488 kB) free!
+[1567955173] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 15.4% (3775708 kB) free!
+[1567955173] SERVICE ALERT: pservercluster2;Memory;WARNING;HARD;3;WARNING - 15.4% (3775708 kB) free!
+[1567955179] SERVICE ALERT: pservercluster2;CPU Load;CRITICAL;SOFT;1;CRITICAL - load average: 96.07, 80.51, 43.07
+[1567955299] SERVICE ALERT: pservercluster2;CPU Load;CRITICAL;SOFT;2;CRITICAL - load average: 28.21, 64.55, 42.12
+[1567955419] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;CPU Load;CRITICAL;notify-service-by-email;CRITICAL - load average: 4.55, 43.48, 37.12
+[1567955419] SERVICE ALERT: pservercluster2;CPU Load;CRITICAL;HARD;3;CRITICAL - load average: 4.55, 43.48, 37.12
+[1567955614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567955773] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 23.5% (5748292 kB) free.
+[1567955773] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 23.5% (5748292 kB) free.
+[1567955870] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 2.73, 5.20, 16.17
+[1567955870] SERVICE ALERT: pservercluster1;CPU Load;WARNING;HARD;3;WARNING - load average: 2.73, 5.20, 16.17
+[1567955987] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 360 processes
+[1567956019] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 0.97, 6.78, 19.97
+[1567956019] SERVICE ALERT: pservercluster2;CPU Load;WARNING;HARD;3;WARNING - load average: 0.97, 6.78, 19.97
+[1567956213] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.48, 15.69, 15.89
+[1567956214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567956814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567957053] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 300 processes
+[1567957054] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567957070] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;OK;notify-service-by-email;OK - load average: 0.60, 0.65, 4.83
+[1567957070] SERVICE ALERT: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.60, 0.65, 4.83
+[1567957298] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567957414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567957547] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567957664] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.5% (4051620 kB) free!
+[1567957685] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (189048 kB) free!
+[1567957805] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (196584 kB) free!
+[1567957819] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;CPU Load;OK;notify-service-by-email;OK - load average: 0.63, 0.84, 3.60
+[1567957819] SERVICE ALERT: pservercluster2;CPU Load;OK;HARD;1;OK - load average: 0.63, 0.84, 3.60
+[1567957897] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 8 users currently logged in
+[1567957925] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (163664 kB) free!
+[1567957925] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (163664 kB) free!
+[1567958014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567958014] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567958014] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 355 processes
+[1567958257] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 337 processes
+[1567958613] Auto-save of retention data completed successfully.
+[1567958614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567958623] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8672 MB (16% inode=98%):
+[1567958855] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567959120] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567959118
+[1567959120] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 94.4% (23295392 kB) free.
+[1567959120] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 94.4% (23295392 kB) free.
+[1567959124] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1567959123
+[1567959214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567959587] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 359 processes
+[1567959813] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 15.71, 15.35, 15.18
+[1567959814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567960414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567960653] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 3 warn out of 297 processes
+[1567960654] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 329 processes
+[1567960899] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567961014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567961147] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 297 processes
+[1567961264] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.5% (4050064 kB) free!
+[1567961497] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567961614] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 353 processes
+[1567961614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567961614] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567961857] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 337 processes
+[1567962213] Auto-save of retention data completed successfully.
+[1567962214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567962223] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8670 MB (16% inode=98%):
+[1567962455] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567962814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567963188] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 359 processes
+[1567963413] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 14.71, 14.73, 14.95
+[1567963414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567963573] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;1;WARNING - 19.9% (4877872 kB) free!
+[1567963693] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;2;WARNING - 19.9% (4873680 kB) free!
+[1567963813] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 19.8% (4854720 kB) free!
+[1567963813] SERVICE ALERT: pservercluster2;Memory;WARNING;HARD;3;WARNING - 19.8% (4854720 kB) free!
+[1567964014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567964253] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 4 crit, 2 warn out of 300 processes
+[1567964254] SERVICE NOTIFICATION: nagiosadmin;qservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 327 processes
+[1567964499] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Current Users;WARNING;notify-service-by-email;USERS WARNING - 9 users currently logged in
+[1567964614] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567964747] SERVICE NOTIFICATION: nagiosadmin;sig5-vm2;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 296 processes
+[1567964864] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 16.5% (4046600 kB) free!
+[1567965097] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1567965214] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567965214] SERVICE NOTIFICATION: nagiosadmin;db1-vm1;PING;CRITICAL;notify-service-by-email;(Return code of 255 for service 'PING' on host 'db1-vm1' was out of bounds)
+[1567965214] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 1 crit, 0 warn out of 357 processes
+[1567965457] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU_Procs;CRITICAL;notify-service-by-email;CPU CRITICAL: 3 crit, 2 warn out of 337 processes
+[1567965813] Auto-save of retention data completed successfully.
+[1567965814] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567965823] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;HDD_Root status;WARNING;notify-service-by-email;DISK WARNING - free space: / 8670 MB (16% inode=98%):
+[1567966055] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Total Processes;WARNING;notify-service-by-email;PROCS WARNING: 564 processes
+[1567966414] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567966447] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;1;WARNING - 19.7% (9717864 kB) free!
+[1567966567] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;2;WARNING - 19.7% (9718584 kB) free!
+[1567966687] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;WARNING;notify-service-by-email;WARNING - 19.7% (9717292 kB) free!
+[1567966687] SERVICE ALERT: sigqscluster1;Memory;WARNING;HARD;3;WARNING - 19.7% (9717292 kB) free!
+[1567967013] SERVICE NOTIFICATION: nagiosadmin;rq-1;CPU Load;WARNING;notify-service-by-email;WARNING - load average: 12.76, 14.28, 14.83
+[1567967014] Warning: Return code of 255 for check of service 'PING' on host 'db1-vm1' was out of bounds.
+[1567967387] SERVICE NOTIFICATION: nagiosadmin;secondary-server;CPU_Procs;WARNING;notify-service-by-email;CPU WARNING: 1 warn out of 362 processes

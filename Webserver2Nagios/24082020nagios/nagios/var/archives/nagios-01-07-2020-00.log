@@ -1,0 +1,888 @@
+[1578249000] LOG ROTATION: DAILY
+[1578249000] LOG VERSION: 2.0
+[1578249000] CURRENT HOST STATE: db1-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.44 ms
+[1578249000] CURRENT HOST STATE: db2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.40 ms
+[1578249000] CURRENT HOST STATE: primary-server;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.37 ms
+[1578249000] CURRENT HOST STATE: pservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.37 ms
+[1578249000] CURRENT HOST STATE: pservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.38 ms
+[1578249000] CURRENT HOST STATE: qservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.35 ms
+[1578249000] CURRENT HOST STATE: qservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.36 ms
+[1578249000] CURRENT HOST STATE: redis-1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.26 ms
+[1578249000] CURRENT HOST STATE: redis-2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.39 ms
+[1578249000] CURRENT HOST STATE: rq-1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.26 ms
+[1578249000] CURRENT HOST STATE: rq-2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.27 ms
+[1578249000] CURRENT HOST STATE: secondary-server;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.35 ms
+[1578249000] CURRENT HOST STATE: sig1-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.52 ms
+[1578249000] CURRENT HOST STATE: sig2-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.50 ms
+[1578249000] CURRENT HOST STATE: sig3-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.46 ms
+[1578249000] CURRENT HOST STATE: sig4-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.52 ms
+[1578249000] CURRENT HOST STATE: sig5-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.46 ms
+[1578249000] CURRENT HOST STATE: sig6-vm2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.45 ms
+[1578249000] CURRENT HOST STATE: sigqscluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.43 ms
+[1578249000] CURRENT HOST STATE: sigqscluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.25 ms
+[1578249000] CURRENT HOST STATE: smscapp1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.28 ms
+[1578249000] CURRENT HOST STATE: smscapp2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.32 ms
+[1578249000] CURRENT HOST STATE: sservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.31 ms
+[1578249000] CURRENT HOST STATE: sservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.33 ms
+[1578249000] CURRENT HOST STATE: webserver1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.43 ms
+[1578249000] CURRENT HOST STATE: webserver2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.06 ms
+[1578249000] CURRENT HOST STATE: webservercluster1;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.43 ms
+[1578249000] CURRENT HOST STATE: webservercluster2;UP;HARD;1;PING OK - Packet loss = 0%, RTA = 0.28 ms
+[1578249000] CURRENT SERVICE STATE: db1-vm2;CPU Load;OK;HARD;1;OK - load average: 0.51, 0.63, 0.64
+[1578249000] CURRENT SERVICE STATE: db1-vm2;CPU_Procs;OK;HARD;1;CPU OK: 461 processes
+[1578249000] CURRENT SERVICE STATE: db1-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: db1-vm2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 26915 MB (67% inode=99%):
+[1578249000] CURRENT SERVICE STATE: db1-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44597 MB (87% inode=99%):
+[1578249000] CURRENT SERVICE STATE: db1-vm2;Memory;OK;HARD;1;OK - 89.9% (22183336 kB) free.
+[1578249000] CURRENT SERVICE STATE: db1-vm2;OutOfMemory-killer--oom-killer;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: db1-vm2;PING;OK;HARD;1;PING OK - Packet loss = 0%, RTA = 0.05 ms
+[1578249000] CURRENT SERVICE STATE: db1-vm2;Total Processes;OK;HARD;1;PROCS OK: 461 processes
+[1578249000] CURRENT SERVICE STATE: db2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.10, 0.35
+[1578249000] CURRENT SERVICE STATE: db2;CPU_Procs;OK;HARD;1;CPU OK: 335 processes
+[1578249000] CURRENT SERVICE STATE: db2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: db2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 90216 MB (40% inode=99%):
+[1578249000] CURRENT SERVICE STATE: db2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44470 MB (86% inode=99%):
+[1578249000] CURRENT SERVICE STATE: db2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: db2;Mariadb status;OK;HARD;1;PROCS OK: 1 process with command name 'mysqld'
+[1578249000] CURRENT SERVICE STATE: db2;Memory;OK;HARD;1;OK - 44.1% (21726392 kB) free.
+[1578249000] CURRENT SERVICE STATE: db2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: db2;Total Processes;OK;HARD;1;PROCS OK: 326 processes
+[1578249000] CURRENT SERVICE STATE: primary-server;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.06, 0.28
+[1578249000] CURRENT SERVICE STATE: primary-server;CPU_Procs;OK;HARD;1;CPU OK: 344 processes
+[1578249000] CURRENT SERVICE STATE: primary-server;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1578249000] CURRENT SERVICE STATE: primary-server;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 84332 MB (37% inode=99%):
+[1578249000] CURRENT SERVICE STATE: primary-server;HDD_Root status;OK;HARD;1;DISK OK - free space: / 30057 MB (58% inode=99%):
+[1578249000] CURRENT SERVICE STATE: primary-server;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: primary-server;Memory;OK;HARD;1;OK - 86.5% (21197520 kB) free.
+[1578249000] CURRENT SERVICE STATE: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: primary-server;Nginx Status;OK;HARD;1;NGINX OK -  0.113 sec. response time, Active: 0 (Writing: 0 Reading: 0 Waiting: 0) ReqPerSec: 0.000 ConnPerSec: 0.000 ReqPerConn: 0.000
+[1578249000] CURRENT SERVICE STATE: primary-server;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: primary-server;Total Processes;OK;HARD;1;PROCS OK: 343 processes
+[1578249000] CURRENT SERVICE STATE: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.70, 0.83, 0.91
+[1578249000] CURRENT SERVICE STATE: pservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 349 processes
+[1578249000] CURRENT SERVICE STATE: pservercluster1;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: pservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 189941 MB (86% inode=99%):
+[1578249000] CURRENT SERVICE STATE: pservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 39516 MB (77% inode=99%):
+[1578249000] CURRENT SERVICE STATE: pservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (194248 kB) free!
+[1578249000] CURRENT SERVICE STATE: pservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: pservercluster1;Total Processes;OK;HARD;1;PROCS OK: 354 processes
+[1578249000] CURRENT SERVICE STATE: pservercluster2;CPU Load;OK;HARD;1;OK - load average: 1.27, 1.19, 1.24
+[1578249000] CURRENT SERVICE STATE: pservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 350 processes
+[1578249000] CURRENT SERVICE STATE: pservercluster2;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1578249000] CURRENT SERVICE STATE: pservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 151106 MB (67% inode=99%):
+[1578249000] CURRENT SERVICE STATE: pservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 37456 MB (73% inode=98%):
+[1578249000] CURRENT SERVICE STATE: pservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: pservercluster2;Memory;OK;HARD;1;OK - 46.8% (11476720 kB) free.
+[1578249000] CURRENT SERVICE STATE: pservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: pservercluster2;Total Processes;OK;HARD;1;PROCS OK: 353 processes
+[1578249000] CURRENT SERVICE STATE: qservercluster1;CPU Load;OK;HARD;1;OK - load average: 9.86, 8.39, 6.79
+[1578249000] CURRENT SERVICE STATE: qservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 330 processes
+[1578249000] CURRENT SERVICE STATE: qservercluster1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1578249000] CURRENT SERVICE STATE: qservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224641 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: qservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 44426 MB (86% inode=99%):
+[1578249000] CURRENT SERVICE STATE: qservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: qservercluster1;Memory;OK;HARD;1;OK - 83.6% (41181024 kB) free.
+[1578249000] CURRENT SERVICE STATE: qservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: qservercluster1;Total Processes;OK;HARD;1;PROCS OK: 330 processes
+[1578249000] CURRENT SERVICE STATE: qservercluster2;CPU Load;OK;HARD;1;OK - load average: 3.46, 3.55, 2.92
+[1578249000] CURRENT SERVICE STATE: qservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 571 processes
+[1578249000] CURRENT SERVICE STATE: qservercluster2;Current Users;OK;HARD;1;USERS OK - 5 users currently logged in
+[1578249000] CURRENT SERVICE STATE: qservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 96601 MB (42% inode=99%):
+[1578249000] CURRENT SERVICE STATE: qservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 27042 MB (52% inode=98%):
+[1578249000] CURRENT SERVICE STATE: qservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: qservercluster2;Memory;OK;HARD;1;OK - 33.5% (16506296 kB) free.
+[1578249000] CURRENT SERVICE STATE: qservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: qservercluster2;Total Processes;OK;HARD;1;PROCS OK: 573 processes
+[1578249000] CURRENT SERVICE STATE: redis-1;CPU Load;OK;HARD;1;OK - load average: 1.61, 1.53, 1.12
+[1578249000] CURRENT SERVICE STATE: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 404 processes
+[1578249000] CURRENT SERVICE STATE: redis-1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1578249000] CURRENT SERVICE STATE: redis-1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 367277 MB (98% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 45257 MB (88% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-1;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /vns1 338492 MB (31% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: redis-1;Memory;OK;HARD;1;OK - 39.1% (51540380 kB) free.
+[1578249000] CURRENT SERVICE STATE: redis-1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: redis-1;Total Processes;OK;HARD;1;PROCS OK: 403 processes
+[1578249000] CURRENT SERVICE STATE: redis-2;CPU Load;OK;HARD;1;OK - load average: 1.02, 0.97, 1.03
+[1578249000] CURRENT SERVICE STATE: redis-2;CPU_Procs;OK;HARD;1;CPU OK: 381 processes
+[1578249000] CURRENT SERVICE STATE: redis-2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: redis-2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 332799 MB (89% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 45299 MB (88% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-2;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /vns1 1069171 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: redis-2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: redis-2;Memory;OK;HARD;1;OK - 30.4% (40073528 kB) free.
+[1578249000] CURRENT SERVICE STATE: redis-2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: redis-2;Total Processes;OK;HARD;1;PROCS OK: 381 processes
+[1578249000] CURRENT SERVICE STATE: rq-1;CPU Load;OK;HARD;1;OK - load average: 13.58, 14.44, 15.32
+[1578249000] CURRENT SERVICE STATE: rq-1;CPU_Procs;OK;HARD;1;CPU OK: 359 processes
+[1578249000] CURRENT SERVICE STATE: rq-1;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: rq-1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 400998 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 42658 MB (83% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-1;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /rq1vns1 1068147 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: rq-1;Memory;OK;HARD;1;OK - 77.6% (102275576 kB) free.
+[1578249000] CURRENT SERVICE STATE: rq-1;Total Processes;OK;HARD;1;PROCS OK: 362 processes
+[1578249000] CURRENT SERVICE STATE: rq-1;rq1-rabbitmqerror;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: rq-2;CPU Load;OK;HARD;1;OK - load average: 13.11, 14.97, 15.96
+[1578249000] CURRENT SERVICE STATE: rq-2;CPU_Procs;OK;HARD;1;CPU OK: 385 processes
+[1578249000] CURRENT SERVICE STATE: rq-2;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1578249000] CURRENT SERVICE STATE: rq-2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 401206 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 45504 MB (88% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-2;HDD_VNS1 status;OK;HARD;1;DISK OK - free space: /dev 64349 MB (100% inode=99%):
+[1578249000] CURRENT SERVICE STATE: rq-2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: rq-2;Memory;OK;HARD;1;OK - 92.2% (121548864 kB) free.
+[1578249000] CURRENT SERVICE STATE: rq-2;Total Processes;OK;HARD;1;PROCS OK: 387 processes
+[1578249000] CURRENT SERVICE STATE: rq-2;rq2-rabbitmqerror;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: secondary-server;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.10
+[1578249000] CURRENT SERVICE STATE: secondary-server;CPU_Procs;OK;HARD;1;CPU OK: 342 processes
+[1578249000] CURRENT SERVICE STATE: secondary-server;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1578249000] CURRENT SERVICE STATE: secondary-server;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 112952 MB (50% inode=99%):
+[1578249000] CURRENT SERVICE STATE: secondary-server;HDD_Root status;OK;HARD;1;DISK OK - free space: / 37225 MB (72% inode=99%):
+[1578249000] CURRENT SERVICE STATE: secondary-server;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: secondary-server;Memory Status;OK;HARD;1;OK - 45.3% (11108340 kB) free.
+[1578249000] CURRENT SERVICE STATE: secondary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: secondary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: secondary-server;Nginx Status;OK;HARD;1;NGINX OK -  0.089 sec. response time, Active: 0 (Writing: 0 Reading: 0 Waiting: 0) ReqPerSec: 0.000 ConnPerSec: 0.000 ReqPerConn: 0.000
+[1578249000] CURRENT SERVICE STATE: secondary-server;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: secondary-server;Total Processes;OK;HARD;1;PROCS OK: 342 processes
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.00, 0.00
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;CPU_Procs;OK;HARD;1;CPU OK: 263 processes
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;Memory;OK;HARD;1;OK - 71.7% (11715304 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;Root status;OK;HARD;1;DISK OK - free space: / 125238 MB (93% inode=97%):
+[1578249000] CURRENT SERVICE STATE: sig1-vm2;Total Processes;OK;HARD;1;PROCS OK: 266 processes
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;CPU Load;OK;HARD;1;OK - load average: 0.86, 0.74, 0.69
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;CPU_Procs;OK;HARD;1;CPU OK: 456 processes
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 124132 MB (89% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;Memory;OK;HARD;1;OK - 89.1% (31057296 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig2-vm2;Total Processes;OK;HARD;1;PROCS OK: 456 processes
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.00, 0.00
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;CPU_Procs;OK;HARD;1;CPU OK: 549 processes
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 90227 MB (75% inode=96%):
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 2 processes with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;Memory;OK;HARD;1;OK - 95.8% (22576656 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig3-vm2;Total Processes;OK;HARD;1;PROCS OK: 550 processes
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.05
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;CPU_Procs;OK;HARD;1;CPU OK: 222 processes
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 99680 MB (77% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;Memory;OK;HARD;1;OK - 88.4% (30787556 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig4-vm2;Total Processes;OK;HARD;1;PROCS OK: 222 processes
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;CPU Load;OK;HARD;1;OK - load average: 0.94, 0.97, 0.89
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;CPU_Procs;OK;HARD;1;CPU OK: 460 processes
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 231798 MB (92% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;Memory;OK;HARD;1;OK - 88.0% (30831532 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig5-vm2;Total Processes;OK;HARD;1;PROCS OK: 461 processes
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;CPU Load;OK;HARD;1;OK - load average: 0.71, 0.71, 0.75
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;CPU_Procs;OK;HARD;1;CPU OK: 498 processes
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 179812 MB (91% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;Memory;OK;HARD;1;OK - 70.9% (15927380 kB) free.
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;OutOfMemory-killer--oom-killer;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: sig6-vm2;Total Processes;OK;HARD;1;PROCS OK: 498 processes
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.04, 0.18
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;CPU_Procs;OK;HARD;1;CPU OK: 353 processes
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;Current Users;OK;HARD;1;USERS OK - 7 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224102 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40061 MB (78% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;Memory;OK;HARD;1;OK - 42.8% (21109096 kB) free.
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: sigqscluster1;Total Processes;OK;HARD;1;PROCS OK: 353 processes
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;CPU Load;OK;HARD;1;OK - load average: 12.30, 12.08, 11.71
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;CPU_Procs;OK;HARD;1;CPU OK: 300 processes
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 208589 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 45512 MB (88% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;Memory;OK;HARD;1;OK - 80.2% (39538432 kB) free.
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;Total Processes;OK;HARD;1;PROCS OK: 299 processes
+[1578249000] CURRENT SERVICE STATE: sigqscluster2;sigqscluster2-rabbitmqerror;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578249000] CURRENT SERVICE STATE: smscapp1;CPU Load;OK;HARD;1;OK - load average: 2.42, 2.40, 2.38
+[1578249000] CURRENT SERVICE STATE: smscapp1;CPU_Procs;OK;HARD;1;CPU OK: 670 processes
+[1578249000] CURRENT SERVICE STATE: smscapp1;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1578249000] CURRENT SERVICE STATE: smscapp1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 100950 MB (44% inode=99%):
+[1578249000] CURRENT SERVICE STATE: smscapp1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 39076 MB (76% inode=98%):
+[1578249000] CURRENT SERVICE STATE: smscapp1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: smscapp1;Memory;OK;HARD;1;OK - 71.8% (35380064 kB) free.
+[1578249000] CURRENT SERVICE STATE: smscapp1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: smscapp1;Total Processes;OK;HARD;1;PROCS OK: 673 processes
+[1578249000] CURRENT SERVICE STATE: smscapp2;CPU Load;OK;HARD;1;OK - load average: 4.42, 4.50, 3.88
+[1578249000] CURRENT SERVICE STATE: smscapp2;CPU_Procs;OK;HARD;1;CPU OK: 2126 processes
+[1578249000] CURRENT SERVICE STATE: smscapp2;Current Users;OK;HARD;1;USERS OK - 0 users currently logged in
+[1578249000] CURRENT SERVICE STATE: smscapp2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 133162 MB (59% inode=99%):
+[1578249000] CURRENT SERVICE STATE: smscapp2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 38762 MB (75% inode=98%):
+[1578249000] CURRENT SERVICE STATE: smscapp2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: smscapp2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.5% (236464 kB) free!
+[1578249000] CURRENT SERVICE STATE: smscapp2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: smscapp2;Total Processes;OK;HARD;1;PROCS OK: 2126 processes
+[1578249000] CURRENT SERVICE STATE: sservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.70, 1.17, 1.39
+[1578249000] CURRENT SERVICE STATE: sservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 323 processes
+[1578249000] CURRENT SERVICE STATE: sservercluster1;Current Users;OK;HARD;1;USERS OK - 3 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 114036 MB (51% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40532 MB (79% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sservercluster1;Memory;OK;HARD;1;OK - 55.9% (13707792 kB) free.
+[1578249000] CURRENT SERVICE STATE: sservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: sservercluster1;Total Processes;OK;HARD;1;PROCS OK: 323 processes
+[1578249000] CURRENT SERVICE STATE: sservercluster2;CPU Load;OK;HARD;1;OK - load average: 1.11, 0.89, 0.88
+[1578249000] CURRENT SERVICE STATE: sservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 343 processes
+[1578249000] CURRENT SERVICE STATE: sservercluster2;Current Users;OK;HARD;1;USERS OK - 5 users currently logged in
+[1578249000] CURRENT SERVICE STATE: sservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 180409 MB (81% inode=99%):
+[1578249000] CURRENT SERVICE STATE: sservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 33239 MB (64% inode=98%):
+[1578249000] CURRENT SERVICE STATE: sservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: sservercluster2;Memory;WARNING;HARD;3;WARNING - 10.2% (2501328 kB) free!
+[1578249000] CURRENT SERVICE STATE: sservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: sservercluster2;Total Processes;OK;HARD;1;PROCS OK: 348 processes
+[1578249000] CURRENT SERVICE STATE: webserver1;CPU Load;OK;HARD;1;OK - load average: 0.01, 0.03, 0.15
+[1578249000] CURRENT SERVICE STATE: webserver1;CPU_Procs;OK;HARD;1;CPU OK: 363 processes
+[1578249000] CURRENT SERVICE STATE: webserver1;Current Users;OK;HARD;1;USERS OK - 1 users currently logged in
+[1578249000] CURRENT SERVICE STATE: webserver1;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 224832 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webserver1;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40218 MB (78% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webserver1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: webserver1;Memory;OK;HARD;1;OK - 84.2% (20601948 kB) free.
+[1578249000] CURRENT SERVICE STATE: webserver1;Nginx_status;OK;HARD;1;NGINX OK -  0.089 sec. response time, Active: 1 (Writing: 1 Reading: 0 Waiting: 0) ReqPerSec: 0.003 ConnPerSec: 0.010 ReqPerConn: 0.959
+[1578249000] CURRENT SERVICE STATE: webserver1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: webserver1;Total Processes;OK;HARD;1;PROCS OK: 361 processes
+[1578249000] CURRENT SERVICE STATE: webserver2;CPU_Procs;OK;HARD;1;CPU OK: 468 processes
+[1578249000] CURRENT SERVICE STATE: webserver2;Current Load;OK;HARD;1;OK - load average: 0.02, 0.04, 0.05
+[1578249000] CURRENT SERVICE STATE: webserver2;Current Users;OK;HARD;1;USERS OK - 31 users currently logged in
+[1578249000] CURRENT SERVICE STATE: webserver2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 92063 MB (40.96% inode=100%):
+[1578249000] CURRENT SERVICE STATE: webserver2;HTTP;OK;HARD;1;HTTP OK: HTTP/1.1 200 OK - 355 bytes in 0.001 second response time
+[1578249000] CURRENT SERVICE STATE: webserver2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: webserver2;Memory;OK;HARD;1;OK - 45.2% (11083408 kB) free.
+[1578249000] CURRENT SERVICE STATE: webserver2;PING;OK;HARD;1;PING OK - Packet loss = 0%, RTA = 0.05 ms
+[1578249000] CURRENT SERVICE STATE: webserver2;Root Partition;OK;HARD;1;DISK OK - free space: / 13243 MB (25.87% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webserver2;SSH;OK;HARD;1;SSH OK - OpenSSH_7.4 (protocol 2.0)
+[1578249000] CURRENT SERVICE STATE: webserver2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: webserver2;Total Processes;OK;HARD;1;PROCS OK: 161 processes with STATE = RSZDT
+[1578249000] CURRENT SERVICE STATE: webservercluster1;CPU Load;OK;HARD;1;OK - load average: 0.00, 0.01, 0.05
+[1578249000] CURRENT SERVICE STATE: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 328 processes
+[1578249000] CURRENT SERVICE STATE: webservercluster1;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: webservercluster1;HDD_Home status;OK;HARD;1;DISK OK - free space: / 20396 MB (39% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webservercluster1;HDD_Root status;OK;HARD;1;DISK OK - free space: /home 127805 MB (56% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webservercluster1;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: webservercluster1;Memory;OK;HARD;1;OK - 52.6% (8550564 kB) free.
+[1578249000] CURRENT SERVICE STATE: webservercluster1;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: webservercluster1;Total Processes;OK;HARD;1;PROCS OK: 327 processes
+[1578249000] CURRENT SERVICE STATE: webservercluster2;CPU Load;OK;HARD;1;OK - load average: 0.95, 0.99, 0.95
+[1578249000] CURRENT SERVICE STATE: webservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 294 processes
+[1578249000] CURRENT SERVICE STATE: webservercluster2;Current Users;OK;HARD;1;USERS OK - 2 users currently logged in
+[1578249000] CURRENT SERVICE STATE: webservercluster2;HDD_Home status;OK;HARD;1;DISK OK - free space: /home 223257 MB (99% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webservercluster2;HDD_Root status;OK;HARD;1;DISK OK - free space: / 40142 MB (78% inode=99%):
+[1578249000] CURRENT SERVICE STATE: webservercluster2;LocalService-NTPD SERVICE;OK;HARD;1;PROCS OK: 1 process with command name 'ntpd'
+[1578249000] CURRENT SERVICE STATE: webservercluster2;Memory;OK;HARD;1;OK - 49.9% (8110952 kB) free.
+[1578249000] CURRENT SERVICE STATE: webservercluster2;Sensors Status;OK;HARD;1;SENSORS OK
+[1578249000] CURRENT SERVICE STATE: webservercluster2;Total Processes;OK;HARD;1;PROCS OK: 293 processes
+[1578249040] SERVICE ALERT: smscapp2;Memory;OK;HARD;1;OK - 52.0% (25615180 kB) free.
+[1578249129] SERVICE ALERT: redis-1;Memory;WARNING;SOFT;1;WARNING - 12.6% (16614000 kB) free!
+[1578249249] SERVICE ALERT: redis-1;Memory;WARNING;SOFT;2;WARNING - 12.6% (16612988 kB) free!
+[1578249369] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 12.6% (16616188 kB) free!
+[1578249369] SERVICE ALERT: redis-1;Memory;WARNING;HARD;3;WARNING - 12.6% (16616188 kB) free!
+[1578249427] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (173548 kB) free!
+[1578249427] SERVICE ALERT: sservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (173548 kB) free!
+[1578249497] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (189748 kB) free!
+[1578249618] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (190352 kB) free!
+[1578249738] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (202216 kB) free!
+[1578249738] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (202216 kB) free!
+[1578249895] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (186936 kB) free!
+[1578250015] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.7% (182564 kB) free!
+[1578250107] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (173668 kB) free!
+[1578250135] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192496 kB) free!
+[1578250135] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (192496 kB) free!
+[1578250694] Auto-save of retention data completed successfully.
+[1578250904] SERVICE ALERT: webserver2;Memory;WARNING;SOFT;1;WARNING - 13.3% (3260212 kB) free!
+[1578250964] SERVICE ALERT: webserver2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (201808 kB) free!
+[1578251024] SERVICE ALERT: webserver2;Memory;OK;HARD;1;OK - 67.7% (16583548 kB) free.
+[1578252969] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 13.2% (17370436 kB) free!
+[1578253027] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 1.0% (234776 kB) free!
+[1578253106] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 14.5% (3579932 kB) free!
+[1578253106] SERVICE ALERT: pservercluster1;Memory;WARNING;HARD;3;WARNING - 14.5% (3579932 kB) free!
+[1578253338] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (197188 kB) free!
+[1578253706] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (193956 kB) free!
+[1578253706] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (193956 kB) free!
+[1578253736] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (170896 kB) free!
+[1578254294] Auto-save of retention data completed successfully.
+[1578254687] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;1;WARNING - 11.4% (5609644 kB) free!
+[1578254807] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 6.6% (3233440 kB) free!
+[1578254927] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 6.6% (3235140 kB) free!
+[1578254927] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 6.6% (3235140 kB) free!
+[1578256569] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 14.7% (19366440 kB) free!
+[1578256627] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 1.0% (248996 kB) free!
+[1578256938] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (167280 kB) free!
+[1578257306] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (198416 kB) free!
+[1578257336] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (175924 kB) free!
+[1578257538] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 40.9% (10028308 kB) free.
+[1578257538] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 40.9% (10028308 kB) free.
+[1578257867] SERVICE ALERT: smscapp1;Memory;CRITICAL;SOFT;1;CRITICAL - 2.2% (1079728 kB) free!
+[1578257894] Auto-save of retention data completed successfully.
+[1578257987] SERVICE ALERT: smscapp1;Memory;OK;HARD;1;OK - 85.8% (42296868 kB) free.
+[1578258527] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 6.4% (3171252 kB) free!
+[1578260169] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 17.0% (22367328 kB) free!
+[1578260227] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 1.0% (235660 kB) free!
+[1578260906] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.9% (216840 kB) free!
+[1578260936] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195364 kB) free!
+[1578261494] Auto-save of retention data completed successfully.
+[1578262127] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 6.3% (3112456 kB) free!
+[1578263769] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 17.1% (22520392 kB) free!
+[1578263827] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.9% (214416 kB) free!
+[1578264506] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (171236 kB) free!
+[1578264536] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (167252 kB) free!
+[1578265094] Auto-save of retention data completed successfully.
+[1578265727] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 6.2% (3077516 kB) free!
+[1578267369] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 17.7% (23280304 kB) free!
+[1578267427] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.9% (229476 kB) free!
+[1578268106] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (202960 kB) free!
+[1578268136] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195556 kB) free!
+[1578268694] Auto-save of retention data completed successfully.
+[1578269327] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 6.1% (3008168 kB) free!
+[1578270738] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (182164 kB) free!
+[1578270858] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.7% (171756 kB) free!
+[1578270969] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;WARNING;notify-service-by-email;WARNING - 16.4% (21600704 kB) free!
+[1578270978] SERVICE ALERT: pservercluster2;Total Processes;CRITICAL;SOFT;1;PROCS CRITICAL: 879 processes
+[1578270978] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 18.8% (4600804 kB) free!
+[1578270978] SERVICE ALERT: sservercluster1;Memory;WARNING;HARD;3;WARNING - 18.8% (4600804 kB) free!
+[1578271028] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (172920 kB) free!
+[1578271098] SERVICE ALERT: pservercluster2;Total Processes;CRITICAL;SOFT;2;PROCS CRITICAL: 877 processes
+[1578271218] SERVICE ALERT: pservercluster2;Total Processes;OK;HARD;1;PROCS OK: 357 processes
+[1578271569] SERVICE NOTIFICATION: nagiosadmin;redis-1;Memory;OK;notify-service-by-email;OK - 31.8% (41924040 kB) free.
+[1578271569] SERVICE ALERT: redis-1;Memory;OK;HARD;1;OK - 31.8% (41924040 kB) free.
+[1578271578] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 4.2% (1017572 kB) free!
+[1578271578] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 4.2% (1017572 kB) free!
+[1578271615] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578271614
+[1578271615] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 89.7% (22143968 kB) free.
+[1578271615] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 89.7% (22143968 kB) free.
+[1578271618] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578271617
+[1578271627] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;OK;notify-service-by-email;OK - 85.9% (21043676 kB) free.
+[1578271627] SERVICE ALERT: sservercluster2;Memory;OK;HARD;1;OK - 85.9% (21043676 kB) free.
+[1578271650] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578271650
+[1578271651] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 89.8% (22009940 kB) free.
+[1578271651] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 89.8% (22009940 kB) free.
+[1578271654] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578271653
+[1578271658] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578271657
+[1578271684] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578271683
+[1578271685] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 79.0% (38945792 kB) free.
+[1578271685] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 79.0% (38945792 kB) free.
+[1578271713] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578271711
+[1578271713] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 90.0% (22060996 kB) free.
+[1578271713] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 90.0% (22060996 kB) free.
+[1578271716] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578271715
+[1578271732] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(9) < 139.59.21.208 [06/Jan/2020:06:14:57 +0530] TCP 502 0 0 0.000 "backend_13000" "0" "0" "0.000"
+[1578271852] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578272021] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(44) < 2020/01/06 06:16:45 [error] 21675#0: *22885842 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.16.101.72, server: 0.0.0.0:13000, upstream: "10.147.212.143:13000", bytes from/to client:43/0, bytes from/to upstream:0/43
+[1578272141] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578272294] Auto-save of retention data completed successfully.
+[1578272697] SERVICE ALERT: redis-1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 402 processes
+[1578272817] SERVICE ALERT: redis-1;CPU_Procs;OK;HARD;1;CPU OK: 400 processes
+[1578275894] Auto-save of retention data completed successfully.
+[1578277480] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;1;USERS WARNING - 6 users currently logged in
+[1578277600] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;2;USERS WARNING - 6 users currently logged in
+[1578277617] SERVICE ALERT: secondary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(41) < 2020/01/06 07:55:09 [error] 28875#0: *33685753 recv() failed (104: Connection reset by peer) while proxying connection, client: 49.50.86.152, server: 0.0.0.0:4000, upstream: "10.147.212.37:4000", bytes from/to client:42/0, bytes from/to upstream:0/42
+[1578277720] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578277720] SERVICE ALERT: sservercluster2;Current Users;WARNING;HARD;3;USERS WARNING - 6 users currently logged in
+[1578277737] SERVICE ALERT: secondary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578277902] SERVICE ALERT: secondary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(11) < 103.16.101.72 [06/Jan/2020:07:54:39 +0530] TCP 502 0 0 0.000 "backend3" "0" "0" "0.000"
+[1578278022] SERVICE ALERT: secondary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578278741] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(7) < 2020/01/06 08:13:07 [error] 21677#0: *22906630 connect() failed (111: Connection refused) while connecting to upstream, client: 185.255.8.58, server: 0.0.0.0:13001, upstream: "10.147.212.143:13001", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578278862] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578279461] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(1) < 2020/01/06 08:21:33 [error] 21675#0: *22908141 recv() failed (104: Connection reset by peer) while proxying connection, client: 125.19.22.226, server: 0.0.0.0:13001, upstream: "10.147.212.154:13001", bytes from/to client:39/0, bytes from/to upstream:0/39
+[1578279494] Auto-save of retention data completed successfully.
+[1578279581] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578280181] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(1) < 2020/01/06 08:29:48 [error] 21674#0: *22909349 recv() failed (104: Connection reset by peer) while proxying connection, client: 92.42.104.166, server: 0.0.0.0:13001, upstream: "10.147.212.155:13001", bytes from/to client:41/0, bytes from/to upstream:0/41
+[1578280301] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578281320] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578282520] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;OK;notify-service-by-email;USERS OK - 5 users currently logged in
+[1578282520] SERVICE ALERT: sservercluster2;Current Users;OK;HARD;1;USERS OK - 5 users currently logged in
+[1578283094] Auto-save of retention data completed successfully.
+[1578286618] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;1;WARNING - 18.9% (4663636 kB) free!
+[1578286694] Auto-save of retention data completed successfully.
+[1578286739] SERVICE ALERT: pservercluster1;Memory;WARNING;SOFT;2;WARNING - 18.5% (4552996 kB) free!
+[1578286852] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(693) < 103.255.146.164 [06/Jan/2020:10:24:20 +0530] TCP 502 0 0 0.001 "10.147.212.142:3000" "0" "0" "0.001"
+[1578286859] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 14.4% (3564172 kB) free!
+[1578286859] SERVICE ALERT: pservercluster1;Memory;WARNING;HARD;3;WARNING - 14.4% (3564172 kB) free!
+[1578286902] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(705) < 2020/01/06 10:24:20 [error] 21676#0: *22931471 connect() failed (111: Connection refused) while connecting to upstream, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578286972] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578287022] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;2;(1) < 2020/01/06 10:32:38 [error] 21676#0: *22932980 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:12617/70, bytes from/to upstream:70/12617
+[1578287142] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578287459] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 9.8% (2423384 kB) free!
+[1578287459] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 9.8% (2423384 kB) free!
+[1578289058] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.8% (2403428 kB) free!
+[1578289178] SERVICE ALERT: pservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 9.1% (2230516 kB) free!
+[1578289298] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 8.3% (2046412 kB) free!
+[1578289298] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 8.3% (2046412 kB) free!
+[1578289540] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578289539
+[1578289541] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 90.6% (22357720 kB) free.
+[1578289541] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 90.6% (22357720 kB) free.
+[1578289546] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578289545
+[1578289577] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578289575
+[1578289577] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 89.4% (21904036 kB) free.
+[1578289577] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 89.4% (21904036 kB) free.
+[1578289584] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578289582
+[1578290294] Auto-save of retention data completed successfully.
+[1578290320] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;1;USERS WARNING - 6 users currently logged in
+[1578290440] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;2;USERS WARNING - 6 users currently logged in
+[1578290560] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578290560] SERVICE ALERT: sservercluster2;Current Users;WARNING;HARD;3;USERS WARNING - 6 users currently logged in
+[1578291238] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;1;WARNING - 17.8% (4001588 kB) free!
+[1578291358] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;2;WARNING - 16.3% (3662820 kB) free!
+[1578291478] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;WARNING;notify-service-by-email;WARNING - 15.0% (3362816 kB) free!
+[1578291478] SERVICE ALERT: sig6-vm2;Memory;WARNING;HARD;3;WARNING - 15.0% (3362816 kB) free!
+[1578292078] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 8.4% (1880420 kB) free!
+[1578292078] SERVICE ALERT: sig6-vm2;Memory;CRITICAL;HARD;3;CRITICAL - 8.4% (1880420 kB) free!
+[1578292679] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;OK;notify-service-by-email;OK - 74.4% (16700000 kB) free.
+[1578292679] SERVICE ALERT: sig6-vm2;Memory;OK;HARD;1;OK - 74.4% (16700000 kB) free.
+[1578292885] SERVICE ALERT: db1-vm2;Memory;WARNING;SOFT;1;WARNING - 19.7% (4872980 kB) free!
+[1578293005] SERVICE ALERT: db1-vm2;Memory;OK;HARD;1;OK - 93.1% (22987552 kB) free.
+[1578293746] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (171832 kB) free!
+[1578293866] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.9% (234380 kB) free!
+[1578293894] Auto-save of retention data completed successfully.
+[1578293986] SERVICE FLAPPING ALERT: pservercluster1;Memory;STARTED; Service appears to have started flapping (20.7% change >= 20.0% threshold)
+[1578293986] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (181416 kB) free!
+[1578294046] SERVICE ALERT: qservercluster2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.4% (212284 kB) free!
+[1578294160] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578294166] SERVICE ALERT: qservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.5% (241436 kB) free!
+[1578294286] SERVICE NOTIFICATION: nagiosadmin;qservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (235916 kB) free!
+[1578294286] SERVICE ALERT: qservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.5% (235916 kB) free!
+[1578294427] SERVICE ALERT: sservercluster2;Memory;WARNING;SOFT;1;WARNING - 17.6% (4307340 kB) free!
+[1578294547] SERVICE ALERT: sservercluster2;Memory;WARNING;SOFT;2;WARNING - 17.3% (4228640 kB) free!
+[1578294587] SERVICE ALERT: smscapp1;Memory;WARNING;SOFT;1;WARNING - 17.0% (8379736 kB) free!
+[1578294667] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (180856 kB) free!
+[1578294667] SERVICE ALERT: sservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (180856 kB) free!
+[1578294707] SERVICE ALERT: smscapp1;Memory;CRITICAL;SOFT;2;CRITICAL - 4.5% (2198048 kB) free!
+[1578294754] SERVICE ALERT: webservercluster1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 327 processes
+[1578294827] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (239044 kB) free!
+[1578294827] SERVICE ALERT: smscapp1;Memory;CRITICAL;HARD;3;CRITICAL - 0.5% (239044 kB) free!
+[1578294874] SERVICE ALERT: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 326 processes
+[1578294942] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(1) < 2020/01/06 12:44:58 [error] 21680#0: *22956907 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:2155/87, bytes from/to upstream:87/2155
+[1578295062] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578296628] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;OK;notify-service-by-email;OK - 26.7% (13139836 kB) free.
+[1578296628] SERVICE ALERT: smscapp1;Memory;OK;HARD;1;OK - 26.7% (13139836 kB) free.
+[1578296655] SERVICE ALERT: primary-server;Memory;WARNING;SOFT;1;WARNING - 18.0% (4417508 kB) free!
+[1578296674] SERVICE ALERT: webservercluster1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 328 processes
+[1578296776] SERVICE ALERT: primary-server;Memory;WARNING;SOFT;2;WARNING - 17.4% (4261420 kB) free!
+[1578296794] SERVICE ALERT: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 326 processes
+[1578296840] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 14.0% (18425880 kB) free!
+[1578296896] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;WARNING;notify-service-by-email;WARNING - 16.7% (4099608 kB) free!
+[1578296896] SERVICE ALERT: primary-server;Memory;WARNING;HARD;3;WARNING - 16.7% (4099608 kB) free!
+[1578296960] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 31.4% (41336516 kB) free.
+[1578297447] SERVICE ALERT: webservercluster1;Memory;WARNING;SOFT;1;WARNING - 19.3% (3136480 kB) free!
+[1578297494] Auto-save of retention data completed successfully.
+[1578297516] SERVICE ALERT: sservercluster1;Memory;WARNING;SOFT;1;WARNING - 16.8% (4126860 kB) free!
+[1578297568] SERVICE ALERT: webservercluster1;Memory;WARNING;SOFT;2;WARNING - 17.4% (2825164 kB) free!
+[1578297636] SERVICE ALERT: sservercluster1;Memory;WARNING;SOFT;2;WARNING - 15.9% (3889084 kB) free!
+[1578297688] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 5.0% (816684 kB) free!
+[1578297688] SERVICE ALERT: webservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 5.0% (816684 kB) free!
+[1578297756] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 15.1% (3690940 kB) free!
+[1578297756] SERVICE ALERT: sservercluster1;Memory;WARNING;HARD;3;WARNING - 15.1% (3690940 kB) free!
+[1578297760] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578297828] SERVICE ALERT: smscapp1;Memory;WARNING;SOFT;1;WARNING - 19.8% (9772444 kB) free!
+[1578297886] SERVICE NOTIFICATION: nagiosadmin;qservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (225900 kB) free!
+[1578297948] SERVICE ALERT: smscapp1;Memory;WARNING;SOFT;2;WARNING - 19.1% (9406036 kB) free!
+[1578297984] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;1;WARNING - 19.8% (4847976 kB) free!
+[1578298068] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;WARNING;notify-service-by-email;WARNING - 18.4% (9059604 kB) free!
+[1578298068] SERVICE ALERT: smscapp1;Memory;WARNING;HARD;3;WARNING - 18.4% (9059604 kB) free!
+[1578298104] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;2;WARNING - 19.0% (4655372 kB) free!
+[1578298224] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 18.2% (4463636 kB) free!
+[1578298224] SERVICE ALERT: pservercluster2;Memory;WARNING;HARD;3;WARNING - 18.2% (4463636 kB) free!
+[1578298268] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (178560 kB) free!
+[1578298685] SERVICE ALERT: sigqscluster1;Memory;WARNING;SOFT;1;WARNING - 19.8% (9772300 kB) free!
+[1578298696] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;CRITICAL;notify-service-by-email;CRITICAL - 8.1% (1995904 kB) free!
+[1578298696] SERVICE ALERT: primary-server;Memory;CRITICAL;HARD;3;CRITICAL - 8.1% (1995904 kB) free!
+[1578298805] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 9.7% (4756304 kB) free!
+[1578298925] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 9.6% (4750112 kB) free!
+[1578298925] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 9.6% (4750112 kB) free!
+[1578298956] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 7.2% (1759004 kB) free!
+[1578298956] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 7.2% (1759004 kB) free!
+[1578299086] SERVICE NOTIFICATION: nagiosadmin;qservercluster2;Memory;OK;notify-service-by-email;OK - 26.1% (12856924 kB) free.
+[1578299086] SERVICE ALERT: qservercluster2;Memory;OK;HARD;1;OK - 26.1% (12856924 kB) free.
+[1578299194] SERVICE ALERT: webservercluster1;CPU_Procs;WARNING;SOFT;1;CPU WARNING: 1 warn out of 333 processes
+[1578299268] SERVICE FLAPPING ALERT: smscapp1;Memory;STARTED; Service appears to have started flapping (23.3% change >= 20.0% threshold)
+[1578299268] SERVICE ALERT: smscapp1;Memory;OK;HARD;1;OK - 51.3% (25273956 kB) free.
+[1578299314] SERVICE ALERT: webservercluster1;CPU_Procs;OK;HARD;1;CPU OK: 333 processes
+[1578299337] SERVICE ALERT: secondary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(5) < 2020/01/06 13:58:17 [error] 28873#0: *33835969 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 183.82.105.122, server: webserver2.com, request: "POST /temtapp/index.php/consolidate/lrnreport HTTP/1.0", upstream: "http://10.147.212.40:80/temtapp/index.php/consolidate/lrnreport", host: "altsmsc.tesync.net", referrer: "http://altsmsc.tesync.net/temtapp/index.php/consolidate/lrnreport"
+[1578299457] SERVICE ALERT: secondary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578300024] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 5.3% (1301708 kB) free!
+[1578300024] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 5.3% (1301708 kB) free!
+[1578300479] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;1;WARNING - 13.6% (3045764 kB) free!
+[1578300599] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;2;WARNING - 12.5% (2812012 kB) free!
+[1578300719] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;WARNING;notify-service-by-email;WARNING - 11.4% (2551980 kB) free!
+[1578300719] SERVICE ALERT: sig6-vm2;Memory;WARNING;HARD;3;WARNING - 11.4% (2551980 kB) free!
+[1578300760] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;OK;notify-service-by-email;USERS OK - 5 users currently logged in
+[1578300760] SERVICE ALERT: sservercluster2;Current Users;OK;HARD;1;USERS OK - 5 users currently logged in
+[1578301094] Auto-save of retention data completed successfully.
+[1578301186] SERVICE FLAPPING ALERT: pservercluster1;Memory;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1578301186] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (198652 kB) free!
+[1578301288] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 4.5% (729248 kB) free!
+[1578301319] SERVICE FLAPPING ALERT: sig6-vm2;Memory;STARTED; Service appears to have started flapping (25.2% change >= 20.0% threshold)
+[1578301319] SERVICE ALERT: sig6-vm2;Memory;CRITICAL;HARD;3;CRITICAL - 6.1% (1373680 kB) free!
+[1578301486] SERVICE ALERT: qservercluster2;Memory;WARNING;SOFT;1;WARNING - 19.6% (9676804 kB) free!
+[1578301606] SERVICE ALERT: qservercluster2;Memory;WARNING;SOFT;2;WARNING - 19.4% (9566524 kB) free!
+[1578301727] SERVICE NOTIFICATION: nagiosadmin;qservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 19.2% (9461744 kB) free!
+[1578301727] SERVICE ALERT: qservercluster2;Memory;WARNING;HARD;3;WARNING - 19.2% (9461744 kB) free!
+[1578301840] SERVICE ALERT: smscapp2;Memory;WARNING;SOFT;1;WARNING - 16.9% (8344332 kB) free!
+[1578301960] SERVICE ALERT: smscapp2;Memory;WARNING;SOFT;2;WARNING - 16.2% (7997108 kB) free!
+[1578302080] SERVICE NOTIFICATION: nagiosadmin;smscapp2;Memory;WARNING;notify-service-by-email;WARNING - 15.6% (7697208 kB) free!
+[1578302080] SERVICE ALERT: smscapp2;Memory;WARNING;HARD;3;WARNING - 15.6% (7697208 kB) free!
+[1578302297] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (163748 kB) free!
+[1578302467] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195772 kB) free!
+[1578302525] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (228588 kB) free!
+[1578302556] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (175916 kB) free!
+[1578302862] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(3) < 2020/01/06 14:49:25 [error] 21677#0: *22979550 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:19374/104, bytes from/to upstream:104/19374
+[1578302960] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 14.7% (19328388 kB) free!
+[1578302982] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578302992] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;primary-server;Memory;1578302991
+[1578302993] SERVICE NOTIFICATION: nagiosadmin;primary-server;Memory;OK;notify-service-by-email;OK - 89.7% (21979720 kB) free.
+[1578302993] SERVICE ALERT: primary-server;Memory;OK;HARD;1;OK - 89.7% (21979720 kB) free.
+[1578302996] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;primary-server;Memory;1578302995
+[1578303023] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578303017
+[1578303024] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 87.8% (21673892 kB) free.
+[1578303024] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 87.8% (21673892 kB) free.
+[1578303027] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578303026
+[1578303047] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578303046
+[1578303048] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 88.8% (21763108 kB) free.
+[1578303048] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 88.8% (21763108 kB) free.
+[1578303052] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578303050
+[1578303055] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578303054
+[1578303080] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 33.0% (43509140 kB) free.
+[1578303083] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;qservercluster2;Memory;1578303081
+[1578303083] SERVICE FLAPPING ALERT: qservercluster2;Memory;STARTED; Service appears to have started flapping (21.7% change >= 20.0% threshold)
+[1578303083] SERVICE ALERT: qservercluster2;Memory;OK;HARD;1;OK - 91.0% (44841080 kB) free.
+[1578303086] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;qservercluster2;Memory;1578303085
+[1578303108] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sig6-vm2;Memory;1578303107
+[1578303108] SERVICE ALERT: sig6-vm2;Memory;OK;HARD;1;OK - 74.9% (16819664 kB) free.
+[1578303112] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sig6-vm2;Memory;1578303111
+[1578303117] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sig6-vm2;Memory;1578303116
+[1578303142] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578303141
+[1578303143] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 78.7% (38795892 kB) free.
+[1578303143] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 78.7% (38795892 kB) free.
+[1578303145] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578303145
+[1578303176] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp2;Memory;1578303174
+[1578303176] SERVICE NOTIFICATION: nagiosadmin;smscapp2;Memory;OK;notify-service-by-email;OK - 56.4% (27810608 kB) free.
+[1578303176] SERVICE ALERT: smscapp2;Memory;OK;HARD;1;OK - 56.4% (27810608 kB) free.
+[1578303181] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp2;Memory;1578303179
+[1578303185] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp2;Memory;1578303184
+[1578303205] SERVICE ALERT: db1-vm2;Memory;WARNING;SOFT;1;WARNING - 18.7% (4625888 kB) free!
+[1578303209] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578303207
+[1578303209] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 84.1% (20619664 kB) free.
+[1578303209] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 84.1% (20619664 kB) free.
+[1578303212] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578303211
+[1578303216] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578303215
+[1578303274] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster2;Memory;1578303271
+[1578303275] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;OK;notify-service-by-email;OK - 89.7% (21978756 kB) free.
+[1578303275] SERVICE ALERT: sservercluster2;Memory;OK;HARD;1;OK - 89.7% (21978756 kB) free.
+[1578303277] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster2;Memory;1578303276
+[1578303301] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1578303300
+[1578303302] SERVICE NOTIFICATION: nagiosadmin;webservercluster1;Memory;OK;notify-service-by-email;OK - 87.0% (14133696 kB) free.
+[1578303302] SERVICE ALERT: webservercluster1;Memory;OK;HARD;1;OK - 87.0% (14133696 kB) free.
+[1578303304] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1578303303
+[1578303308] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;webservercluster1;Memory;1578303307
+[1578303325] SERVICE ALERT: db1-vm2;Memory;WARNING;SOFT;2;WARNING - 17.4% (4289384 kB) free!
+[1578303428] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;db1-vm2;Memory;1578303427
+[1578303428] SERVICE ALERT: db1-vm2;Memory;OK;HARD;1;OK - 93.5% (23086728 kB) free.
+[1578303432] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;db1-vm2;Memory;1578303430
+[1578303435] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;db1-vm2;Memory;1578303434
+[1578303627] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (195944 kB) free!
+[1578303681] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 12.9% (17005836 kB) free!
+[1578303747] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.7% (176596 kB) free!
+[1578303801] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 31.9% (42005336 kB) free.
+[1578303867] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (177248 kB) free!
+[1578303867] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (177248 kB) free!
+[1578304345] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.4% (212668 kB) free!
+[1578304401] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 11.8% (15570676 kB) free!
+[1578304465] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.5% (247500 kB) free!
+[1578304521] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 30.4% (40137268 kB) free.
+[1578304585] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.4% (219684 kB) free!
+[1578304585] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.4% (219684 kB) free!
+[1578304694] Auto-save of retention data completed successfully.
+[1578305121] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 10.5% (13811036 kB) free!
+[1578305241] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 29.4% (38770940 kB) free.
+[1578305841] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.4% (12390640 kB) free!
+[1578305961] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 28.7% (37790828 kB) free.
+[1578305983] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(1) < 2020/01/06 15:42:05 [error] 21681#0: *22989265 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:3427/104, bytes from/to upstream:104/3427
+[1578306103] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578306561] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 8.4% (11120028 kB) free!
+[1578306681] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 25.1% (33047972 kB) free.
+[1578307047] SERVICE ALERT: secondary-server;Memory Status;WARNING;SOFT;1;WARNING - 19.5% (4776376 kB) free!
+[1578307068] SERVICE ALERT: smscapp1;Memory;WARNING;SOFT;1;WARNING - 18.8% (9256792 kB) free!
+[1578307168] SERVICE ALERT: secondary-server;Memory Status;WARNING;SOFT;2;WARNING - 19.4% (4743968 kB) free!
+[1578307188] SERVICE ALERT: smscapp1;Memory;WARNING;SOFT;2;WARNING - 18.2% (8952100 kB) free!
+[1578307281] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 5.7% (7461392 kB) free!
+[1578307288] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 19.2% (4704788 kB) free!
+[1578307288] SERVICE ALERT: secondary-server;Memory Status;WARNING;HARD;3;WARNING - 19.2% (4704788 kB) free!
+[1578307308] SERVICE ALERT: smscapp1;Memory;WARNING;HARD;3;WARNING - 17.6% (8658132 kB) free!
+[1578307401] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 34.6% (45596668 kB) free.
+[1578307467] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (195184 kB) free!
+[1578307903] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(892) < 2020/01/06 16:17:26 [error] 21683#0: *22997656 connect() failed (111: Connection refused) while connecting to upstream, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578307973] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(890) < 103.255.146.164 [06/Jan/2020:16:17:26 +0530] TCP 502 0 0 0.000 "10.147.212.142:3000" "0" "0" "0.000"
+[1578308023] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578308093] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578308185] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.4% (221096 kB) free!
+[1578308294] Auto-save of retention data completed successfully.
+[1578308602] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 18.8% (24797176 kB) free!
+[1578308722] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;2;WARNING - 15.7% (20634864 kB) free!
+[1578308842] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 35.7% (47044044 kB) free.
+[1578309108] SERVICE ALERT: smscapp1;Memory;CRITICAL;HARD;3;CRITICAL - 9.4% (4651200 kB) free!
+[1578309442] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 15.4% (20275656 kB) free!
+[1578309562] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 35.1% (46290792 kB) free.
+[1578309823] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(199) < 2020/01/06 16:49:20 [error] 21681#0: *23003894 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:5860/104, bytes from/to upstream:104/5860
+[1578309894] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(189) < 103.255.146.164 [06/Jan/2020:16:45:51 +0530] TCP 502 0 0 0.001 "10.147.212.142:3000" "0" "0" "0.001"
+[1578309943] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578310014] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578310162] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 14.9% (19604600 kB) free!
+[1578310282] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 34.8% (45870244 kB) free.
+[1578310543] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(2) < 2020/01/06 16:57:29 [error] 21681#0: *23005174 recv() failed (104: Connection reset by peer) while proxying connection, client: 92.42.104.166, server: 0.0.0.0:13001, upstream: "10.147.212.154:13001", bytes from/to client:41/0, bytes from/to upstream:0/41
+[1578310663] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578310882] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 15.1% (19864892 kB) free!
+[1578310885] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;1;WARNING - 14.0% (2281264 kB) free!
+[1578310888] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 15.7% (3858136 kB) free!
+[1578311002] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.1% (31726324 kB) free.
+[1578311005] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;2;WARNING - 15.5% (2524164 kB) free!
+[1578311016] SERVICE ALERT: sservercluster1;Memory;WARNING;SOFT;1;WARNING - 18.3% (4496020 kB) free!
+[1578311067] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (176952 kB) free!
+[1578311126] SERVICE NOTIFICATION: nagiosadmin;webservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 16.6% (2705200 kB) free!
+[1578311126] SERVICE ALERT: webservercluster2;Memory;WARNING;HARD;3;WARNING - 16.6% (2705200 kB) free!
+[1578311136] SERVICE ALERT: sservercluster1;Memory;WARNING;SOFT;2;WARNING - 17.9% (4380980 kB) free!
+[1578311256] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;WARNING;notify-service-by-email;WARNING - 17.2% (4209676 kB) free!
+[1578311256] SERVICE ALERT: sservercluster1;Memory;WARNING;HARD;3;WARNING - 17.2% (4209676 kB) free!
+[1578311455] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;1;WARNING - 18.7% (4583480 kB) free!
+[1578311575] SERVICE ALERT: pservercluster2;Memory;WARNING;SOFT;2;WARNING - 18.1% (4428264 kB) free!
+[1578311602] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 15.3% (20134608 kB) free!
+[1578311695] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 17.4% (4256924 kB) free!
+[1578311695] SERVICE ALERT: pservercluster2;Memory;WARNING;HARD;3;WARNING - 17.4% (4256924 kB) free!
+[1578311722] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;2;WARNING - 12.0% (15880300 kB) free!
+[1578311785] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (223864 kB) free!
+[1578311842] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 31.6% (41619092 kB) free.
+[1578311894] Auto-save of retention data completed successfully.
+[1578312117] SERVICE FLAPPING ALERT: sig6-vm2;Memory;STOPPED; Service appears to have stopped flapping (4.0% change < 5.0% threshold)
+[1578312117] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;OK;notify-service-by-email;OK - 21.5% (4823864 kB) free.
+[1578312160] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;1;USERS WARNING - 6 users currently logged in
+[1578312280] SERVICE ALERT: sservercluster2;Current Users;WARNING;SOFT;2;USERS WARNING - 6 users currently logged in
+[1578312326] SERVICE NOTIFICATION: nagiosadmin;webservercluster2;Memory;OK;notify-service-by-email;OK - 23.7% (3854120 kB) free.
+[1578312326] SERVICE ALERT: webservercluster2;Memory;OK;HARD;1;OK - 23.7% (3854120 kB) free.
+[1578312400] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578312400] SERVICE ALERT: sservercluster2;Current Users;WARNING;HARD;3;USERS WARNING - 6 users currently logged in
+[1578312442] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 11.7% (15369464 kB) free!
+[1578312456] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 2.0% (492708 kB) free!
+[1578312456] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 2.0% (492708 kB) free!
+[1578312562] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 31.9% (42101188 kB) free.
+[1578312687] SERVICE FLAPPING ALERT: qservercluster2;Memory;STOPPED; Service appears to have stopped flapping (4.0% change < 5.0% threshold)
+[1578312717] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;1;WARNING - 15.2% (3418288 kB) free!
+[1578312837] SERVICE ALERT: sig6-vm2;Memory;WARNING;SOFT;2;WARNING - 14.4% (3242700 kB) free!
+[1578312958] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;WARNING;notify-service-by-email;WARNING - 13.8% (3090900 kB) free!
+[1578312958] SERVICE ALERT: sig6-vm2;Memory;WARNING;HARD;3;WARNING - 13.8% (3090900 kB) free!
+[1578313162] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 12.3% (16233400 kB) free!
+[1578313283] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 31.2% (41171608 kB) free.
+[1578313385] SERVICE ALERT: smscapp2;Memory;WARNING;SOFT;1;WARNING - 19.4% (9571668 kB) free!
+[1578313495] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 7.7% (1883128 kB) free!
+[1578313495] SERVICE ALERT: pservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 7.7% (1883128 kB) free!
+[1578313505] SERVICE ALERT: smscapp2;Memory;WARNING;SOFT;2;WARNING - 19.0% (9364292 kB) free!
+[1578313526] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;1;WARNING - 13.9% (2257984 kB) free!
+[1578313625] SERVICE NOTIFICATION: nagiosadmin;smscapp2;Memory;WARNING;notify-service-by-email;WARNING - 18.6% (9148140 kB) free!
+[1578313625] SERVICE ALERT: smscapp2;Memory;WARNING;HARD;3;WARNING - 18.6% (9148140 kB) free!
+[1578313646] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;2;WARNING - 15.4% (2498500 kB) free!
+[1578313766] SERVICE NOTIFICATION: nagiosadmin;webservercluster2;Memory;WARNING;notify-service-by-email;WARNING - 16.4% (2668076 kB) free!
+[1578313766] SERVICE ALERT: webservercluster2;Memory;WARNING;HARD;3;WARNING - 16.4% (2668076 kB) free!
+[1578313882] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 12.7% (16743232 kB) free!
+[1578314002] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;2;CRITICAL - 9.5% (12503292 kB) free!
+[1578314122] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 28.7% (37783220 kB) free.
+[1578314158] SERVICE NOTIFICATION: nagiosadmin;sig6-vm2;Memory;OK;notify-service-by-email;OK - 74.8% (16801672 kB) free.
+[1578314158] SERVICE ALERT: sig6-vm2;Memory;OK;HARD;1;OK - 74.8% (16801672 kB) free.
+[1578314230] SERVICE NOTIFICATION: nagiosadmin;smscapp2;Memory;OK;notify-service-by-email;OK - 55.1% (27168072 kB) free.
+[1578314230] SERVICE ALERT: smscapp2;Memory;OK;HARD;1;OK - 55.1% (27168072 kB) free.
+[1578314263] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(1) < 2020/01/06 18:03:10 [error] 21669#0: *23017106 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:10520/51, bytes from/to upstream:51/10520
+[1578314366] SERVICE FLAPPING ALERT: webservercluster2;Memory;STARTED; Service appears to have started flapping (23.8% change >= 20.0% threshold)
+[1578314366] SERVICE ALERT: webservercluster2;Memory;OK;HARD;1;OK - 26.3% (4269020 kB) free.
+[1578314383] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578314488] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 13.0% (3197508 kB) free!
+[1578314668] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (168472 kB) free!
+[1578314722] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.7% (12737028 kB) free!
+[1578314842] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 29.6% (39023816 kB) free.
+[1578315385] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (234164 kB) free!
+[1578315442] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 10.4% (13660428 kB) free!
+[1578315494] Auto-save of retention data completed successfully.
+[1578315562] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 29.4% (38730084 kB) free.
+[1578315566] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;1;WARNING - 12.7% (2063704 kB) free!
+[1578315686] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;2;WARNING - 13.3% (2164780 kB) free!
+[1578315806] SERVICE ALERT: webservercluster2;Memory;WARNING;HARD;3;WARNING - 15.3% (2492488 kB) free!
+[1578316000] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578316056] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (189624 kB) free!
+[1578316162] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 10.6% (13935832 kB) free!
+[1578316282] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;2;WARNING - 17.7% (23343300 kB) free!
+[1578316402] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 26.7% (35218548 kB) free.
+[1578316406] SERVICE ALERT: webservercluster2;Memory;OK;HARD;1;OK - 33.3% (5410348 kB) free.
+[1578317002] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.8% (10267520 kB) free!
+[1578317095] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (203820 kB) free!
+[1578317122] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 27.4% (36114848 kB) free.
+[1578317607] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;1;WARNING - 15.4% (2496924 kB) free!
+[1578317722] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 8.2% (10781836 kB) free!
+[1578317727] SERVICE ALERT: webservercluster2;Memory;WARNING;SOFT;2;WARNING - 15.5% (2521892 kB) free!
+[1578317842] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 27.6% (36430268 kB) free.
+[1578317847] SERVICE ALERT: webservercluster2;Memory;WARNING;HARD;3;WARNING - 16.6% (2691868 kB) free!
+[1578318088] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;WARNING;notify-service-by-email;WARNING - 10.2% (2505648 kB) free!
+[1578318443] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 8.4% (11026016 kB) free!
+[1578318563] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;2;CRITICAL - 5.4% (7113200 kB) free!
+[1578318683] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.9% (32848492 kB) free.
+[1578318688] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;CRITICAL;notify-service-by-email;CRITICAL - 9.8% (2393220 kB) free!
+[1578318688] SERVICE ALERT: secondary-server;Memory Status;CRITICAL;HARD;3;CRITICAL - 9.8% (2393220 kB) free!
+[1578318867] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (192508 kB) free!
+[1578318985] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (241496 kB) free!
+[1578319094] Auto-save of retention data completed successfully.
+[1578319183] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(815) < 2020/01/06 19:29:17 [error] 21680#0: *23034152 connect() failed (111: Connection refused) while connecting to upstream, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578319283] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 6.6% (8761056 kB) free!
+[1578319303] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578319308] SERVICE FLAPPING ALERT: smscapp1;Memory;STOPPED; Service appears to have stopped flapping (4.0% change < 5.0% threshold)
+[1578319308] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.6% (284996 kB) free!
+[1578319403] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 26.3% (34620468 kB) free.
+[1578319600] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578319614] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(815) < 103.255.146.164 [06/Jan/2020:19:29:17 +0530] TCP 502 0 0 0.001 "10.147.212.142:3000" "0" "0" "0.001"
+[1578319657] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (179644 kB) free!
+[1578319734] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578320003] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.6% (10064628 kB) free!
+[1578320123] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 25.9% (34080812 kB) free.
+[1578320695] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (174952 kB) free!
+[1578320723] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.7% (12848232 kB) free!
+[1578320843] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;2;CRITICAL - 6.8% (8995980 kB) free!
+[1578320963] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.9% (32770240 kB) free.
+[1578321563] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.8% (10319360 kB) free!
+[1578321683] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 25.5% (33565544 kB) free.
+[1578322047] SERVICE ALERT: webservercluster2;Memory;OK;HARD;1;OK - 23.7% (3858792 kB) free.
+[1578322283] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.1% (12039612 kB) free!
+[1578322288] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;CRITICAL;notify-service-by-email;CRITICAL - 8.2% (2003132 kB) free!
+[1578322403] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;2;WARNING - 18.8% (24823792 kB) free!
+[1578322467] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (198516 kB) free!
+[1578322518] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578322516
+[1578322518] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;OK;notify-service-by-email;OK - 80.4% (19846316 kB) free.
+[1578322518] SERVICE ALERT: pservercluster1;Memory;OK;HARD;1;OK - 80.4% (19846316 kB) free.
+[1578322520] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578322519
+[1578322523] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 23.8% (31338152 kB) free.
+[1578322524] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578322523
+[1578322527] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster1;Memory;1578322526
+[1578322548] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578322542
+[1578322549] SERVICE NOTIFICATION: nagiosadmin;pservercluster2;Memory;OK;notify-service-by-email;OK - 87.2% (21379652 kB) free.
+[1578322549] SERVICE ALERT: pservercluster2;Memory;OK;HARD;1;OK - 87.2% (21379652 kB) free.
+[1578322552] EXTERNAL COMMAND: DISABLE_SVC_CHECK;pservercluster2;Memory
+[1578322556] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;pservercluster2;Memory;1578322555
+[1578322585] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (240664 kB) free!
+[1578322595] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;secondary-server;Memory Status;1578322594
+[1578322596] SERVICE NOTIFICATION: nagiosadmin;secondary-server;Memory Status;OK;notify-service-by-email;OK - 91.1% (22319188 kB) free.
+[1578322596] SERVICE ALERT: secondary-server;Memory Status;OK;HARD;1;OK - 91.1% (22319188 kB) free.
+[1578322599] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;secondary-server;Memory Status;1578322597
+[1578322602] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;secondary-server;Memory Status;1578322601
+[1578322606] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;secondary-server;Memory Status;1578322605
+[1578322631] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578322629
+[1578322635] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578322634
+[1578322636] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;OK;notify-service-by-email;OK - 26.7% (13148924 kB) free.
+[1578322636] SERVICE ALERT: sigqscluster1;Memory;OK;HARD;1;OK - 26.7% (13148924 kB) free.
+[1578322642] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578322640
+[1578322646] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sigqscluster1;Memory;1578322645
+[1578322687] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp1;Memory;1578322686
+[1578322687] SERVICE NOTIFICATION: nagiosadmin;smscapp1;Memory;OK;notify-service-by-email;OK - 89.4% (44072432 kB) free.
+[1578322687] SERVICE ALERT: smscapp1;Memory;OK;HARD;1;OK - 89.4% (44072432 kB) free.
+[1578322690] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp1;Memory;1578322689
+[1578322694] Auto-save of retention data completed successfully.
+[1578322694] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;smscapp1;Memory;1578322693
+[1578322712] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578322711
+[1578322713] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;OK;notify-service-by-email;OK - 80.2% (19657304 kB) free.
+[1578322713] SERVICE ALERT: sservercluster1;Memory;OK;HARD;1;OK - 80.2% (19657304 kB) free.
+[1578322716] EXTERNAL COMMAND: SCHEDULE_FORCED_SVC_CHECK;sservercluster1;Memory;1578322714
+[1578323124] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 6.0% (7912024 kB) free!
+[1578323127] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.7% (177076 kB) free!
+[1578323200] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578323244] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 25.2% (33163664 kB) free.
+[1578323246] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.4% (218600 kB) free!
+[1578323247] SERVICE ALERT: pservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (188708 kB) free!
+[1578323366] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.5% (231188 kB) free!
+[1578323367] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (194952 kB) free!
+[1578323367] SERVICE ALERT: pservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.8% (194952 kB) free!
+[1578323487] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (246612 kB) free!
+[1578323487] SERVICE ALERT: sigqscluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.5% (246612 kB) free!
+[1578323844] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 8.5% (11156420 kB) free!
+[1578323964] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 25.0% (33016036 kB) free.
+[1578324564] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 9.5% (12522076 kB) free!
+[1578324684] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;2;CRITICAL - 6.4% (8437312 kB) free!
+[1578324704] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(9) < 2020/01/06 20:56:32 [error] 21675#0: *23048658 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.16.101.72, server: 0.0.0.0:13000, upstream: "10.147.212.154:13000", bytes from/to client:44/0, bytes from/to upstream:0/44
+[1578324804] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.0% (31620344 kB) free.
+[1578324824] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578325103] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;SOFT;1;CRITICAL - load average: 1327.76, 992.21, 475.38
+[1578325224] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;SOFT;2;CRITICAL - load average: 381.26, 808.86, 475.85
+[1578325344] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;CRITICAL;notify-service-by-email;CRITICAL - load average: 53.92, 542.22, 418.52
+[1578325344] SERVICE ALERT: pservercluster1;CPU Load;CRITICAL;HARD;3;CRITICAL - load average: 53.92, 542.22, 418.52
+[1578325404] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.3% (9565312 kB) free!
+[1578325424] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(15) < 2020/01/06 21:09:49 [error] 21681#0: *23049345 recv() failed (104: Connection reset by peer) while proxying connection, client: 169.38.76.212, server: 0.0.0.0:13000, upstream: "10.147.212.142:13000", bytes from/to client:43/0, bytes from/to upstream:0/43
+[1578325524] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.9% (32777484 kB) free.
+[1578325544] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578325939] SERVICE ALERT: sigqscluster1;CPU Load;WARNING;SOFT;1;WARNING - load average: 5.00, 5.11, 5.05
+[1578325944] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;CPU Load;OK;notify-service-by-email;OK - load average: 2.58, 74.56, 220.29
+[1578325944] SERVICE ALERT: pservercluster1;CPU Load;OK;HARD;1;OK - load average: 2.58, 74.56, 220.29
+[1578326059] SERVICE ALERT: sigqscluster1;CPU Load;OK;HARD;1;OK - load average: 4.25, 4.78, 4.93
+[1578326124] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.8% (10274912 kB) free!
+[1578326144] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(14) < 2020/01/06 21:16:18 [error] 21679#0: *23049784 recv() failed (104: Connection reset by peer) while proxying connection, client: 103.209.99.7, server: 0.0.0.0:13000, upstream: "10.147.212.155:13000", bytes from/to client:43/0, bytes from/to upstream:0/43
+[1578326244] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 24.8% (32677928 kB) free.
+[1578326264] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578326294] Auto-save of retention data completed successfully.
+[1578326659] SERVICE ALERT: sigqscluster1;CPU Load;WARNING;SOFT;1;WARNING - load average: 4.94, 5.10, 5.02
+[1578326779] SERVICE ALERT: sigqscluster1;CPU Load;WARNING;SOFT;2;WARNING - load average: 4.93, 5.04, 5.01
+[1578326800] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 6 users currently logged in
+[1578326844] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;1;CRITICAL - 7.8% (10312688 kB) free!
+[1578326899] SERVICE ALERT: sigqscluster1;CPU Load;OK;HARD;1;OK - load average: 4.72, 4.95, 4.98
+[1578326964] SERVICE ALERT: redis-2;Memory;CRITICAL;SOFT;2;CRITICAL - 5.0% (6628536 kB) free!
+[1578326968] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (193468 kB) free!
+[1578327084] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 20.9% (27515984 kB) free.
+[1578327087] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (246524 kB) free!
+[1578328284] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 19.0% (25049968 kB) free!
+[1578328405] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.9% (48642036 kB) free.
+[1578328716] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (183932 kB) free!
+[1578328837] SERVICE ALERT: sservercluster1;Memory;CRITICAL;SOFT;2;CRITICAL - 0.8% (192544 kB) free!
+[1578328957] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (165920 kB) free!
+[1578328957] SERVICE ALERT: sservercluster1;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (165920 kB) free!
+[1578329004] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 19.1% (25213892 kB) free!
+[1578329076] SERVICE ALERT: sservercluster2;CPU_Procs;CRITICAL;SOFT;1;CPU CRITICAL: 1 crit, 0 warn out of 354 processes
+[1578329077] SERVICE ALERT: sservercluster2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.8% (195944 kB) free!
+[1578329124] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.8% (48506732 kB) free.
+[1578329196] SERVICE ALERT: sservercluster2;CPU_Procs;OK;HARD;1;CPU OK: 375 processes
+[1578329197] SERVICE ALERT: sservercluster2;Memory;CRITICAL;SOFT;2;CRITICAL - 5.4% (1322140 kB) free!
+[1578329264] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(14) < 2020/01/06 22:15:44 [error] 21677#0: *23060290 connect() failed (111: Connection refused) while connecting to upstream, client: 92.42.104.166, server: 0.0.0.0:13001, upstream: "10.147.212.143:13001", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578329317] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (169416 kB) free!
+[1578329317] SERVICE ALERT: sservercluster2;Memory;CRITICAL;HARD;3;CRITICAL - 0.7% (169416 kB) free!
+[1578329384] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578329724] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 18.9% (24945024 kB) free!
+[1578329844] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.7% (48390856 kB) free.
+[1578329847] SERVICE FLAPPING ALERT: webservercluster2;Memory;STOPPED; Service appears to have stopped flapping (4.5% change < 5.0% threshold)
+[1578329894] Auto-save of retention data completed successfully.
+[1578329934] SERVICE ALERT: primary-server;Nginx Access Log Status;CRITICAL;SOFT;1;(502) < 103.255.146.164 [06/Jan/2020:22:20:38 +0530] TCP 502 0 0 0.001 "10.147.212.142:3000" "0" "0" "0.001"
+[1578329984] SERVICE ALERT: primary-server;Nginx Error Log Status;CRITICAL;SOFT;1;(515) < 2020/01/06 22:20:38 [error] 21674#0: *23062174 connect() failed (111: Connection refused) while connecting to upstream, client: 103.255.146.164, server: 0.0.0.0:3000, upstream: "10.147.212.142:3000", bytes from/to client:0/0, bytes from/to upstream:0/0
+[1578330055] SERVICE ALERT: primary-server;Nginx Access Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578330104] SERVICE ALERT: primary-server;Nginx Error Log Status;OK;HARD;1;Log check ok - 0 pattern matches found
+[1578330400] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;WARNING;notify-service-by-email;USERS WARNING - 7 users currently logged in
+[1578330444] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 19.0% (25054652 kB) free!
+[1578330564] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.6% (48254556 kB) free.
+[1578330687] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (222992 kB) free!
+[1578331164] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 19.3% (25450996 kB) free!
+[1578331167] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (188052 kB) free!
+[1578331284] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.5% (48172288 kB) free.
+[1578331884] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 18.9% (24930948 kB) free!
+[1578332004] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 36.4% (48042812 kB) free.
+[1578332557] SERVICE NOTIFICATION: nagiosadmin;sservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.7% (168212 kB) free!
+[1578332604] SERVICE ALERT: redis-2;Memory;WARNING;SOFT;1;WARNING - 18.1% (23887884 kB) free!
+[1578332724] SERVICE ALERT: redis-2;Memory;OK;HARD;1;OK - 35.0% (46121636 kB) free.
+[1578332800] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Current Users;OK;notify-service-by-email;USERS OK - 5 users currently logged in
+[1578332800] SERVICE ALERT: sservercluster2;Current Users;OK;HARD;1;USERS OK - 5 users currently logged in
+[1578332917] SERVICE NOTIFICATION: nagiosadmin;sservercluster2;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (203168 kB) free!
+[1578333494] Auto-save of retention data completed successfully.
+[1578334287] SERVICE NOTIFICATION: nagiosadmin;sigqscluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.5% (242904 kB) free!
+[1578334767] SERVICE NOTIFICATION: nagiosadmin;pservercluster1;Memory;CRITICAL;notify-service-by-email;CRITICAL - 0.8% (189568 kB) free!
+[1578335169] SERVICE ALERT: redis-1;Memory;WARNING;SOFT;1;WARNING - 12.3% (16210080 kB) free!
+[1578335230] SERVICE ALERT: smscapp2;Memory;CRITICAL;SOFT;1;CRITICAL - 0.5% (235724 kB) free!
+[1578335289] SERVICE ALERT: redis-1;Memory;CRITICAL;SOFT;2;CRITICAL - 8.8% (11583372 kB) free!
+[1578335350] SERVICE ALERT: smscapp2;Memory;CRITICAL;SOFT;2;CRITICAL - 0.5% (234348 kB) free!
