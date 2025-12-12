@@ -1,0 +1,42 @@
+Kernel panic not syncin VFS unable to mount root fs on unknow blocks:
+Now the issue is very clear Root cause identified: some modules are missing: Lets do start troubleshoot:
+step1 : login with old kernel
+step2: cd /lib/modules   ( check new kernel version is installed or not)
+step3 : cd /boot/
+step4: ls -ltrh  (check initramfs file is present or not)
+
+In this case kernel installation was incomplete and coreupted
+
+step5 : yum install kernel*
+step6: depmod -a new-kernel
+step7: Dracut --force /boot/initramfs-new-kernel.imp kernel-version
+
+no more errors should come now
+
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+if UEFI
+grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+
+step8 : reboot
+
+=======================================================
+History file on Rhel-9.7
+
+cd /boot/
+ls -ltrh
+dracut --force /boot/initramfs-$(uname -r).img $(uname -r)
+uname -r
+ls /lib/modules
+yum reinstall kernel*
+cd /lib/modules
+ls -ltrh
+cd /boot/
+ls -ltrh
+depmod -a 5.14.0-611.8.1.el9_7.x86_64
+dracut --force /boot/initramfs-5.14.0-611.8.1.el9_7.x86_64.img 5.14.0-611.8.1.el9_7.x86_64
+grub2-mkconfig -o /boot/grub2/grub.cfg
+grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+reboot
+cat /etc/redhat-release
+uname -r
