@@ -1,0 +1,45 @@
+we have killed zombie processes pid in pservercluster2(10.147.212.38) and sservercluste2(10.147.212.61) without system reboot.
+
+
+From pservercluster2
+1) Identify the zombie processes
+[root@pservercluster2 ~]# top -b1 -n1 | grep Z
+32290 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+[root@pservercluster2 ~]# top -b1 -n1 | grep Z
+ 1345 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 1417 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 3493 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 4371 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.02 pkla-check-auth
+2) Find the parent of zombie processes
+[root@pservercluster2 ~]# ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }' | uniq | xargs ps -p
+  PID TTY          TIME CMD
+  849 ?        02:12:36 polkitd
+[root@pservercluster2 ~]# kill 849
+-----------------------------------------------
+From sservercluster2
+1) Identify the zombie processes
+[root@sservercluster2 ~]#  top -b1 -n1 | grep Z
+  379 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+  399 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 1353 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 1820 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 2488 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.02 pkla-check-auth
+ 2514 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 2517 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.01 pkla-check-auth
+ 2525 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.03 pkla-check-auth
+ 3296 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.03 pkla-check-auth
+ 3336 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.02 pkla-check-auth
+ 3520 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.02 pkla-check-auth
+10299 root      20   0       0      0      0 Z   0.0  0.0  36:19.28 pmdalinux
+20340 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.04 pkla-check-auth
+20357 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.04 pkla-check-auth
+22778 polkitd   20   0       0      0      0 Z   0.0  0.0   0:00.07 pkla-check-auth
+2) Find the parent of zombie processes
+[root@sservercluster2 ~]# ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }' | uniq | xargs ps -p
+  PID TTY      STAT   TIME COMMAND
+  882 ?        Ssl   61:41 /usr/lib/polkit-1/polkitd --no-debug
+10268 ?        S      0:00 /var/lib/pcp/pmdas/root/pmdaroot
+[root@sservercluster2 ~]# kill 882
+[root@sservercluster2 ~]# kill 10268
+
+
